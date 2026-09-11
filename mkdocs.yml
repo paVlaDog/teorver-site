@@ -1,0 +1,88 @@
+site_name: Теорвер — план практик
+site_description: Преподавательский конспект практик по теории вероятностей (y2025)
+site_author: Практики теорвера
+site_url: https://pavladog.github.io/teorver-site/
+
+docs_dir: docs
+site_dir: site_build
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - О сайте: index.md
+  - Система оценивания: ocenivanie.md
+  - Практики:
+      - Практика 1. События и Байес: practices/p01.md
+      - Практика 2. Случайные величины: practices/p02.md
+      - Практика 3. Геометрическая вероятность: practices/p03.md
+      - Практика 4. Дискретные распределения: practices/p04.md
+      - Практика 5. Производящие функции: practices/p05.md
+      - Практика 6. (нет в плане): practices/p06.md
+      - Практика 7. Непрерывные СВ и преобразования: practices/p07.md
+      - Практика 8. Зоопарк непрерывных распределений: practices/p08.md
+      - Практика 9. Многомерные, ЗБЧ и ЦПТ: practices/p09.md
+      - Практика 10. Моменты: practices/p10.md
+      - Практика 11. Характеристические функции: practices/p11.md
+      - Бонусная лекция. Дисбаланс в играх: practices/p-bonus-balance.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: ru
