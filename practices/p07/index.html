@@ -1,0 +1,2409 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p07/">
+      
+      
+        <link rel="prev" href="../p06/">
+      
+      
+        <link rel="next" href="../p08/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Практика 7. Непрерывные СВ и преобразования - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 7. Непрерывные СВ и преобразования
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Функции распределения и плотности
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Функции распределения и плотности">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Плотность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.1. Кусочная \(F\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.1. Кусочная \(F\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.2. Арктангенс
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.2. Арктангенс">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Преобразование одномерной СВ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Преобразование одномерной СВ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-sin2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.3. \(\sin^2\) напрямую
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.3. \(\sin^2\) напрямую">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Строго монотонные преобразования
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Строго монотонные преобразования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Немонотонные преобразования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-y3x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.4. \(Y=3X\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.4. \(Y=3X\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.5. Квадрат нормальной
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.5. Квадрат нормальной">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Многомерные преобразования
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Многомерные преобразования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.6. Формула суммы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.6. Формула суммы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#77" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.7. Сумма двух нормальных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.7. Сумма двух нормальных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дискретные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Дискретные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#78-2x1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.8. Линейное \(2X+1\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.8. Линейное \(2X+1\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#79" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.9. Квадрат дискретной
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.9. Квадрат дискретной">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#710" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.10. Сумма двух дискретных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.10. Сумма двух дискретных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Функции распределения и плотности
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Функции распределения и плотности">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Плотность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.1. Кусочная \(F\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.1. Кусочная \(F\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.2. Арктангенс
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.2. Арктангенс">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Преобразование одномерной СВ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Преобразование одномерной СВ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-sin2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.3. \(\sin^2\) напрямую
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.3. \(\sin^2\) напрямую">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Строго монотонные преобразования
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Строго монотонные преобразования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Немонотонные преобразования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-y3x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.4. \(Y=3X\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.4. \(Y=3X\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.5. Квадрат нормальной
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.5. Квадрат нормальной">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Многомерные преобразования
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Многомерные преобразования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.6. Формула суммы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.6. Формула суммы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#77" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.7. Сумма двух нормальных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.7. Сумма двух нормальных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дискретные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Дискретные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#78-2x1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.8. Линейное \(2X+1\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.8. Линейное \(2X+1\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#79" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.9. Квадрат дискретной
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.9. Квадрат дискретной">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#710" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7.10. Сумма двух дискретных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7.10. Сумма двух дискретных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="7">Практика 7. Непрерывные СВ и преобразования<a class="headerlink" href="#7" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> Функция распределения и плотность; преобразования непрерывных СВ — монотонные, немонотонные и многомерные.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Функции распределения и плотности</li>
+<li>Преобразование одномерной СВ</li>
+<li>Строго монотонные преобразования</li>
+<li>Немонотонные преобразования</li>
+<li>Многомерные преобразования</li>
+<li>Дискретные распределения</li>
+</ol>
+<p>Из двух пар (7 и 8) <strong>7 — почти полностью теория</strong>, 8 — закрепление и нарешивание.</p>
+<h2 id="_1">Функции распределения и плотности<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Теория<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Функцией распределения называют функцию <span class="arithmatex">\(F(x)\)</span>, определяющую для каждого значения <span class="arithmatex">\(x\)</span> вероятность того, что случайная величина <span class="arithmatex">\(X\)</span> примет значение, меньшее <span class="arithmatex">\(x\)</span>,</p>
+<div class="arithmatex">\[
+F(x) = P(X &lt; x).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 1. Значения функции распределения принадлежат отрезку <span class="arithmatex">\([0; 1]\)</span>:</p>
+<div class="arithmatex">\[
+0 \leqslant F(x) \leqslant 1.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 2. Функция распределения есть неубывающая функция:</p>
+<div class="arithmatex">\[
+F(x_2) \geqslant F(x_1), \quad \text{если } x_2 &gt; x_1.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Следствие 1. Вероятность того, что случайная величина <span class="arithmatex">\(X\)</span> примет значение, заключенное в интервале <span class="arithmatex">\((a, b)\)</span>, равна приращению функции распределения на этом интервале:</p>
+<div class="arithmatex">\[
+P(a &lt; X &lt; b) = F(b) - F(a).
+\]</div>
+</div>
+<p><img alt="Приращение \(F(b)-F(a)\)" src="../../assets/p07/fig-cdf-increment.png" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Следствие 2. Вероятность того, что непрерывная случайная величина <span class="arithmatex">\(X\)</span> примет одно определенное значение, например <span class="arithmatex">\(x_1\)</span>, равна нулю:</p>
+<div class="arithmatex">\[
+P(X = x_1) = 0.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 3. Если все возможные значения случайной величины <span class="arithmatex">\(X\)</span> принадлежат интервалу <span class="arithmatex">\((a, b)\)</span>, то</p>
+<div class="arithmatex">\[
+F(x) = 0 \text{ при } x \leqslant a; \qquad F(x) = 1 \text{ при } x \geqslant b.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Следствие. Справедливы следующие предельные соотношения:</p>
+<div class="arithmatex">\[
+\lim_{x \to -\infty} F(x) = 0, \qquad \lim_{x \to +\infty} F(x) = 1.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 4. Функция распределения непрерывна слева:</p>
+<div class="arithmatex">\[
+\lim_{x \uparrow x_0} F(x) = F(x_0).
+\]</div>
+</div>
+<p>В современных курсах чаще пишут <span class="arithmatex">\(F(x)=P(X\leqslant x)\)</span> и непрерывность справа. Здесь — формулировка с <span class="arithmatex">\(P(X&lt;x)\)</span>, как в задачниках.</p>
+<h3 id="_3">Плотность<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Плотностью распределения вероятностей непрерывной случайной величины называют первую производную от функции распределения: <span class="arithmatex">\(f(x) = F'(x)\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Вероятность того, что непрерывная случайная величина <span class="arithmatex">\(X\)</span> примет значение, принадлежащее интервалу <span class="arithmatex">\((a, b)\)</span>, определяется равенством</p>
+<div class="arithmatex">\[
+P(a &lt; X &lt; b) = \int_a^b f(x)\, dx.
+\]</div>
+</div>
+<p><img alt="Площадь под плотностью" src="../../assets/p07/fig-pdf-area.png" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Зная плотность распределения, можно найти функцию распределения</p>
+<div class="arithmatex">\[
+F(x) = \int_{-\infty}^{x} f(x)\, dx.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 1. Плотность распределения неотрицательна, т. е. <span class="arithmatex">\(f(x) \geqslant 0\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 2. Несобственный интеграл от плотности распределения в пределах от <span class="arithmatex">\(-\infty\)</span> до <span class="arithmatex">\(\infty\)</span> равен единице: <span class="arithmatex">\(\int_{-\infty}^{\infty} f(x)\, dx = 1\)</span>.</p>
+</div>
+<p>В частности, если все возможные значения случайной величины принадлежат интервалу <span class="arithmatex">\((a, b)\)</span>, то <span class="arithmatex">\(\int_a^b f(x)\, dx = 1\)</span>.</p>
+<h3 id="71-f">Задача 7.1. Кусочная <span class="arithmatex">\(F\)</span><a class="headerlink" href="#71-f" title="Permanent link">&para;</a></h3>
+<p>Случайная величина <span class="arithmatex">\(X\)</span> задана функцией распределения</p>
+<div class="arithmatex">\[
+F(x) =
+\begin{cases}
+0, &amp; x \leqslant -1, \\
+\dfrac{3}{4}x + \dfrac{3}{4}, &amp; -1 &lt; x \leqslant \dfrac{1}{3}, \\
+1, &amp; x &gt; \dfrac{1}{3}.
+\end{cases}
+\]</div>
+<p>Найти вероятность того, что в результате испытания величина <span class="arithmatex">\(X\)</span> примет значение, заключенное в интервале <span class="arithmatex">\((0, 1/3)\)</span> и найти плотность.</p>
+<h4 id="_4">Решение<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(P(a &lt; X &lt; b) = F(b) - F(a)\)</span>. Положив <span class="arithmatex">\(a = 0\)</span>, <span class="arithmatex">\(b = 1/3\)</span>,</p>
+<div class="arithmatex">\[
+P\bigl(0 &lt; X &lt; 1/3\bigr) = F(1/3) - F(0) = 1 - \tfrac{3}{4} = \tfrac{1}{4}.
+\]</div>
+<p>Плотность — производная там, где <span class="arithmatex">\(F\)</span> гладкая: <span class="arithmatex">\(f(x) = 3/4\)</span> при <span class="arithmatex">\(-1 &lt; x &lt; 1/3\)</span>, и <span class="arithmatex">\(f(x)=0\)</span> вне этого интервала. Скачки <span class="arithmatex">\(F\)</span> нет, в <span class="arithmatex">\(\pm\)</span> концах носителя плотность не обязана быть определена.</p>
+<p><img alt="Кусочная \(F\) и приращение \(1/4\)" src="../../assets/p07/fig-252-F.png" /></p>
+</details>
+<h3 id="72">Задача 7.2. Арктангенс<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<p>Случайная величина <span class="arithmatex">\(X\)</span> задана на всей оси <span class="arithmatex">\(Ox\)</span> функцией распределения <span class="arithmatex">\(F(x) = 1/2 + (\operatorname{arctg} x)/\pi\)</span>. Найти вероятность того, что в результате испытания величина <span class="arithmatex">\(X\)</span> примет значение, заключенное в интервале <span class="arithmatex">\((0, 1)\)</span> и найти плотность.</p>
+<h4 id="_5">Решение<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+P(0 &lt; X &lt; 1) = F(1) - F(0) = \Bigl(\tfrac12 + \tfrac{\operatorname{arctg} 1}{\pi}\Bigr) - \tfrac12 = \tfrac{1}{4}.
+\]</div>
+<div class="arithmatex">\[
+f(x) = F'(x) = \frac{1}{\pi(1+x^2)}.
+\]</div>
+<p>Это плотность Коши (с точностью до сдвига/масштаба — стандартная).</p>
+<p><img alt="\(F\) через \(\operatorname{arctg}\)" src="../../assets/p07/fig-253-F.png" /></p>
+</details>
+<h2 id="_6">Преобразование одномерной СВ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">Теория<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Пусть <span class="arithmatex">\(X \sim f_X(x)\)</span> — непрерывная случайная величина с носителем <span class="arithmatex">\(\mathcal{X}\)</span>. Пусть случайная величина <span class="arithmatex">\(Y\)</span> задана через преобразование <span class="arithmatex">\(Y = g(X)\)</span>. Тогда <span class="arithmatex">\(Y\)</span> имеет функцию распределения</p>
+<div class="arithmatex">\[
+F_Y(y) = \int_{\{x \in \mathcal{X} : g(x) \leqslant y\}} f_X(x)\, dx.
+\]</div>
+</div>
+<p>Дальше есть два пути: посчитать напрямую по этой формуле или разбить на монотонно возрастающие/убывающие интервалы, чтобы взять обратную функцию.</p>
+<p>Давайте один раз попробуем первый вариант — чтобы больше к нему не возвращаться.</p>
+<h3 id="73-sin2">Задача 7.3. <span class="arithmatex">\(\sin^2\)</span> напрямую<a class="headerlink" href="#73-sin2" title="Permanent link">&para;</a></h3>
+<p>Рассмотрим случайную величину <span class="arithmatex">\(X \sim \mathrm{uniform}(0, 2\pi)\)</span> и преобразование <span class="arithmatex">\(Y = g(X) = \sin^2 X\)</span>.</p>
+<p>График <span class="arithmatex">\(\sin^2\)</span> на <span class="arithmatex">\([0, 2\pi]\)</span>: два горба, горизонталь <span class="arithmatex">\(y\)</span> пересекает кривую в четырёх точках <span class="arithmatex">\(x_1 &lt; x_2 &lt; \pi &lt; x_3 &lt; x_4\)</span>.</p>
+<p><img alt="Четыре прообраза \(\sin^2 x = y\)" src="../../assets/p07/fig-sin2.png" /></p>
+<h4 id="_8">Решение<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+X \sim \mathrm{uniform}(0, 2\pi) \implies f_X(x) = \frac{1}{2\pi},\ x \in [0; 2\pi]
+\implies F_X(x) = \int_0^x \frac{1}{2\pi}\, dt = \frac{x}{2\pi},\ x \in [0; 2\pi].
+\]</div>
+<div class="arithmatex">\[
+Y = g(X) = \sin^2 X
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+F_Y(y) &amp;= P(Y \leqslant y) = P\bigl(g(X) \leqslant y\bigr) \\
+&amp;= P(X \leqslant x_1) + P(x_2 \leqslant X \leqslant x_3) + P(X \geqslant x_4) \\
+&amp;= 2P(X \leqslant x_1) + 2P(x_2 \leqslant X \leqslant \pi) \\
+&amp;= 2\bigl[F_X(x_1) + F_X(\pi) - F_X(x_2)\bigr] \\
+&amp;= \frac{1}{\pi}(x_1 - x_2 + \pi).
+\end{aligned}
+\]</div>
+<p>Носитель <span class="arithmatex">\(Y\)</span> — <span class="arithmatex">\([0, 1]\)</span>. Для <span class="arithmatex">\(y\in(0,1)\)</span> положим <span class="arithmatex">\(\alpha=\arcsin\sqrt{y}\in(0,\pi/2)\)</span>. Тогда</p>
+<div class="arithmatex">\[
+x_1=\alpha,\quad x_2=\pi-\alpha,\quad x_3=\pi+\alpha,\quad x_4=2\pi-\alpha.
+\]</div>
+<p>Подставить в уже полученное:</p>
+<div class="arithmatex">\[
+F_Y(y)=\frac{1}{\pi}\bigl(\alpha-(\pi-\alpha)+\pi\bigr)=\frac{2\alpha}{\pi}=\frac{2}{\pi}\arcsin\sqrt{y}.
+\]</div>
+<p>На краях <span class="arithmatex">\(F_Y(y)=0\)</span> при <span class="arithmatex">\(y\leqslant 0\)</span> и <span class="arithmatex">\(F_Y(y)=1\)</span> при <span class="arithmatex">\(y\geqslant 1\)</span>. Плотность:</p>
+<div class="arithmatex">\[
+f_Y(y)=F_Y'(y)=\frac{2}{\pi}\cdot\frac{1}{\sqrt{1-y}}\cdot\frac{1}{2\sqrt{y}}=\frac{1}{\pi\sqrt{y(1-y)}}, \qquad y\in(0,1).
+\]</div>
+<p>Это арксинусное распределение (бета <span class="arithmatex">\(1/2\)</span>, <span class="arithmatex">\(1/2\)</span>). Дальше к общему интегралу по <span class="arithmatex">\(\{g\leqslant y\}\)</span> не возвращаемся: режем на монотонные куски.</p>
+</details>
+<h2 id="_9">Строго монотонные преобразования<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">Теория<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Пусть <span class="arithmatex">\(X \sim F_X(x)\)</span> и <span class="arithmatex">\(Y = g(X)\)</span>, где <span class="arithmatex">\(g(x)\)</span> является строго монотонным преобразованием. Тогда</p>
+<ol>
+<li><span class="arithmatex">\(g\)</span> возрастает на <span class="arithmatex">\(\mathcal{X}\)</span> <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(F_Y(y) = F_X\bigl(g^{-1}(y)\bigr)\)</span>, <span class="arithmatex">\(y \in \mathcal{Y}\)</span>;</li>
+<li><span class="arithmatex">\(g\)</span> убывает на <span class="arithmatex">\(\mathcal{X}\)</span> и <span class="arithmatex">\(X\)</span> является непрерывной <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\(F_Y(y) = 1 - F_X\bigl(g^{-1}(y)\bigr)\)</span>, <span class="arithmatex">\(y \in \mathcal{Y}\)</span>.</li>
+</ol>
+</div>
+<p><img alt="Возрастающее \(g\)" src="../../assets/p07/fig-mono-inc.png" /></p>
+<p><img alt="Убывающее \(g\)" src="../../assets/p07/fig-mono-dec.png" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Диффеоморфизмом называется такая биективная функция <span class="arithmatex">\(g(x)\)</span>, обратная <span class="arithmatex">\(g^{-1}(y)\)</span> которой является непрерывно дифференцируемой.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Пусть <span class="arithmatex">\(X \sim f_X(x)\)</span> является непрерывной случайной величиной и <span class="arithmatex">\(Y = g(X)\)</span>, где <span class="arithmatex">\(g\)</span> является диффеоморфизмом и строго монотонной функцией. Тогда плотность вероятности <span class="arithmatex">\(Y\)</span> имеет вид</p>
+<div class="arithmatex">\[
+f_Y(y) =
+\begin{cases}
+f_X\bigl(g^{-1}(y)\bigr) \left|\dfrac{d}{dy} g^{-1}(y)\right|, &amp; y \in \mathcal{Y}, \\
+0, &amp; y \notin \mathcal{Y},
+\end{cases}
+\]</div>
+<p>где <span class="arithmatex">\(\mathcal{Y}\)</span> — носитель распределения <span class="arithmatex">\(Y\)</span>.</p>
+</div>
+<p>Модуль производной — якобиан в одномерии: сжимаете ось <span class="arithmatex">\(x\)</span> в <span class="arithmatex">\(y\)</span>, плотность пересчитывается.</p>
+<h3 id="_11">Немонотонные преобразования<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Пусть <span class="arithmatex">\(X \sim f_X(x)\)</span> и <span class="arithmatex">\(Y = g(X)\)</span>. Пусть существует такое разбиение <span class="arithmatex">\(A_0, A_1, \dots, A_k\)</span> для носителя <span class="arithmatex">\(\mathcal{X}\)</span> случайной величины <span class="arithmatex">\(X\)</span>, что <span class="arithmatex">\(f_X(x)\)</span> непрерывна на всех <span class="arithmatex">\(A_i\)</span> и <span class="arithmatex">\(P(X \in A_0) = 0\)</span>. Пусть существуют функции <span class="arithmatex">\(g_1(x), \dots, g_k(x)\)</span>, определенные на <span class="arithmatex">\(A_1, \dots, A_k\)</span> соответственно и удовлетворяющие условиям:</p>
+<ol>
+<li><span class="arithmatex">\(g(x) = g_i(x)\)</span>, <span class="arithmatex">\(x \in A_i\)</span>;</li>
+<li>множество <span class="arithmatex">\(\mathcal{Y} = \{ y : y = g_i(x) \text{ для } x \in A_i \}\)</span> одинаково для каждого <span class="arithmatex">\(i = 1, \dots, k\)</span>;</li>
+<li><span class="arithmatex">\(g_i(x)\)</span>, как отображение из <span class="arithmatex">\(A_i\)</span> в <span class="arithmatex">\(\mathcal{Y}\)</span>, является диффеоморфизмом.</li>
+</ol>
+<p>Тогда плотность вероятности <span class="arithmatex">\(Y\)</span> имеет вид:</p>
+<div class="arithmatex">\[
+f_Y(y) = \sum_{i=1}^{k} f_X\bigl(g_i^{-1}(y)\bigr) \left|\frac{d}{dy} g_i^{-1}(y)\right|, \qquad y \in \mathcal{Y}.
+\]</div>
+</div>
+<p>На графике куски <span class="arithmatex">\(g_{i-1}\)</span>, <span class="arithmatex">\(g_i\)</span>, <span class="arithmatex">\(g_{i+1}\)</span> живут на <span class="arithmatex">\(A_{i-1}\)</span>, <span class="arithmatex">\(A_i\)</span>, <span class="arithmatex">\(A_{i+1}\)</span>.</p>
+<p><img alt="Монотонные куски немонотонного \(g\)" src="../../assets/p07/fig-nonmono-pieces.png" /></p>
+<h3 id="74-y3x">Задача 7.4. <span class="arithmatex">\(Y=3X\)</span><a class="headerlink" href="#74-y3x" title="Permanent link">&para;</a></h3>
+<p>Задана плотность распределения <span class="arithmatex">\(f(x)\)</span> случайной величины <span class="arithmatex">\(X\)</span>, возможные значения которой заключены в интервале <span class="arithmatex">\((a, b)\)</span>. Найти плотность распределения случайной величины <span class="arithmatex">\(Y = 3X\)</span>.</p>
+<h4 id="_12">Решение<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Так как функция <span class="arithmatex">\(y = 3x\)</span> дифференцируема и строго возрастает, то применима формула</p>
+<div class="arithmatex">\[
+g(y) = f\bigl[\psi(y)\bigr] \cdot \bigl|\psi'(y)\bigr|,
+\]</div>
+<p>где <span class="arithmatex">\(\psi(y)\)</span> — функция, обратная функции <span class="arithmatex">\(y = 3x\)</span>.</p>
+<p><span class="arithmatex">\(\psi(y) = y/3\)</span>, <span class="arithmatex">\(f\bigl[\psi(y)\bigr] = f(y/3)\)</span>, <span class="arithmatex">\(|\psi'(y)| = 1/3\)</span>.</p>
+<p>Искомая плотность <span class="arithmatex">\(g(y) = (1/3)\, f(y/3)\)</span>. Так как <span class="arithmatex">\(x\)</span> изменяется в интервале <span class="arithmatex">\((a, b)\)</span> и <span class="arithmatex">\(y = 3x\)</span>, то <span class="arithmatex">\(3a &lt; y &lt; 3b\)</span>.</p>
+</details>
+<h3 id="75">Задача 7.5. Квадрат нормальной<a class="headerlink" href="#75" title="Permanent link">&para;</a></h3>
+<p>Рассмотрим случайную величину <span class="arithmatex">\(X \sim n(0, 1)\)</span>:</p>
+<div class="arithmatex">\[
+f_X(x) = \frac{1}{\sqrt{2\pi}} \exp\Bigl(-\frac{x^2}{2}\Bigr), \qquad x \in \mathbb{R},
+\]</div>
+<p>и квадратичное преобразование <span class="arithmatex">\(Y = X^2\)</span>.</p>
+<p><img alt="Два прообраза \(x=\pm\sqrt{y}\)" src="../../assets/p07/fig-x-squared.png" /></p>
+<h4 id="_13">Решение<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+\mathcal{Y} = (0; \infty),\quad
+A_1 = (-\infty; 0) \implies g_1(x) = x^2,\ g_1^{-1}(y) = -\sqrt{y},
+\]</div>
+<div class="arithmatex">\[
+A_2 = (0; \infty) \implies g_2(x) = x^2,\ g_2^{-1}(y) = \sqrt{y},
+\]</div>
+<div class="arithmatex">\[
+A_0 = \{0\}.
+\]</div>
+<p>Плотность <span class="arithmatex">\(Y\)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f_Y(y)
+&amp;= f_X\bigl(g_1^{-1}(y)\bigr) \Bigl|\frac{d}{dy} g_1^{-1}(y)\Bigr| + f_X\bigl(g_2^{-1}(y)\bigr) \Bigl|\frac{d}{dy} g_2^{-1}(y)\Bigr| \\
+&amp;= \frac{1}{\sqrt{2\pi}} \exp\Bigl(-\frac{y}{2}\Bigr) \cdot \frac{1}{2\sqrt{y}} + \frac{1}{\sqrt{2\pi}} \exp\Bigl(-\frac{y}{2}\Bigr) \cdot \frac{1}{2\sqrt{y}} \\
+&amp;= \frac{1}{\sqrt{2\pi y}} \exp\Bigl(-\frac{y}{2}\Bigr).
+\end{aligned}
+\]</div>
+<p>Это распределение хи-квадрат!</p>
+</details>
+<h2 id="_14">Многомерные преобразования<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">Теория<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>Несмотря на то, что двумерные распределения ещё не проходили, бояться их не нужно. Это отображения из пар <span class="arithmatex">\((x, y)\)</span> в вероятности; функции распределения и плотности определяются похожим образом. С преобразованиями: просто расширяем на многомерный случай.</p>
+<p>Теория вероятностей #24: многомерные преобразования / сумма, разность и отношение случайных величин.</p>
+<p>Одномерная случайная величина:</p>
+<ul>
+<li>случайная величина <span class="arithmatex">\(X \sim f_X\)</span>;</li>
+<li>диффеоморфизм: <span class="arithmatex">\(Y = g(X)\)</span>;</li>
+<li>плотность вероятности для <span class="arithmatex">\(Y\)</span>:</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+f_Y(y) = f_X\bigl(g^{-1}(y)\bigr) \left|\frac{d}{dy} g^{-1}(y)\right| \mathbf{1}_{\Omega_Y}(y).
+\]</div>
+</div>
+<p>Двумерная случайная величина:</p>
+<ul>
+<li>случайная величина <span class="arithmatex">\((X, Y) \sim f_{X,Y}\)</span>;</li>
+<li>диффеоморфизм: <span class="arithmatex">\(U = g_1(X, Y)\)</span>, <span class="arithmatex">\(V = g_2(X, Y)\)</span>;</li>
+<li>плотность вероятности для <span class="arithmatex">\((U, V)\)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+f_{U,V}(u, v) = f_{X,Y}\bigl(h_1(u, v), h_2(u, v)\bigr) |J| \mathbf{1}_{\Omega_{U,V}}(u, v).
+\]</div>
+<p>Так как <span class="arithmatex">\(g_1(x, y)\)</span> и <span class="arithmatex">\(g_2(x, y)\)</span> являются диффеоморфизмом, можно выразить обратные отображения: <span class="arithmatex">\(X = h_1(U, V)\)</span> и <span class="arithmatex">\(Y = h_2(U, V)\)</span>.</p>
+<p>В многомерном случае производная обратной функции заменяется на якобиан:</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+J = \begin{vmatrix}
+\dfrac{\partial h_1(u, v)}{\partial u} &amp; \dfrac{\partial h_1(u, v)}{\partial v} \\[6pt]
+\dfrac{\partial h_2(u, v)}{\partial u} &amp; \dfrac{\partial h_2(u, v)}{\partial v}
+\end{vmatrix}
+= \frac{\partial h_1}{\partial u}\frac{\partial h_2}{\partial v} - \frac{\partial h_2}{\partial u}\frac{\partial h_1}{\partial v},
+\]</div>
+<p>где <span class="arithmatex">\(J \ne 0\)</span> и <span class="arithmatex">\((u, v) \in \Omega_{U,V}\)</span>.</p>
+</div>
+<p>Небиективное преобразование.</p>
+<p>Необходимо построить разбиение <span class="arithmatex">\(A_0, A_1, \dots, A_k \subset \Omega_{X,Y}\)</span>:</p>
+<ul>
+<li><span class="arithmatex">\(P\bigl((X, Y) \in A_0\bigr) = 0\)</span>;</li>
+<li>для <span class="arithmatex">\(A_i\)</span> дан диффеоморфизм <span class="arithmatex">\((U, V) = \bigl(g_{1i}(X, Y), g_{2i}(X, Y)\bigr)\)</span>, отображающий <span class="arithmatex">\(A_i\)</span> в <span class="arithmatex">\(\Omega_{U,V}\)</span>;</li>
+<li>обратное преобразование: <span class="arithmatex">\((X, Y) = \bigl(h_{1i}(U, V), h_{2i}(U, V)\bigr)\)</span>.</li>
+</ul>
+<p><img alt="Разбиение плоскости и образ" src="../../assets/p07/fig-2d-partition.png" /></p>
+<p>Совместное распределение для <span class="arithmatex">\((U, V)\)</span>:</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+f_{U,V}(u, v) = \sum_{i=1}^{k} f_{X,Y}\bigl(h_{1i}(u, v), h_{2i}(u, v)\bigr) |J_i|,
+\]</div>
+<p>где якобиан имеет вид</p>
+<div class="arithmatex">\[
+J_i = \begin{vmatrix}
+\dfrac{\partial h_{1i}}{\partial u} &amp; \dfrac{\partial h_{1i}}{\partial v} \\[6pt]
+\dfrac{\partial h_{2i}}{\partial u} &amp; \dfrac{\partial h_{2i}}{\partial v}
+\end{vmatrix}.
+\]</div>
+</div>
+<h3 id="76">Задача 7.6. Формула суммы<a class="headerlink" href="#76" title="Permanent link">&para;</a></h3>
+<p>Выведите формулу суммы двумерной СВ.
+Для начала поймём, что сумма является преобразованием двумерной СВ в одномерную СВ.
+К сожалению, нам это не совсем подходит, т.к. преобразование не биективно, поэтому, посчитаем формулу для <span class="arithmatex">\((x, y) \to (x + y, y)\)</span></p>
+<div class="arithmatex">\[
+\varphi = (x + y,\ y), \qquad u = x + y,\quad v = y, \qquad J = 1\cdot 1 - 1\cdot 0 = 1.
+\]</div>
+<p>Обратное: <span class="arithmatex">\(\psi = (u - v,\ v)\)</span>, <span class="arithmatex">\(x = u - v\)</span>, <span class="arithmatex">\(y = v\)</span>.</p>
+<div class="arithmatex">\[
+f_{U,V}(u, v) = f_{X,Y}(u - v,\ v) \cdot |J| = f_{X,Y}(u - v,\ v).
+\]</div>
+<p>Fun facts:</p>
+<ol>
+<li>Если <span class="arithmatex">\(X \sim f_X\)</span>, <span class="arithmatex">\(Y \sim f_Y\)</span>, <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> независимы <span class="arithmatex">\(\implies\)</span> <span class="arithmatex">\((X, Y) \sim f_X f_Y = f_{XY}\)</span>.</li>
+<li><span class="arithmatex">\(\int f_{X,Y}\, dy = f_X\)</span> (маргинал).</li>
+</ol>
+<p>Отсюда</p>
+<div class="arithmatex">\[
+f_U(u) = \int_{-\infty}^{+\infty} f_X(u - v)\, f_Y(v)\, dv.
+\]</div>
+<h4 id="_16">Решение<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>После замены <span class="arithmatex">\((U,V)=(X+Y,Y)\)</span> маргинал <span class="arithmatex">\(U\)</span> — интеграл совместной по <span class="arithmatex">\(v\)</span>. При независимости <span class="arithmatex">\(f_{X,Y}(u-v,v)=f_X(u-v)f_Y(v)\)</span>, откуда свёртка выше. Поправка: интеграл берётся только по совместной области определения <span class="arithmatex">\(v\)</span> и <span class="arithmatex">\(u-v\)</span>.</p>
+<p>Произведение <span class="arithmatex">\(Z=XY\)</span> тем же жестом через <span class="arithmatex">\(F_Z\)</span>, либо сразу якобианом <span class="arithmatex">\((Z,X)=(XY,X)\)</span>: <span class="arithmatex">\(x=x\)</span>, <span class="arithmatex">\(y=z/x\)</span>, <span class="arithmatex">\(|J|=1/|x|\)</span>,</p>
+<div class="arithmatex">\[
+f_Z(z) = \int_{-\infty}^{\infty} f_X(x)\, f_Y(z/x)\, \frac{1}{|x|}\, dx.
+\]</div>
+</details>
+<h3 id="77">Задача 7.7. Сумма двух нормальных<a class="headerlink" href="#77" title="Permanent link">&para;</a></h3>
+<p>Независимые нормально распределенные случайные величины <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> заданы плотностями распределений:</p>
+<div class="arithmatex">\[
+f_1(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}, \qquad f_2(y) = \frac{1}{\sqrt{2\pi}} e^{-y^2/2}.
+\]</div>
+<p>Доказать, что композиция этих законов, т. е. плотность распределения случайной величины <span class="arithmatex">\(Z = X + Y\)</span>, также есть нормальный закон.</p>
+<h4 id="_17">Решение<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Используем формулу <span class="arithmatex">\(g(z) = \int_{-\infty}^{\infty} f_1(x) f_2(z - x)\, dx\)</span>. Тогда</p>
+<div class="arithmatex">\[
+g(z) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{-x^2/2} e^{-(z-x)^2/2}\, dx.
+\]</div>
+<p>Выполнив элементарные выкладки, получим</p>
+<div class="arithmatex">\[
+g(z) = \frac{1}{2\pi} e^{-z^2/2} \int_{-\infty}^{\infty} e^{-(x^2 - zx)}\, dx.
+\]</div>
+<p>Дополнив показатель степени показательной функции, стоящей под знаком интеграла, до полного квадрата, вынесем <span class="arithmatex">\(e^{z^2/4}\)</span> за знак интеграла:</p>
+<div class="arithmatex">\[
+g(z) = \frac{1}{2\pi} e^{-z^2/2} e^{z^2/4} \int_{-\infty}^{\infty} e^{-(x - z/2)^2}\, dx.
+\]</div>
+<p>Учитывая, что интеграл Пуассона, стоящий в правой части равенства, равен <span class="arithmatex">\(\sqrt{\pi}\)</span>, окончательно имеем</p>
+<div class="arithmatex">\[
+g(z) = \frac{1}{2\sqrt{\pi}} e^{-z^2/4}.
+\]</div>
+<p>Это <span class="arithmatex">\(n(0,2)\)</span>: дисперсии сложились.</p>
+</details>
+<h2 id="_18">Дискретные распределения<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="78-2x1">Задача 7.8. Линейное <span class="arithmatex">\(2X+1\)</span><a class="headerlink" href="#78-2x1" title="Permanent link">&para;</a></h3>
+<p>Дискретная случайная величина <span class="arithmatex">\(X\)</span> задана законом распределения:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th>3</th>
+<th>6</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p\)</span></td>
+<td>0,2</td>
+<td>0,1</td>
+<td>0,7</td>
+</tr>
+</tbody>
+</table>
+<p>Найти закон распределения случайной величины <span class="arithmatex">\(Y = 2X + 1\)</span>.</p>
+<h4 id="_19">Решение<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(y=2x+1\)</span> взаимно однозначно, вероятности едут вместе со значениями: <span class="arithmatex">\(7\)</span>, <span class="arithmatex">\(13\)</span>, <span class="arithmatex">\(21\)</span> с теми же <span class="arithmatex">\(0{,}2\)</span>, <span class="arithmatex">\(0{,}1\)</span>, <span class="arithmatex">\(0{,}7\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(Y\)</span></th>
+<th>7</th>
+<th>13</th>
+<th>21</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p\)</span></td>
+<td>0,2</td>
+<td>0,1</td>
+<td>0,7</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="79">Задача 7.9. Квадрат дискретной<a class="headerlink" href="#79" title="Permanent link">&para;</a></h3>
+<p>Дискретная случайная величина <span class="arithmatex">\(X\)</span> задана законом распределения:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th>−1</th>
+<th>−2</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p\)</span></td>
+<td>0,3</td>
+<td>0,1</td>
+<td>0,2</td>
+<td>0,4</td>
+</tr>
+</tbody>
+</table>
+<p>Найти закон распределения случайной величины <span class="arithmatex">\(Y = X^2\)</span>.</p>
+<h4 id="_20">Решение<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Возможные значения <span class="arithmatex">\(Y\)</span>: <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(4\)</span>, <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(4\)</span>. Различным значениям <span class="arithmatex">\(X\)</span> соответствуют одинаковые значения <span class="arithmatex">\(Y\)</span>: <span class="arithmatex">\(X^2\)</span> не монотонна.</p>
+<p><span class="arithmatex">\(P(Y=1)=P(X=-1)+P(X=1)=0{,}3+0{,}2=0{,}5\)</span>,
+<span class="arithmatex">\(P(Y=4)=P(X=-2)+P(X=2)=0{,}1+0{,}4=0{,}5\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(Y\)</span></th>
+<th>1</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p\)</span></td>
+<td>0,5</td>
+<td>0,5</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="710">Задача 7.10. Сумма двух дискретных<a class="headerlink" href="#710" title="Permanent link">&para;</a></h3>
+<p>Дискретные независимые случайные величины <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> заданы распределениями:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th>1</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P\)</span></td>
+<td>0,3</td>
+<td>0,7</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(Y\)</span></th>
+<th>2</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P\)</span></td>
+<td>0,6</td>
+<td>0,4</td>
+</tr>
+</tbody>
+</table>
+<p>Найти распределение случайной величины <span class="arithmatex">\(Z = X + Y\)</span>.</p>
+<h4 id="_21">Решение<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Возможные суммы: <span class="arithmatex">\(1+2=3\)</span>, <span class="arithmatex">\(1+4=5\)</span>, <span class="arithmatex">\(3+2=5\)</span>, <span class="arithmatex">\(3+4=7\)</span>. Независимость — произведение,</p>
+<div class="arithmatex">\[
+P(Z=3)=0{,}3\cdot 0{,}6=0{,}18,\quad
+P(Z=5)=0{,}3\cdot 0{,}4+0{,}7\cdot 0{,}6=0{,}54,\quad
+P(Z=7)=0{,}7\cdot 0{,}4=0{,}28.
+\]</div>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(Z\)</span></th>
+<th>3</th>
+<th>5</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P\)</span></td>
+<td>0,18</td>
+<td>0,54</td>
+<td>0,28</td>
+</tr>
+</tbody>
+</table>
+<p>Контроль: <span class="arithmatex">\(0{,}18+0{,}54+0{,}28=1\)</span>.</p>
+</details>
+<h2 id="_22">Самостоятельная<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<p><strong>9 минут.</strong> Независимые случайные величины <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> заданы плотностями распределений:</p>
+<div class="arithmatex">\[
+f_1(x) = \tfrac{1}{3} e^{-x/3}\ (0 \leqslant x &lt; \infty),\qquad
+f_2(y) = \tfrac{1}{5} e^{-y/5}\ (0 \leqslant y &lt; \infty).
+\]</div>
+<p>Найти композицию этих законов, т. е. плотность распределения случайной величины <span class="arithmatex">\(Z = X + Y\)</span>.</p>
+<h4 id="_23">Решение<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Носители неотрицательны, свёртка по <span class="arithmatex">\([0,z]\)</span>:</p>
+<div class="arithmatex">\[
+g(z)=\int_0^z \frac13 e^{-x/3}\cdot\frac15 e^{-(z-x)/5}\, dx = \frac1{15}e^{-z/5}\int_0^z e^{-(2/15)x}\, dx = \frac12\bigl(e^{-z/5}-e^{-z/3}\bigr),
+\]</div>
+<p>при <span class="arithmatex">\(z&gt;0\)</span>, и <span class="arithmatex">\(g(z)=0\)</span> при <span class="arithmatex">\(z&lt;0\)</span>.</p>
+</details>
+<p><strong>6 минут.</strong> Случайная величина <span class="arithmatex">\(X\)</span> равномерно распределена в интервале <span class="arithmatex">\((-\pi/2, \pi/2)\)</span>. Найти плотность распределения <span class="arithmatex">\(g(y)\)</span> случайной величины <span class="arithmatex">\(Y = \sin X\)</span>.</p>
+<p><img alt="Монотонный \(\sin\) на \((-\pi/2,\pi/2)\)" src="../../assets/p07/fig-sin-mono.png" /></p>
+<h4 id="_24">Решение<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Найдем плотность распределения <span class="arithmatex">\(f(x)\)</span> случайной величины <span class="arithmatex">\(X\)</span>. Величина <span class="arithmatex">\(X\)</span> распределена равномерно в интервале <span class="arithmatex">\((-\pi/2, \pi/2)\)</span>, поэтому в этом интервале</p>
+<div class="arithmatex">\[
+f(x) = \frac{1}{\pi/2 - (-\pi/2)} = \frac{1}{\pi};
+\]</div>
+<p>вне рассматриваемого интервала <span class="arithmatex">\(f(x) = 0\)</span>.</p>
+<p>Функция <span class="arithmatex">\(y = \sin x\)</span> в интервале <span class="arithmatex">\((-\pi/2, \pi/2)\)</span> монотонна, следовательно, в этом интервале она имеет обратную функцию <span class="arithmatex">\(x = \psi(y) = \arcsin y\)</span>. Найдем производную <span class="arithmatex">\(\psi'(y)\)</span>:</p>
+<div class="arithmatex">\[
+\psi'(y) = \frac{1}{\sqrt{1 - y^2}}.
+\]</div>
+<p>Найдем искомую плотность распределения по формуле</p>
+<div class="arithmatex">\[
+g(y) = f\bigl[\psi(y)\bigr] \cdot \bigl|\psi'(y)\bigr|.
+\]</div>
+<p>Учитывая, что <span class="arithmatex">\(f(x) = 1/\pi\)</span> (следовательно, <span class="arithmatex">\(f\bigl[\psi(y)\bigr] = 1/\pi\)</span>) и <span class="arithmatex">\(|\psi'(y)| = 1/\sqrt{1-y^2}\)</span>, получим</p>
+<div class="arithmatex">\[
+g(y) = \frac{1}{\pi \sqrt{1 - y^2}}.
+\]</div>
+<p>Так как <span class="arithmatex">\(y = \sin x\)</span>, причем <span class="arithmatex">\(-\pi/2 &lt; x &lt; \pi/2\)</span>, то <span class="arithmatex">\(-1 &lt; y &lt; 1\)</span>. Таким образом, в интервале <span class="arithmatex">\((-1, 1)\)</span> имеем <span class="arithmatex">\(g(y) = 1/(\pi\sqrt{1-y^2})\)</span>; вне этого интервала <span class="arithmatex">\(g(y) = 0\)</span>.</p>
+<p>Контроль:</p>
+<div class="arithmatex">\[
+\int_{-1}^{1} g(y)\, dy = \frac{1}{\pi} \int_{-1}^{1} \frac{dy}{\sqrt{1-y^2}} = \frac{2}{\pi} \int_{0}^{1} \frac{dy}{\sqrt{1-y^2}} = \frac{2}{\pi} \operatorname{arcsin} y \Big|_{0}^{1} = \frac{2}{\pi} \cdot \frac{\pi}{2} = 1.
+\]</div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p><code>HW7_y2023.pdf</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

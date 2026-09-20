@@ -1,0 +1,2085 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p04/">
+      
+      
+        <link rel="prev" href="../p03/">
+      
+      
+        <link rel="next" href="../p05/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Практика 4. Зоопарк дискретных распределений - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 4. Зоопарк дискретных распределений
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Виды задания случайной величины
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Виды задания случайной величины">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Шестигранный кубик
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Биномиальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Биномиальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Отказы элементов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Отказы элементов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Геометрическое
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Геометрическое">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Экзамен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Два орудия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Два орудия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Паскаля
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Паскаля">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Спутник
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Спутник">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Гипергеометрическое
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Гипергеометрическое">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пуассон
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пуассон">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Изделия в пути
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Изделия в пути">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Простейший поток событий
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Простейший поток событий">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#185" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 185. Вызовы такси
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 185. Вызовы такси">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Ординарность в пределе - дополнительно.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Ординарность в пределе - дополнительно.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Виды задания случайной величины
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Виды задания случайной величины">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Шестигранный кубик
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Биномиальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Биномиальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Отказы элементов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Отказы элементов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Геометрическое
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Геометрическое">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Экзамен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Два орудия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Два орудия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Паскаля
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Паскаля">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Спутник
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Спутник">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Гипергеометрическое
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Гипергеометрическое">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пуассон
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пуассон">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Изделия в пути
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Изделия в пути">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Простейший поток событий
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Простейший поток событий">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#185" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 185. Вызовы такси
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 185. Вызовы такси">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Ординарность в пределе - дополнительно.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Ординарность в пределе - дополнительно.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4">Практика 4. Дискретные распределения<a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> Дискретные распределения: вывести формулу на задаче, потом голосовать, как она называется.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Виды задания СВ</li>
+<li>Биномиальное</li>
+<li>Геометрическое</li>
+<li>Паскаля</li>
+<li>Гипергеометрическое</li>
+<li>Пуассон</li>
+<li>Простейший поток</li>
+</ol>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<ul>
+<li>равномерное</li>
+<li>Бернулли</li>
+<li>биномиальное</li>
+<li>Паскаля</li>
+<li>геометрическое</li>
+<li>отрицательное биномиальное</li>
+<li>гипергеометрическое</li>
+<li>Пуассона</li>
+</ul>
+</div>
+<p>Схема следующая:
+Даём задачу на новое распределение, решаем, предлагаем после решения проголосовать, как называется распределение, формулу которого мы только что вывели.
+На большинстве задач угадать сложно, люди будут голосовать не за тот вариант)</p>
+<h2 id="_1">Виды задания случайной величины<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Спросить у зала, какие они знают способы задания СВ.
+Необходимо получить следующие варианты:</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<ul>
+<li>табличка</li>
+<li>функция плотности</li>
+<li>многоугольник распределения</li>
+<li>функция распределения</li>
+<li>график распределения</li>
+<li>объект</li>
+</ul>
+</div>
+<h3 id="_2">Задача. Шестигранный кубик<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Постройте все виды задания СВ для шестигранного кубика.</p>
+<h2 id="_3">Биномиальное<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">Теория<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Количество <span class="arithmatex">\(k\)</span> успехов в <span class="arithmatex">\(n\)</span> испытаниях, исход которых распределен по Бернулли с вероятностью успеха <span class="arithmatex">\(p\)</span> (пример с возвращением мячей в корзину), описывается биномиальным распределением:</p>
+<div class="arithmatex">\[
+B_{n,p}(k) = C_n^k p^k q^{n-k} \tag{1.2.1}
+\]</div>
+<p>где <span class="arithmatex">\(C_n^k = \dfrac{n!}{k!(n-k)!}\)</span> — число сочетаний из <span class="arithmatex">\(n\)</span> по <span class="arithmatex">\(k\)</span>.</p>
+</div>
+<h3 id="_5">Задача. Отказы элементов<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Устройство состоит из трех независимо работающих элементов. Вероятность отказа каждого элемента в одном опыте равна 0,1. Составить закон распределения числа отказавших элементов в одном опыте.</p>
+<h4 id="_6">Решение<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Дискретная случайная величина <span class="arithmatex">\(X\)</span> (число отказавших элементов в одном опыте) имеет следующие возможные значения: <span class="arithmatex">\(x_1=0\)</span> (ни один из элементов устройства не отказал), <span class="arithmatex">\(x_2=1\)</span> (отказал один элемент), <span class="arithmatex">\(x_3=2\)</span> (отказали два элемента) и <span class="arithmatex">\(x_4=3\)</span> (отказали три элемента).</p>
+<p>Отказы элементов независимы один от другого, вероятности отказа каждого элемента равны между собой, поэтому применима формула Бернулли. Учитывая, что, по условию, <span class="arithmatex">\(n=3\)</span>, <span class="arithmatex">\(p=0{,}1\)</span> (следовательно, <span class="arithmatex">\(q=1-0{,}1=0{,}9\)</span>), получим:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P_3(0) &amp;= q^3 = 0{,}9^3 = 0{,}729; \\
+P_3(1) &amp;= C_3^1 p q^2 = 3 \cdot 0{,}1 \cdot 0{,}9^2 = 0{,}243; \\
+P_3(2) &amp;= C_3^2 p^2 q = 3 \cdot 0{,}1^2 \cdot 0{,}9 = 0{,}027; \\
+P_3(3) &amp;= p^3 = 0{,}1^3 = 0{,}001.
+\end{aligned}
+\]</div>
+<p>Контроль: <span class="arithmatex">\(0{,}729+0{,}243+0{,}027+0{,}001=1\)</span>.</p>
+<p>Напишем искомый биномиальный закон распределения <span class="arithmatex">\(X\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p\)</span></td>
+<td>0,729</td>
+<td>0,243</td>
+<td>0,027</td>
+<td>0,001</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="_7">Геометрическое<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">Теория<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Представим ситуацию, что мы вытягиваем мячи из корзины и возвращаем обратно до тех пор, пока не будет вытянут белый шар. Количество таких операций описывается геометрическим распределением. Иными словами: геометрическое распределение описывает количество испытаний <span class="arithmatex">\(n\)</span> до первого успеха при вероятности наступления успеха в каждом испытании <span class="arithmatex">\(p\)</span>. Если <span class="arithmatex">\(n\)</span> подразумевается номер испытания, в котором наступил успех, то геометрическое распределение будет описываться следующей формулой:</p>
+<div class="arithmatex">\[
+\operatorname{Geom}_p(n) = q^{n-1}p \tag{1.3.1}
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Матожидание и дисперсия геометрического распределения:</p>
+<div class="arithmatex">\[
+E\{\operatorname{Geom}_p\} = \frac{1}{p} \tag{1.3.2}
+\]</div>
+<div class="arithmatex">\[
+D\{\operatorname{Geom}_p\} = \frac{q}{p^2} \tag{1.3.3}
+\]</div>
+</div>
+<h3 id="_9">Задача. Экзамен<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>Вероятность сдать экзамен: <span class="arithmatex">\(0{,}4\)</span>. Найдите распределение количества неудачных попыток. (Геометрическое.)</p>
+<p>Вероятность сдать экзамен: <span class="arithmatex">\(0{,}4\)</span>. Найдите распределение количества попыток сдачи (суммарно).</p>
+<p>NOTE: Спросить у зала, как называется распределение из последней задачи.  <br />
+К удивлению зала объявить, что тоже геометрическое, потому что геометрическое задаётся двумя способами.</p>
+<h3 id="_10">Задача. Два орудия<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>Два орудия залпом, но при независимой наводке, стреляют в цель до первого попадания хотя бы одним орудием. Вероятность попадания в цель первым орудием при одном выстреле равна 0,2, вторым — 0,3. Найти.</p>
+<p>5.1. Закон распределения числа <span class="arithmatex">\(X\)</span> сделанных залпов.</p>
+<p>5.2. <span class="arithmatex">\(P(X&gt;2)\)</span>.</p>
+<p>5.3. <span class="arithmatex">\(m_X\)</span>.</p>
+<h4 id="_11">Решение<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Сначала найдем вероятность <span class="arithmatex">\(p\)</span> того, что залп успешный, то есть попало хотя бы одно орудие в цель: <span class="arithmatex">\(p=1-q_1 q_2=1-(1-0{,}2)(1-0{,}3)=1-0{,}8\cdot 0{,}7=0{,}44\)</span>.</p>
+<p>Пусть <span class="arithmatex">\(X\)</span> — число сделанных залпов. Найдем закон распределения <span class="arithmatex">\(X\)</span>. <span class="arithmatex">\(X\)</span> распределено по геометрическому закону с вероятностью <span class="arithmatex">\(P(X=k)=0{,}56^{k-1}\cdot 0{,}44\)</span> (первые <span class="arithmatex">\(k-1\)</span> неуспешных залпов с вероятностью 0,56 каждый, на <span class="arithmatex">\(k\)</span> залпе попадание с вероятностью 0,44).</p>
+<p>5.1. Закон распределения имеет вид:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th>1</th>
+<th>2</th>
+<th><span class="arithmatex">\(\dots\)</span></th>
+<th><span class="arithmatex">\(k\)</span></th>
+<th><span class="arithmatex">\(\dots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P\)</span></td>
+<td>0,44</td>
+<td>0,2464</td>
+<td><span class="arithmatex">\(\dots\)</span></td>
+<td><span class="arithmatex">\(0{,}56^{k-1}\cdot 0{,}44\)</span></td>
+<td><span class="arithmatex">\(\dots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>5.2. Найдем вероятность</p>
+<div class="arithmatex">\[
+P(X&gt;2)=1-P(X\le 2)=1-P(X=1)-P(X=2)=1-0{,}44-0{,}2464=0{,}3136.
+\]</div>
+<p>5.3. <span class="arithmatex">\(m_X = E[X] = 1/p = 1/0{,}44 \approx 2{,}27\)</span>.</p>
+</details>
+<h2 id="_12">Паскаля<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_13">Теория<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Распределение Паскаля является обобщением геометрического распределения: описывает распределение количества неудач <span class="arithmatex">\(k\)</span> в независимых испытаниях, исход которых распределен по Бернулли с вероятностью успеха <span class="arithmatex">\(p\)</span> до наступления <span class="arithmatex">\(r\)</span> успехов в сумме. При <span class="arithmatex">\(r=1\)</span>, мы получим геометрическое распределение для величины <span class="arithmatex">\(k+1\)</span>.</p>
+<div class="arithmatex">\[
+NB_{r,p}(k) = C_{k+r-1}^{k} p^r q^k \tag{1.4.1}
+\]</div>
+<p>где <span class="arithmatex">\(C_n^k = \dfrac{n!}{k!(n-k)!}\)</span> — число сочетаний из <span class="arithmatex">\(n\)</span> по <span class="arithmatex">\(k\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Матожидание и дисперсия отрицательного биномиального распределения:</p>
+<div class="arithmatex">\[
+E\{NB_{r,p}\} = \frac{rq}{p} \tag{1.4.2}
+\]</div>
+<div class="arithmatex">\[
+D\{NB_{r,p}\} = \frac{rq}{p^2} \tag{1.4.3}
+\]</div>
+</div>
+<p><span class="arithmatex">\(S = 4\)</span>, <span class="arithmatex">\(p = 0.8\)</span>. <span class="arithmatex">\(P(k\)</span> — суммарное число неудач<span class="arithmatex">\() = ?\)</span></p>
+<p>Показываем, что для <span class="arithmatex">\(k\)</span> неудач <span class="arithmatex">\(+ r\)</span> успехов нужна вероятность <span class="arithmatex">\(q^k p^r\)</span>, домноженная на число сочетаний <span class="arithmatex">\(C_{k+r-1}^{r-1}\)</span>.</p>
+<p>NOTE: У распределения Паскаля есть второе название - Отрицательное биномиальное.  <br />
+Но, если никто из зала не будет прямо спрашивать, не называется ли распределение выше Отрицательным Биномиальным, то, можно этот факт ненадолго утаить и рассказать после следующего распределения, т.к. из-за наличия большого числа биномов в формуле, многие подумают, что гипергеометрическое это отрицательное биномиальное.</p>
+<h3 id="_14">Задача. Спутник<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>Спутник сканирует заданную акваторию океана за 4 оборота вокруг Земли. Если на каком-либо витке из-за различных помех происходит искажение текущего результата, то оно обнаруживается, и сканирование, выполненное на этом витке, повторяется заново. Найти вероятность того, что всё сканирование будет завершено не более чем за 10 витков, если вероятность искажения результата на одном витке составляет 0,2.</p>
+<h4 id="_15">Решение<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Нужно 4 удачных витка, удача с вероятностью <span class="arithmatex">\(p=0{,}8\)</span>. Число неудач <span class="arithmatex">\(k\)</span> до 4-й удачи — Паскаль <span class="arithmatex">\(NB_{4;0{,}8}\)</span>. Всего витков <span class="arithmatex">\(4+k\)</span>, условие «не более 10» это <span class="arithmatex">\(k\le 6\)</span>:</p>
+<div class="arithmatex">\[
+P = \sum_{k=0}^{6} C_{k+3}^{3}\, (0{,}8)^4 (0{,}2)^k \approx 0{,}999.
+\]</div>
+</details>
+<h2 id="_16">Гипергеометрическое<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p>Испытания <strong>не</strong> независимы.</p>
+<h3 id="_17">Теория<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Пусть общая совокупность содержит <span class="arithmatex">\(N\)</span> объектов, из них <span class="arithmatex">\(D\)</span> помечены как «1», а <span class="arithmatex">\(N-D\)</span> как «0». Будем считать выбор объекта с меткой «1», как успех, а с меткой «0» как неудачу. Проведём <span class="arithmatex">\(n\)</span> испытаний, причём выбранные объект больше не будут участвовать в дальнейших испытаниях. Вероятность наступления <span class="arithmatex">\(k\)</span> успехов будет подчиняться гипергеометрическому распределению:</p>
+<div class="arithmatex">\[
+HG_{N,D,n}(k) = \frac{C_D^k C_{N-D}^{n-k}}{C_N^n} \tag{1.5.1}
+\]</div>
+<p>где <span class="arithmatex">\(C_n^k = \dfrac{n!}{k!(n-k)!}\)</span> — число сочетаний из <span class="arithmatex">\(n\)</span> по <span class="arithmatex">\(k\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Матожидание и дисперсия:</p>
+<div class="arithmatex">\[
+E\{HG_{N,D,n}\} = \frac{nD}{N} \tag{1.5.2}
+\]</div>
+<div class="arithmatex">\[
+D\{HG_{N,D,n}\} = n \frac{D}{N} \frac{N-D}{N} \frac{N-n}{N-1} \tag{1.5.3}
+\]</div>
+</div>
+<ul>
+<li>Ч — успех</li>
+<li><span class="arithmatex">\(N = \operatorname{count}(\text{Ч}) + \operatorname{count}(\text{Б})\)</span></li>
+<li><span class="arithmatex">\(D = \operatorname{count}(\text{Б})\)</span></li>
+<li><span class="arithmatex">\(n\)</span> — выбранное количество</li>
+</ul>
+<h2 id="_18">Пуассон<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(n &lt; 20\)</span> / <span class="arithmatex">\(n &lt; 200\)</span>: биномиальное <span class="arithmatex">\(P(k) = C_n^k p^k q^{n-k}\)</span></li>
+<li><span class="arithmatex">\(n &gt; 50\)</span> и <span class="arithmatex">\(p &gt; 0.1\)</span>: локальная теорема Муавра–Лапласа</li>
+<li><span class="arithmatex">\(n &gt; 50\)</span> и <span class="arithmatex">\(p &lt; 0.1\)</span>: теорема Пуассона <span class="arithmatex">\(P(k) = \lambda^k e^{-\lambda} / k!\)</span></li>
+</ul>
+<h3 id="_19">Теория<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Распределение Пуассона описывает вероятность наступления <span class="arithmatex">\(k\)</span> независимых событий за время <span class="arithmatex">\(t\)</span> при средней интенсивности событий <span class="arithmatex">\(\lambda\)</span>:</p>
+<div class="arithmatex">\[
+P_{\lambda,t}(k) = \frac{(\lambda t)^k}{k!} e^{-\lambda t} \tag{1.6.1}
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Матожидание и дисперсия распределения Пуассона:</p>
+<div class="arithmatex">\[
+E\{P_{\lambda,t}\} = \lambda t \tag{1.6.2}
+\]</div>
+<div class="arithmatex">\[
+D\{P_{\lambda,t}\} = \lambda t \tag{1.6.3}
+\]</div>
+</div>
+<h3 id="_20">Задача. Изделия в пути<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>Завод отправил на базу 500 изделий. Вероятность повреждения изделия в пути равна 0,002. Найти вероятности того, что в пути будет повреждено изделий: а) ровно три; б) менее трех; в) более трех; г) хотя бы одно.</p>
+<h4 id="_21">Решение<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Число <span class="arithmatex">\(n=500\)</span> велико, вероятность <span class="arithmatex">\(p=0{,}002\)</span> мала и рассматриваемые события (повреждение изделий) независимы, поэтому имеет место формула Пуассона</p>
+<div class="arithmatex">\[
+P_n(k)=\lambda^k e^{-\lambda}/k!.
+\]</div>
+<p>а) Найдем <span class="arithmatex">\(\lambda\)</span>: <span class="arithmatex">\(\lambda=np=500\cdot 0{,}002=1\)</span>.</p>
+<p>Найдем вероятность того, что будет повреждено ровно 3 (<span class="arithmatex">\(k=3\)</span>) изделия:</p>
+<div class="arithmatex">\[
+P_{500}(3)=e^{-1}/3!=0{,}36788/6=0{,}0613.
+\]</div>
+<p>б) Найдем вероятность того, что будет повреждено менее трех изделий:</p>
+<div class="arithmatex">\[
+P_{500}(0)+P_{500}(1)+P_{500}(2)=e^{-1}+e^{-1}+e^{-1}/2=(5/2)e^{-1}=2{,}5\cdot 0{,}36788=0{,}9197.
+\]</div>
+<p>в) Найдем вероятность <span class="arithmatex">\(P\)</span> того, что будет повреждено более трех изделий. События «повреждено более трех изделий» и «повреждено не более трех изделий» (обозначим вероятность этого события через <span class="arithmatex">\(Q\)</span>) — противоположны, поэтому <span class="arithmatex">\(P+Q=1\)</span>. Отсюда</p>
+<div class="arithmatex">\[
+P=1-Q=1-\bigl[P_{500}(0)+P_{500}(1)+P_{500}(2)+P_{500}(3)\bigr].
+\]</div>
+<p>Используя результаты, полученные выше, имеем</p>
+<div class="arithmatex">\[
+P=1-\bigl[0{,}9197+0{,}0613\bigr]=0{,}019.
+\]</div>
+<p>г) Найдем вероятность <span class="arithmatex">\(P_1\)</span> того, что будет повреждено хотя бы одно изделие. События «повреждено хотя бы одно изделие» и «ни одно из изделий не повреждено» (обозначим вероятность этого события через <span class="arithmatex">\(Q_1\)</span>) — противоположны, следовательно, <span class="arithmatex">\(P_1+Q_1=1\)</span>. Отсюда искомая вероятность того, что будет повреждено хотя бы одно изделие, равна</p>
+<div class="arithmatex">\[
+P_1=1-Q_1=1-P_{500}(0)=1-e^{-1}=1-0{,}36788=0{,}632.
+\]</div>
+</details>
+<h2 id="_22">Простейший поток событий<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<h3 id="_23">Теория<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Потоком событий называют последовательность событий, которые наступают в случайные моменты времени.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Простейшим (пуассоновским) называют поток событий, который обладает следующими тремя свойствами: стационарностью, «отсутствием последействия» и ординарностью.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><strong>Стационарность</strong> — вероятность попадания того или иного числа событий на интервал времени длиной <span class="arithmatex">\(\tau\)</span> зависит только от длины этого интервала и не зависит от того, где он расположен на оси времени.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><strong>Отсутствие последействия</strong> — события, происходящие на непересекающихся интервалах времени, независимы друг от друга. Иными словами, «будущее» не зависит от «прошлого» при известном настоящем.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><strong>Ординарность</strong> — вероятность появления двух или более событий за бесконечно малый интервал <span class="arithmatex">\(\Delta t\)</span> есть величина порядка <span class="arithmatex">\(o(\Delta t)\)</span>, то есть события происходят поодиночке, а не парами и не группами.</p>
+</div>
+<p>На паре поток считают простейшим, если события редкие, сыплются примерно равномерно и не пачками: звонки на большую АТС в спокойный час, заказы такси, щелчки счётчика Гейгера. <br />
+По большому счёту, смысл распределение Пуассона в том, что это сумма одинаковых Бернуллиевские СВ на очень малых интервалах - произойдёт или не произойдёт некое событие в конкретную миллисекунду/микросекунду и т.д. </p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Интенсивностью потока <span class="arithmatex">\(\lambda\)</span> называют среднее число событий, которые появляются в единицу времени.</p>
+<p>Если постоянная интенсивность потока <span class="arithmatex">\(\lambda\)</span> известна, то вероятность появления <span class="arithmatex">\(k\)</span> событий простейшего потока за время <span class="arithmatex">\(t\)</span> определяется формулой Пуассона</p>
+<div class="arithmatex">\[
+P_t(k)=\frac{(\lambda t)^k e^{-\lambda t}}{k!}.
+\]</div>
+</div>
+<p>Замечание. Поток, обладающий свойством стационарности, называют стационарным; в противном случае — нестационарным.</p>
+<p>Почему на примере со звонками: в каждый момент времени <span class="arithmatex">\(t\)</span> у вас очень низкая вероятность <span class="arithmatex">\(p\)</span>, что позвонит каждый конкретный человек из большого множества в <span class="arithmatex">\(n\)</span> людей.</p>
+<h3 id="185">Задача 185. Вызовы такси<a class="headerlink" href="#185" title="Permanent link">&para;</a></h3>
+<p>Среднее число заказов такси, поступающих на диспетчерский пункт в одну минуту, равно трем. Найти вероятность того, что за 2 мин поступит: а) четыре вызова; б) менее четырех вызовов; в) не менее четырех вызовов.</p>
+<h4 id="_24">Решение<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>По условию, <span class="arithmatex">\(\lambda=3\)</span>, <span class="arithmatex">\(t=2\)</span>, <span class="arithmatex">\(k=4\)</span>. Воспользуемся формулой Пуассона</p>
+<div class="arithmatex">\[
+P_t(k)=\frac{(\lambda t)^k e^{-\lambda t}}{k!}.
+\]</div>
+<p>а) Искомая вероятность того, что за две 2 мин поступит четыре вызова</p>
+<div class="arithmatex">\[
+P_2(4)=\frac{6^4 e^{-6}}{4!}=\frac{1296\cdot 0{,}0025}{24}=0{,}135.
+\]</div>
+<p>б) Событие «поступило менее четырех вызовов» произойдет, если наступит одно из следующих несовместных событий: 1) поступило три вызова; 2) поступило два вызова; 3) поступил один вызов; 4) не поступило ни одного вызова. Эти события несовместны, поэтому применима теорема сложения вероятностей несовместных событий:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P_2(k&lt;4)&amp;=P_2(3)+P_2(2)+P_2(1)+P_2(0)\\
+&amp;=\frac{6^3 e^{-6}}{3!}+\frac{6^2 e^{-6}}{2!}+\frac{6 e^{-6}}{1!}+e^{-6}=e^{-6}(36+18+6+1)\\
+&amp;=0{,}0025\cdot 61=0{,}1525.
+\end{aligned}
+\]</div>
+<p>в) События «поступило менее четырех вызовов» и «поступило не менее четырех вызовов» противоположны, поэтому искомая вероятность того, что за 2 мин поступит не менее четырех вызовов,</p>
+<div class="arithmatex">\[
+P(k\ge 4)=1-P(k&lt;4)=1-0{,}1525=0{,}8475.
+\]</div>
+</details>
+<h3 id="-">Задача. Ординарность в пределе - дополнительно.<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p>Доказать, что для простейшего потока событий</p>
+<div class="arithmatex">\[
+\lim_{t\to 0}\frac{P(k\ge 1)}{P(k=1)}=1.
+\]</div>
+<p>Указание. Использовать теорему о сумме вероятностей противоположных событий:</p>
+<div class="arithmatex">\[
+P_t(k=0)+P_t(k\ge 1)=1.
+\]</div>
+<p>При отыскании искомого предела применить правило Лопиталя.</p>
+<h4 id="_25">Решение<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(P(k\ge 1)=1-e^{-\lambda t}\)</span>, <span class="arithmatex">\(P(k=1)=\lambda t\, e^{-\lambda t}\)</span>. При <span class="arithmatex">\(t\to 0\)</span> получается <span class="arithmatex">\(0/0\)</span>. По Лопиталю:</p>
+<div class="arithmatex">\[
+\lim_{t\to 0}\frac{1-e^{-\lambda t}}{\lambda t\, e^{-\lambda t}} = \lim_{t\to 0}\frac{\lambda e^{-\lambda t}}{\lambda e^{-\lambda t}(1-\lambda t)} = \lim_{t\to 0}\frac{1}{1-\lambda t}=1.
+\]</div>
+<p>За малый интервал «хотя бы одно» почти совпадает с «ровно одно» — это и есть ординарность.</p>
+</details>
+<h2 id="_26">Самостоятельная<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
+<p><strong>4 минуты.</strong> Человек <span class="arithmatex">\(X\)</span> идёт под сосульками. Каждая сосулька может упасть на него с вероятностью <span class="arithmatex">\(0{,}2\)</span>. Голова выдерживает 3 сосульки (на четвёртой он теряет сознание). Посчитайте вероятность, что он успеет пройти под <span class="arithmatex">\(k+4\)</span> сосульками.</p>
+<h4 id="_27">Решение<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Вырубится на 4-й упавшей. Пройти под <span class="arithmatex">\(k+4\)</span> — значит среди этих <span class="arithmatex">\(k+4\)</span> упало не больше трёх, биномиальное:</p>
+<div class="arithmatex">\[
+P = \sum_{i=0}^{3} C_{k+4}^{i}\, (0{,}2)^i (0{,}8)^{k+4-i}.
+\]</div>
+<p>То же через Паскаля: число неудач (неупавших) до 4-й упавшей <span class="arithmatex">\(K\sim NB_{4;0{,}2}\)</span>, тогда <span class="arithmatex">\(P(K\ge k+1)\)</span>.</p>
+</details>
+<p><strong>4 минуты.</strong> Человек <span class="arithmatex">\(Y\)</span> видит валяющегося в отключке <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(\sim 20\)</span> упавших сосулек позади него. Он знает, что <span class="arithmatex">\(X\)</span> вырубится, если на голову упадут 4 сосульки. Берёт 5 случайных упавших сосулек, чтобы наказать их. Найдите вероятность, что среди наказанных будут хотя бы 3 упавшие на голову <span class="arithmatex">\(X\)</span>.</p>
+<h4 id="_28">Решение<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Уже вырубился — на голову упали ровно 4. Среди <span class="arithmatex">\(N=20\)</span> упавших помечены <span class="arithmatex">\(D=4\)</span>, берём <span class="arithmatex">\(n=5\)</span> без возвращения: гипергеометрическое. Ищем <span class="arithmatex">\(P(\xi\ge 3)=P(\xi=3)+P(\xi=4)\)</span>:</p>
+<div class="arithmatex">\[
+P(\xi=k)=\frac{C_4^k C_{16}^{5-k}}{C_{20}^{5}}, \qquad C_{20}^{5}=15504.
+\]</div>
+<div class="arithmatex">\[
+P(\xi=3)=\frac{C_4^3 C_{16}^{2}}{15504}=\frac{480}{15504},\qquad P(\xi=4)=\frac{C_4^4 C_{16}^{1}}{15504}=\frac{16}{15504}.
+\]</div>
+<div class="arithmatex">\[
+P=\frac{496}{15504}=\frac{31}{969}.
+\]</div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p><code>HW4_y2023.pdf</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
