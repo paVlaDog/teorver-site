@@ -1,0 +1,2339 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p09/">
+      
+      
+        <link rel="prev" href="../p08/">
+      
+      
+        <link rel="next" href="../p10/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Практика 9. Многомерные, ЗБЧ и ЦПТ - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 9. Многомерные, ЗБЧ и ЦПТ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Многомерная функция распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Многомерная функция распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 412. Двумерная плотность
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 412. Двумерная плотность">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 416. Плотность в круге
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 416. Плотность в круге">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Маргинальные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Маргинальные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#408" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 408. Законы составляющих
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 408. Законы составляющих">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 423. Плотности составляющих
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 423. Плотности составляющих">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#условные-распределения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1016-xi-eta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 10.16. Зависимы ли \(\xi\) и \(\eta\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 10.16. Зависимы ли \(\xi\) и \(\eta\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Совместные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Совместные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Венчурный фонд
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ЗБЧ и ЦПТ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ЗБЧ и ЦПТ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Люди и вампиры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Применимость ЗБЧ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Применимость ЗБЧ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вероятностные неравенства и правило трёх сигм
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Вероятностные неравенства и правило трёх сигм">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Вызовы на коммутатор
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 1. Вызовы на коммутатор">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Отклонение числа успехов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 4. Отклонение числа успехов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правило трёх сигм
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Многомерная функция распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Многомерная функция распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 412. Двумерная плотность
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 412. Двумерная плотность">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 416. Плотность в круге
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 416. Плотность в круге">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Маргинальные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Маргинальные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#408" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 408. Законы составляющих
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 408. Законы составляющих">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 423. Плотности составляющих
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 423. Плотности составляющих">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#условные-распределения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1016-xi-eta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 10.16. Зависимы ли \(\xi\) и \(\eta\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 10.16. Зависимы ли \(\xi\) и \(\eta\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Совместные распределения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Совместные распределения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Венчурный фонд
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ЗБЧ и ЦПТ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ЗБЧ и ЦПТ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Люди и вампиры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Применимость ЗБЧ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Применимость ЗБЧ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вероятностные неравенства и правило трёх сигм
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Вероятностные неравенства и правило трёх сигм">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Вызовы на коммутатор
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 1. Вызовы на коммутатор">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Отклонение числа успехов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 4. Отклонение числа успехов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правило трёх сигм
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="9">Практика 9. Многомерные, ЗБЧ и ЦПТ<a class="headerlink" href="#9" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> Совместное распределение двух СВ, маргинальные и условные, ЗБЧ с ЦПТ и оценки вероятности неравенствами.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Многомерная функция распределения</li>
+<li>Маргинальные распределения</li>
+<li>Условные распределения</li>
+<li>Совместные распределения</li>
+<li>ЗБЧ и ЦПТ</li>
+<li>Вероятностные неравенства и правило трёх сигм</li>
+</ol>
+<h2 id="_1">Многомерная функция распределения<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Теория<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Двумерной называют случайную величину <span class="arithmatex">\((X, Y)\)</span>, возможные значения которой есть пары чисел <span class="arithmatex">\((x, y)\)</span>. Составляющие <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span>, рассматриваемые одновременно, образуют систему двух случайных величин.</p>
+</div>
+<p>Двумерную величину геометрически можно истолковать как случайную точку <span class="arithmatex">\(M(X; Y)\)</span> на плоскости <span class="arithmatex">\(xOy\)</span> либо как случайный вектор <span class="arithmatex">\(\overrightarrow{OM}\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Функцией распределения вероятностей двумерной случайной величины называют функцию <span class="arithmatex">\(F(x, y)\)</span>, определяющую для каждой пары чисел <span class="arithmatex">\((x, y)\)</span> вероятность того, что <span class="arithmatex">\(X\)</span> примет значение, меньшее <span class="arithmatex">\(x\)</span>, и при этом <span class="arithmatex">\(Y\)</span> примет значение, меньшее <span class="arithmatex">\(y\)</span>:</p>
+<div class="arithmatex">\[
+F(x, y) = P(X &lt; x,\ Y &lt; y).
+\]</div>
+</div>
+<p>Геометрически это равенство можно истолковать так: <span class="arithmatex">\(F(x, y)\)</span> есть вероятность того, что случайная точка <span class="arithmatex">\((X, Y)\)</span> попадет в бесконечный квадрант с вершиной <span class="arithmatex">\((x, y)\)</span>, расположенный левее и ниже этой вершины.</p>
+<p>Функция распределения обладает следующими свойствами.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 1. Значения функции распределения удовлетворяют двойному неравенству</p>
+<div class="arithmatex">\[
+0 \leqslant F(x, y) \leqslant 1.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 2. Функция распределения есть неубывающая функция по каждому аргументу:</p>
+<div class="arithmatex">\[
+F(x_2, y) \geqslant F(x_1, y), \quad \text{если } x_2 &gt; x_1,
+\]</div>
+<div class="arithmatex">\[
+F(x, y_2) \geqslant F(x, y_1), \quad \text{если } y_2 &gt; y_1.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 3. Имеют место предельные соотношения:</p>
+<ol>
+<li><span class="arithmatex">\(F(-\infty, y) = 0\)</span>,</li>
+<li><span class="arithmatex">\(F(x, -\infty) = 0\)</span>,</li>
+<li><span class="arithmatex">\(F(-\infty, -\infty) = 0\)</span>,</li>
+<li><span class="arithmatex">\(F(\infty, \infty) = 1\)</span>.</li>
+</ol>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 4. а) При <span class="arithmatex">\(y = \infty\)</span> функция распределения системы становится функцией распределения составляющей <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+F(x, \infty) = F_1(x).
+\]</div>
+<p>б) При <span class="arithmatex">\(x = \infty\)</span> функция распределения системы становится функцией распределения составляющей <span class="arithmatex">\(Y\)</span>:</p>
+<div class="arithmatex">\[
+F(\infty, y) = F_2(y).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Плотностью совместного распределения вероятностей (двумерной плотностью вероятности) непрерывной двумерной случайной величины называют вторую смешанную производную от функции распределения:</p>
+<div class="arithmatex">\[
+f(x, y) = \frac{\partial^2 F(x, y)}{\partial x\, \partial y}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Зная плотность распределения, можно найти функцию распределения по формуле</p>
+<div class="arithmatex">\[
+F(x, y) = \int_{-\infty}^{y} \int_{-\infty}^{x} f(x, y)\, dx\, dy.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Вероятность попадания случайной точки <span class="arithmatex">\((X, Y)\)</span> в область <span class="arithmatex">\(D\)</span> определяется равенством</p>
+<div class="arithmatex">\[
+P\bigl[(X, Y) \subset D\bigr] = \iint\limits_{(D)} f(x, y)\, dx\, dy.
+\]</div>
+</div>
+<p>Двумерная плотность вероятности обладает следующими свойствами.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 1. Двумерная плотность вероятности неотрицательна:</p>
+<div class="arithmatex">\[
+f(x, y) \geqslant 0.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свойство 2. Двойной несобственный интеграл с бесконечными пределами от двумерной плотности вероятности равен единице:</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y)\, dx\, dy = 1.
+\]</div>
+</div>
+<p>В частности, если все возможные значения <span class="arithmatex">\((X, Y)\)</span> принадлежат конечной области <span class="arithmatex">\(D\)</span>, то</p>
+<div class="arithmatex">\[
+\iint\limits_{(D)} f(x, y)\, dx\, dy = 1.
+\]</div>
+<h3 id="412">Задача 412. Двумерная плотность<a class="headerlink" href="#412" title="Permanent link">&para;</a></h3>
+<p>Задана функция распределения двумерной случайной величины</p>
+<div class="arithmatex">\[
+F(x, y) =
+\begin{cases}
+1 - 3^{-x} - 3^{-y} + 3^{-x-y} &amp; \text{при } x \geqslant 0,\ y \geqslant 0, \\
+0 &amp; \text{при } x &lt; 0 \text{ или } y &lt; 0.
+\end{cases}
+\]</div>
+<p>Найти двумерную плотность вероятности системы.</p>
+<h4 id="_3">Решение<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Используем формулу <span class="arithmatex">\(f(x, y) = \dfrac{\partial^2 F}{\partial x\, \partial y}\)</span>. Найдем частные производные:</p>
+<div class="arithmatex">\[
+\frac{\partial F}{\partial x} = \ln 3 \cdot \bigl(3^{-x} - 3^{-x-y}\bigr),
+\qquad
+\frac{\partial^2 F}{\partial x\, \partial y} = \ln^2 3 \cdot 3^{-x-y}.
+\]</div>
+<p>Итак, искомая двумерная плотность вероятности</p>
+<div class="arithmatex">\[
+f(x, y) =
+\begin{cases}
+\ln^2 3 \cdot 3^{-x-y} &amp; \text{при } x \geqslant 0,\ y \geqslant 0, \\
+0 &amp; \text{при } x &lt; 0 \text{ или } y &lt; 0.
+\end{cases}
+\]</div>
+<p>Рекомендуем читателю для контроля убедиться, что</p>
+<div class="arithmatex">\[
+\ln^2 3 \int_0^{\infty} \int_0^{\infty} 3^{-x-y}\, dx\, dy = 1.
+\]</div>
+</details>
+<h3 id="416">Задача 416. Плотность в круге<a class="headerlink" href="#416" title="Permanent link">&para;</a></h3>
+<p>В круге <span class="arithmatex">\(x^2 + y^2 \leqslant R^2\)</span> двумерная плотность вероятности <span class="arithmatex">\(f(x, y) = C\bigl(R - \sqrt{x^2 + y^2}\bigr)\)</span>; вне круга <span class="arithmatex">\(f(x, y) = 0\)</span>. Найти:</p>
+<p>а) постоянную <span class="arithmatex">\(C\)</span>;</p>
+<p>б) вероятность попадания случайной точки <span class="arithmatex">\((X, Y)\)</span> в круг радиуса <span class="arithmatex">\(r = 1\)</span> с центром в начале координат, если <span class="arithmatex">\(R = 2\)</span>.</p>
+<h4 id="_4">Решение<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>а) Используем второе свойство двумерной плотности вероятности:</p>
+<div class="arithmatex">\[
+\iint\limits_{(D)} C\bigl(R - \sqrt{x^2 + y^2}\bigr)\, dx\, dy = 1.
+\]</div>
+<p>Отсюда</p>
+<div class="arithmatex">\[
+C = 1 \Big/ \iint\limits_{(D)} \bigl(R - \sqrt{x^2 + y^2}\bigr)\, dx\, dy.
+\]</div>
+<p>Перейдя к полярным координатам, получим</p>
+<div class="arithmatex">\[
+C = 1 \Big/ \int_0^{2\pi} d\varphi \int_0^{R} (R - \rho)\,\rho\, d\rho = 3/(\pi R^3).
+\]</div>
+<p>б) По условию, <span class="arithmatex">\(R = 2\)</span>; следовательно, <span class="arithmatex">\(C = 3/(8\pi)\)</span> и</p>
+<div class="arithmatex">\[
+f(x, y) = (3/8\pi)\bigl(2 - \sqrt{x^2 + y^2}\bigr).
+\]</div>
+<p>Вероятность попадания случайной точки <span class="arithmatex">\((X, Y)\)</span> в круг радиуса <span class="arithmatex">\(r = 1\)</span> с центром в начале координат (область <span class="arithmatex">\(D_1\)</span>)</p>
+<div class="arithmatex">\[
+P\bigl[(X, Y) \subset D_1\bigr] = (3/8\pi) \iint\limits_{(D_1)} \bigl(2 - \sqrt{x^2 + y^2}\bigr)\, dx\, dy.
+\]</div>
+<p>Перейдя к полярным координатам, окончательно получим искомую вероятность:</p>
+<div class="arithmatex">\[
+P = (3/8\pi) \int_0^{2\pi} d\varphi \int_0^{1} (2 - \rho)\,\rho\, d\rho = 1/2.
+\]</div>
+</details>
+<h2 id="_5">Маргинальные распределения<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_6">Теория<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Непрерывные</label><label for="__tabbed_1_2">Дискретные</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+f_X(x) = \int_{-\infty}^{\infty} f_{X,Y}(x, y)\, dy,
+\qquad
+f_Y(y) = \int_{-\infty}^{\infty} f_{X,Y}(x, y)\, dx.
+\]</div>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+P(X = x_i) = \sum_j P(X = x_i,\ Y = y_j),
+\qquad
+P(Y = y_j) = \sum_i P(X = x_i,\ Y = y_j).
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<p><img alt="Маргинальные плотности" src="../../assets/p09/07.png" /></p>
+<h3 id="408">Задача 408. Законы составляющих<a class="headerlink" href="#408" title="Permanent link">&para;</a></h3>
+<p>Задано распределение вероятностей дискретной двумерной случайной величины:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(Y \backslash X\)</span></th>
+<th>3</th>
+<th>10</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>0,17</td>
+<td>0,13</td>
+<td>0,25</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0,10</td>
+<td>0,30</td>
+<td>0,05</td>
+</tr>
+</tbody>
+</table>
+<p>Найти законы распределения составляющих <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span>.</p>
+<h4 id="_7">Решение<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Сложив вероятности «по столбцам», получим вероятности возможных значений <span class="arithmatex">\(X\)</span>: <span class="arithmatex">\(p(3) = 0{,}27\)</span>, <span class="arithmatex">\(p(10) = 0{,}43\)</span>, <span class="arithmatex">\(p(12) = 0{,}30\)</span>.</p>
+<p>Напишем закон распределения составляющей <span class="arithmatex">\(X\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th>3</th>
+<th>10</th>
+<th>12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p\)</span></td>
+<td>0,27</td>
+<td>0,43</td>
+<td>0,30</td>
+</tr>
+</tbody>
+</table>
+<p>Контроль: <span class="arithmatex">\(0{,}27 + 0{,}43 + 0{,}30 = 1\)</span>.</p>
+<p>Сложив вероятности «по строкам», аналогично найдем распределение <span class="arithmatex">\(Y\)</span>.</p>
+</details>
+<h3 id="задача-423">Задача 423. Плотности составляющих<a class="headerlink" href="#задача-423" title="Permanent link">&para;</a></h3>
+<p>Задана плотность совместного распределения непрерывной двумерной случайной величины <span class="arithmatex">\((X, Y)\)</span></p>
+<div class="arithmatex">\[
+f(x, y) = \frac{1}{\pi}\, e^{-(1/2)(x^2 + 2xy + 5y^2)}.
+\]</div>
+<p>Найти: а) плотности распределения составляющих; б) условные плотности распределения составляющих.</p>
+<h4 id="_8">Решение<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>а) Найдем плотность распределения составляющей <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+f_1(x) = \int_{-\infty}^{\infty} f(x, y)\, dy = \frac{1}{\pi} \int_{-\infty}^{\infty} e^{-(1/2)(x^2 + 2xy + 5y^2)}\, dy.
+\]</div>
+<p>Вынесем за знак интеграла множитель <span class="arithmatex">\(e^{-x^2/2}\)</span>, не зависящий от переменной интегрирования <span class="arithmatex">\(y\)</span>, и дополним оставшийся показатель степени до полного квадрата; тогда</p>
+<div class="arithmatex">\[
+f_1(x) = (1/\pi) \cdot e^{-x^2/2} \cdot e^{x^2/10} \cdot \sqrt{2/5} \int_{-\infty}^{\infty} e^{-\bigl(\sqrt{5/2}\, y + \sqrt{1/10}\, x\bigr)^2}\, d\bigl(\sqrt{5/2}\, y + \sqrt{1/10}\, x\bigr).
+\]</div>
+<p>Учитывая, что интеграл Пуассона <span class="arithmatex">\(\displaystyle\int_{-\infty}^{\infty} e^{-u^2}\, du = \sqrt{\pi}\)</span>, окончательно получим плотность распределения составляющей <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+f_1(x) = \sqrt{2/(5\pi)}\, e^{-0{,}4 x^2}.
+\]</div>
+<p>Аналогично найдем плотность распределения составляющей <span class="arithmatex">\(Y\)</span>:</p>
+<div class="arithmatex">\[
+f_2(y) = \sqrt{2/\pi}\, e^{-2 y^2}.
+\]</div>
+</details>
+<p>В задачнике в этой промежуточной строке при <span class="arithmatex">\(x\)</span> стояло <span class="arithmatex">\(\sqrt{2/5}\)</span>. Верно <span class="arithmatex">\(\sqrt{1/10}\)</span>: иначе перекрёстный член равен <span class="arithmatex">\(2xy\)</span>, а не <span class="arithmatex">\(xy\)</span>. Множитель <span class="arithmatex">\(e^{x^2/10}\)</span> и ответы <span class="arithmatex">\(f_1\)</span>, <span class="arithmatex">\(f_2\)</span> от этого не меняются. Условные плотности — в <a href="#условные-распределения">следующей теме</a>.</p>
+<h2 id="условные-распределения">Условные распределения<a class="headerlink" href="#условные-распределения" title="Permanent link">&para;</a></h2>
+<h3 id="_9">Теория<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Условное распределение</p>
+<div class="arithmatex">\[
+f_{Y\mid X}(y\mid x) = \frac{f_{X,Y}(x, y)}{f_X(x)}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Независимые случайные величины</p>
+<div class="arithmatex">\[
+f_{X,Y}(x, y) = f_X(x)\, f_Y(y).
+\]</div>
+</div>
+<p><img alt="Условное распределение" src="../../assets/p09/11.png" /></p>
+<p>Добьём предыдущие 2 примера. Пункт б <a href="#задача-423">задачи 423</a>.</p>
+<h4 id="_10">Решение<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Найдем условные плотности распределения составляющих. Выполнив элементарные выкладки, получим:</p>
+<div class="arithmatex">\[
+\varphi(x\mid y) = \frac{f(x, y)}{f_2(y)} = \frac{1}{\sqrt{2\pi}}\, e^{-0{,}5(x+y)^2},
+\]</div>
+<div class="arithmatex">\[
+\psi(y\mid x) = \frac{f(x, y)}{f_1(x)} = \frac{\sqrt{5}}{\sqrt{2\pi}}\, e^{-0{,}1(x+5y)^2}.
+\]</div>
+</details>
+<p>С дискретными тоже должно быть просто.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Теорема. Для того чтобы случайные величины <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> были независимыми, необходимо и достаточно, чтобы интегральная функция системы <span class="arithmatex">\((X, Y)\)</span> была равна произведению интегральных функций составляющих:</p>
+<div class="arithmatex">\[
+F(x, y) = F_1(x) \cdot F_2(y).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Следствие. Для того чтобы непрерывные случайные величины <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> были независимыми, необходимо и достаточно, чтобы дифференциальная функция системы <span class="arithmatex">\((X, Y)\)</span> была равна произведению дифференциальных функций составляющих:</p>
+<div class="arithmatex">\[
+f(x, y) = f_1(x) \cdot f_2(y).
+\]</div>
+</div>
+<h3 id="1016-xi-eta">Задача 10.16. Зависимы ли <span class="arithmatex">\(\xi\)</span> и <span class="arithmatex">\(\eta\)</span><a class="headerlink" href="#1016-xi-eta" title="Permanent link">&para;</a></h3>
+<p>Совместное распределение случайных величин <span class="arithmatex">\(\xi\)</span> и <span class="arithmatex">\(\eta\)</span> имеет плотность</p>
+<div class="arithmatex">\[
+p(x, y) = \frac{c}{1 + x^2 + x^2 y^2 + y^2}.
+\]</div>
+<p>а) Найти постоянную <span class="arithmatex">\(c\)</span>.</p>
+<p>б) Установить, зависимы или нет случайные величины <span class="arithmatex">\(\xi\)</span> и <span class="arithmatex">\(\eta\)</span>.</p>
+<p>в) Найти плотность распределения <span class="arithmatex">\(\xi\)</span>.</p>
+<p>г) Найти плотность распределения <span class="arithmatex">\(\eta\)</span>.</p>
+<p>д) Найти вероятность <span class="arithmatex">\(\mathbf{P}\bigl\{|\xi| \leqslant 1,\ |\eta| \leqslant 1\bigr\}\)</span>.</p>
+<h4 id="_11">Решение<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Знаменатель раскладывается: <span class="arithmatex">\(1 + x^2 + x^2 y^2 + y^2 = (1+x^2)(1+y^2)\)</span>, поэтому</p>
+<div class="arithmatex">\[
+p(x, y) = \frac{c}{(1+x^2)(1+y^2)}.
+\]</div>
+<p>а) Нормировка:</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} p(x, y)\, dx\, dy = c \left( \int_{-\infty}^{\infty} \frac{dx}{1+x^2} \right)^2 = c \pi^2 = 1,
+\]</div>
+<p>отсюда <span class="arithmatex">\(c = 1/\pi^2\)</span>.</p>
+<p>б) <span class="arithmatex">\(p(x, y) = \dfrac{1}{\pi(1+x^2)} \cdot \dfrac{1}{\pi(1+y^2)}\)</span> — произведение плотностей составляющих, <span class="arithmatex">\(\xi\)</span> и <span class="arithmatex">\(\eta\)</span> независимы.</p>
+<p>в), г) Это плотности Коши:</p>
+<div class="arithmatex">\[
+p_\xi(x) = \frac{1}{\pi(1+x^2)}, \qquad p_\eta(y) = \frac{1}{\pi(1+y^2)}.
+\]</div>
+<p>д)</p>
+<div class="arithmatex">\[
+\mathbf{P}\bigl\{|\xi| \leqslant 1,\ |\eta| \leqslant 1\bigr\} = \left( \int_{-1}^{1} \frac{dx}{\pi(1+x^2)} \right)^2 = \left( \frac{\operatorname{arctg} 1 - \operatorname{arctg}(-1)}{\pi} \right)^2 = \left( \frac{1}{2} \right)^2 = \frac{1}{4}.
+\]</div>
+</details>
+<h2 id="_12">Совместные распределения<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_13">Теория<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Составное распределение / compound (mixture) distribution.</p>
+<p>Случайная величина <span class="arithmatex">\(X\)</span> задается составным распределением, если её распределение зависит от величины, которая так же имеет распределение.</p>
+</div>
+<h3 id="_14">Практический пример: Венчурный фонд<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>За год фонд инвестирует в случайное число стартапов <span class="arithmatex">\(Y \sim \mathrm{Poisson}(\lambda)\)</span>. Каждый стартап независимо оказывается удачным с вероятностью <span class="arithmatex">\(p\)</span>. Если проектов ровно <span class="arithmatex">\(Y\)</span>, число удачных <span class="arithmatex">\(X\)</span> — число успехов в <span class="arithmatex">\(Y\)</span> испытаниях Бернулли, то есть <span class="arithmatex">\(X \mid Y \sim \mathrm{binomial}(Y, p)\)</span>.</p>
+<p>У биномиального матожидание равно числу испытаний, умноженному на <span class="arithmatex">\(p\)</span>, поэтому <span class="arithmatex">\(\mathbb{E}[X \mid Y] = pY\)</span>. Снимаем условие по <span class="arithmatex">\(Y\)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+Y &amp;\sim \mathrm{Poisson}(\lambda), \\
+X \mid Y &amp;\sim \mathrm{binomial}(Y, p), \\
+\mathbb{E}[X \mid Y] &amp;= pY, \\
+\mathbb{E}\bigl[\mathbb{E}[X \mid Y]\bigr] &amp;= \mathbb{E}[pY] = p\,\mathbb{E} Y = p\lambda = \mathbb{E} X.
+\end{aligned}
+\]</div>
+<p>Хотелось бы посчитать это матожидание уже здесь, но сделаем это на следующей паре: пока матожидания многомерных ещё не проходили.</p>
+<h2 id="_15">ЗБЧ и ЦПТ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="_16">Теория<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Теорема: слабый закон больших чисел / weak law of large numbers.</p>
+<p>Пусть <span class="arithmatex">\(X_1, \ldots, X_n\)</span> являются i.i.d. случайными величинами с <span class="arithmatex">\(\mathbb{E} X_i = \mu\)</span> и <span class="arithmatex">\(\mathrm{Var}\, X_i = \sigma^2 &lt; \infty\)</span>. Пусть <span class="arithmatex">\(\bar X_n\)</span> является соответствующим выборочным средним. Тогда для любого <span class="arithmatex">\(\varepsilon &gt; 0\)</span></p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \mathrm{P}\bigl(|\bar X_n - \mu| &lt; \varepsilon\bigr) = 1.
+\]</div>
+<p>В таком случае мы говорим, что <span class="arithmatex">\(\bar X_n\)</span> сходится к <span class="arithmatex">\(\mu\)</span> по вероятности.</p>
+</div>
+<h3 id="_17">Практический пример: Люди и вампиры<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>Генеральная совокупность — вероятность 1 к 99 людей и вампиров; выборка — подходим к случайным людям на улице и спрашиваем. ЗБЧ говорит, что среднее выборочное стремится к матожиданию.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Пусть <span class="arithmatex">\(X_1, \ldots, X_n\)</span> есть последовательность независимых одинаково распределённых случайных величин, имеющих конечные математическое ожидание <span class="arithmatex">\(\mu\)</span> и дисперсию <span class="arithmatex">\(\sigma^2\)</span>. Пусть также</p>
+<div class="arithmatex">\[
+S_n = \sum_{i=1}^{n} X_i.
+\]</div>
+<p>Тогда</p>
+<div class="arithmatex">\[
+\frac{S_n - \mu n}{\sigma\sqrt{n}} \to N(0,1)
+\]</div>
+<p>по распределению при <span class="arithmatex">\(n \to \infty\)</span>, где <span class="arithmatex">\(N(0,1)\)</span> — нормальное распределение с нулевым математическим ожиданием и стандартным отклонением, равным единице. Определяя выборочное среднее первых <span class="arithmatex">\(n\)</span> величин как</p>
+<div class="arithmatex">\[
+\bar X_n = \frac{1}{n} \sum_{i=1}^{n} X_i,
+\]</div>
+<p>можно переписать результат центральной предельной теоремы в следующем виде (ЦПТ в форме Леви):</p>
+<div class="arithmatex">\[
+\sqrt{n}\,\frac{\bar X_n - \mu}{\sigma} \to N(0,1)
+\]</div>
+<p>по распределению при <span class="arithmatex">\(n \to \infty\)</span>.</p>
+</div>
+<p>Скорость сходимости можно оценить с помощью неравенства Берри—Эссеена.</p>
+<h3 id="_18">Задача. Применимость ЗБЧ<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>Дана последовательность независимых случайных величин <span class="arithmatex">\(X_1, X_2, \ldots, X_n, \ldots\)</span> Случайная величина <span class="arithmatex">\(X_n\)</span> может принимать значения: <span class="arithmatex">\(-n\alpha, 0, n\alpha\)</span> (<span class="arithmatex">\(\alpha &gt; 0\)</span>, <span class="arithmatex">\(\alpha = \mathrm{const}\)</span>) с вероятностями, соответственно равными: <span class="arithmatex">\(\dfrac{1}{2n^2};\; 1 - \dfrac{1}{n^2};\; \dfrac{1}{2n^2}\)</span>.</p>
+<p>Применим ли к этой последовательности закон больших чисел?</p>
+<h4 id="_19">Решение<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Для того чтобы к последовательности случайных величин была применима теорема Чебышева, достаточно, чтобы эти величины были попарно независимы, имели конечные математические ожидания и равномерно ограниченные дисперсии.</p>
+<p>Поскольку случайные величины независимы, они попарно независимы, то есть первое требование выполняется.</p>
+<p>Проверим, выполняется ли требование конечности математического ожидания:</p>
+<div class="arithmatex">\[
+M(X_n) = -n\alpha \cdot \frac{1}{2n^2} + 0 \cdot \Bigl(1 - \frac{1}{n^2}\Bigr) + n\alpha \cdot \frac{1}{2n^2} = 0.
+\]</div>
+<p>Да, математические ожидания ограничены.</p>
+<p>Исследуем дисперсии:</p>
+<div class="arithmatex">\[
+D(X_n) = (-n\alpha)^2 \cdot \frac{1}{2n^2} + 0^2 \cdot \Bigl(1 - \frac{1}{n^2}\Bigr) + (n\alpha)^2 \cdot \frac{1}{2n^2} = \frac{\alpha^2 n^2}{2n^2} + \frac{\alpha^2 n^2}{2n^2} = \frac{\alpha^2}{2} + \frac{\alpha^2}{2} = \alpha^2.
+\]</div>
+<p>Дисперсии ограничены сверху <span class="arithmatex">\(D(X_n) \leqslant \alpha^2\)</span>.</p>
+<p>Так как все требования выполнены, закон больших чисел применим.</p>
+</details>
+<h2 id="_20">Вероятностные неравенства и правило трёх сигм<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h3 id="_21">Теория<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>С точки зрения практических задач эти неравенства нужны, чтобы упрощать вычисления.</p>
+<p>Часто мы уже можем честно посчитать сложную модель. Иногда задача вовсе не просит такого подхода — и силы тратятся зря.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если случайная величина, принимающая неотрицательные значения, то для любых <span class="arithmatex">\(a &gt; 0\)</span> выполняется</p>
+<div class="arithmatex">\[
+P(X \geqslant a) \leqslant \frac{M(X)}{a}.
+\]</div>
+<p>В записи (когда нужно оценить вероятность того, что <span class="arithmatex">\(X &lt; a\)</span>)</p>
+<div class="arithmatex">\[
+P(X &lt; a) &gt; 1 - \frac{M(X)}{a}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если известно математическое ожидание (первый момент), но и дисперсия случайной величины (и они конечны), можно использовать неравенство Чебышева, которое дает оценку вида:</p>
+<div class="arithmatex">\[
+P\bigl(|X - M(X)| \geqslant a\bigr) \leqslant \frac{D(X)}{a^2}, \quad a &gt; 0.
+\]</div>
+<p>В другой форме:</p>
+<div class="arithmatex">\[
+P\bigl(|X - M(X)| &lt; a\bigr) &gt; 1 - \frac{D(X)}{a^2}, \quad a &gt; 0.
+\]</div>
+</div>
+<h3 id="1">Задача 1. Вызовы на коммутатор<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>Среднее количество вызовов, поступающих на коммутатор завода в течение часа, равно 300. Оценить вероятность того, что в течение следующего часа число вызовов на коммутатор: а) превысит 400; б) будет не более 500.</p>
+<h4 id="_22">Решение<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Неравенство Маркова.</p>
+</details>
+<h3 id="4">Задача 4. Отклонение числа успехов<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>В 1600 испытаниях Бернулли вероятность успеха в каждом испытании равна <span class="arithmatex">\(0{,}3\)</span>. С помощью неравенства Чебышева оценить вероятность того, что разница между числом успехов в этих испытаниях и средним числом успехов будет меньше 50.</p>
+<h4 id="_23">Решение<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Неравенство Чебышева для биномиального распределения.</p>
+</details>
+<h3 id="_24">Правило трёх сигм<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Правило трёх сигм <span class="arithmatex">\((3\sigma)\)</span> — практически все значения нормально распределённой случайной величины лежат в интервале</p>
+<div class="arithmatex">\[
+(\mu - 3\sigma;\; \mu + 3\sigma),
+\]</div>
+<p>где <span class="arithmatex">\(\mu = \mathbb{E}\xi\)</span> — математическое ожидание и параметр нормальной случайной величины.</p>
+</div>
+<p>Более точно — приблизительно с вероятностью <span class="arithmatex">\(0{,}9973\)</span> значение нормально распределённой случайной величины лежит в указанном интервале.</p>
+<p><img alt="Правило трёх сигм" src="../../assets/p09/23.png" /></p>
+<h2 id="_25">Самостоятельная<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p><strong>3 минуты.</strong> Генератор обеспечивает выходное напряжение, которое может отклоняться от номинального на значение, не превышающее 1 В, с вероятностью <span class="arithmatex">\(0{,}95\)</span>. Какие значения дисперсии выходного напряжения можно ожидать?</p>
+<h4 id="_26">Решение<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Пусть <span class="arithmatex">\(X\)</span> — величина выходного напряжения. Применим неравенство Чебышева <span class="arithmatex">\(P\bigl(|X - MX| &lt; \varepsilon\bigr) \geqslant 1 - DX/\varepsilon^2\)</span>. Подставляя наши данные <span class="arithmatex">\(\varepsilon = 1\)</span>, <span class="arithmatex">\(P = 0{,}95\)</span>, имеем:</p>
+<div class="arithmatex">\[
+0{,}95 = P\bigl(|X - MX| &lt; 1\bigr) \geqslant 1 - D(X)/1^2,
+\]</div>
+<div class="arithmatex">\[
+1 - D(X) \leqslant 0{,}95,
+\]</div>
+<div class="arithmatex">\[
+D(X) \geqslant 0{,}05.
+\]</div>
+<p>Ответ: дисперсия не менее <span class="arithmatex">\(0{,}05\)</span> В<span class="arithmatex">\(^2\)</span>.</p>
+</details>
+<p><strong>6 минут.</strong> <strong>425.</strong> Плотность совместного распределения непрерывной двумерной случайной величины <span class="arithmatex">\(f(x, y) = \cos x \cdot \cos y\)</span> в квадрате <span class="arithmatex">\(0 \leqslant x \leqslant \pi/2\)</span>, <span class="arithmatex">\(0 \leqslant y \leqslant \pi/2\)</span>; вне квадрата <span class="arithmatex">\(f(x, y) = 0\)</span>. Доказать, что составляющие <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> независимы.</p>
+<h4 id="_27">Решение<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Указание. Убедиться, что безусловные плотности распределения составляющих равны соответствующим условным плотностям.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p><code>HW9_y2023.pdf</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2330 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p08/">
+      
+      
+        <link rel="prev" href="../p07/">
+      
+      
+        <link rel="next" href="../p09/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Практика 8. Зоопарк непрерывных распределений - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 8. Зоопарк непрерывных распределений
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Равномерное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Равномерное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.1. Светофор
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.1. Светофор">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Экспоненциальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Экспоненциальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.2. Надёжность элемента
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.2. Надёжность элемента">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Нормальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Нормальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.3. Ошибка измерения вала
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.3. Ошибка измерения вала">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Хи-квадрат
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Хи-квадрат">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.4. Сумма хи-квадрат
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.4. Сумма хи-квадрат">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Гамма
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Гамма">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.5. Сумма экспоненциальных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.5. Сумма экспоненциальных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Коши
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Коши">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.6. Луч Коши
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.6. Луч Коши">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Стьюдент
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Стьюдент">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Фишер
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Фишер">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Логнормальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Логнормальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Равномерное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Равномерное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.1. Светофор
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.1. Светофор">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Экспоненциальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Экспоненциальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.2. Надёжность элемента
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.2. Надёжность элемента">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Нормальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Нормальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.3. Ошибка измерения вала
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.3. Ошибка измерения вала">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Хи-квадрат
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Хи-квадрат">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.4. Сумма хи-квадрат
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.4. Сумма хи-квадрат">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Гамма
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Гамма">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.5. Сумма экспоненциальных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.5. Сумма экспоненциальных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Коши
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Коши">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8.6. Луч Коши
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8.6. Луч Коши">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Стьюдент
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Стьюдент">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Фишер
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Фишер">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Логнормальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Логнормальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="8">Практика 8. Зоопарк непрерывных распределений<a class="headerlink" href="#8" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> Три базовых непрерывных — равномерное, экспоненциальное, нормальное — и зоопарк производных: таблица, плотность, где живёт каждое.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Равномерное</li>
+<li>Экспоненциальное</li>
+<li>Нормальное</li>
+<li>Хи-квадрат</li>
+<li>Гамма</li>
+<li>Коши</li>
+<li>Стьюдент</li>
+<li>Фишер</li>
+<li>Логнормальное</li>
+</ol>
+<p>В отличие от дискретных распределений, где каждое создано под конкретную цель, основная польза известных непрерывных — в том, что они удобно связаны друг с другом.</p>
+<p>Берём три распределения с понятным физическим смыслом (равномерное, экспоненциальное, нормальное) и выводим из них остальные.</p>
+<p><img alt="Связи непрерывных распределений" src="../../assets/p08/01.png" /></p>
+<h2 id="_1">Равномерное<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Теория<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(U(a,b)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in[a,b]\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(0\)</span> при <span class="arithmatex">\(x&lt;a\)</span>; <span class="arithmatex">\(\dfrac{x-a}{b-a}\)</span> при <span class="arithmatex">\(a\le x\le b\)</span>; <span class="arithmatex">\(1\)</span> при <span class="arithmatex">\(x&gt;b\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{1}{b-a}\)</span> на <span class="arithmatex">\((a,b)\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(\dfrac{a+b}{2}\)</span></td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(\dfrac{(b-a)^2}{12}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность равномерного" src="../../assets/p08/fig-uniform.png" /></p>
+<p>Чаще всего возникает в геометрических задачах и в задачах, где мы ничего не знаем об объекте.</p>
+<h3 id="81">Задача 8.1. Светофор<a class="headerlink" href="#81" title="Permanent link">&para;</a></h3>
+<p>Светофор 20 секунд горит зелёным и 40 секунд красным. Посчитайте вероятность, что когда вы подойдёте, придётся ждать не менее 15 секунд.</p>
+<h4 id="_3">Решение<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Цикл 60 с, момент подхода равномерен на цикле. Ждать можно только на красном: если от начала красного прошло <span class="arithmatex">\(u\)</span> секунд, остаток <span class="arithmatex">\(40-u\)</span>. Нужно <span class="arithmatex">\(40-u\ge 15\)</span>, то есть <span class="arithmatex">\(u\le 25\)</span>. Окно 25 с из 60:</p>
+<div class="arithmatex">\[
+P=\frac{25}{60}=\frac{5}{12}.
+\]</div>
+</details>
+<h2 id="_4">Экспоненциальное<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">Теория<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(\operatorname{Exp}(\lambda)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in[0;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(1-e^{-\lambda x}\)</span> при <span class="arithmatex">\(x\ge 0\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\lambda e^{-\lambda x}\)</span> при <span class="arithmatex">\(x\ge 0\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(\dfrac{1}{\lambda}\)</span></td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(\dfrac{1}{\lambda^2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность экспоненциального" src="../../assets/p08/fig-exp.png" /></p>
+<h3 id="_6">Практический пример:<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Показательный закон надёжности: длительность времени безотказной работы элемента. Интервалы простейшего потока событий — тоже экспоненциальные: время до первого события.</p>
+<p>Экспоненциальное можно использовать <strong>только</strong> при отсутствии старения: вероятность поломки за промежуток <span class="arithmatex">\(X\)</span> не зависит от того, где этот <span class="arithmatex">\(X\)</span> расположен и наоборот: при отсутствии старения можно использовать <strong>только</strong> экспоненциальное. Должно выполняться <span class="arithmatex">\(P(X)P(Y) = P(X+Y)\)</span>, а решения этого уравнения всегда вида <span class="arithmatex">\(e^{ax}\)</span>.</p>
+<p>Для жизни одной детали этого достаточно. Если отказ — первое событие потока, к отсутствию старения добавляется постоянная интенсивность (стационарность); ординарность нужна, чтобы в <span class="arithmatex">\(dt\)</span> писать <span class="arithmatex">\(\lambda\,dt\)</span>.</p>
+<h3 id="82">Задача 8.2. Надёжность элемента<a class="headerlink" href="#82" title="Permanent link">&para;</a></h3>
+<p>Длительность времени безотказной работы элемента имеет показательное распределение <span class="arithmatex">\(F(t)=1-e^{-0{,}01t}\)</span> <span class="arithmatex">\((t&gt;0)\)</span>. Найти вероятность того, что за время длительностью <span class="arithmatex">\(t=50\)</span> ч элемент не откажет.</p>
+<h4 id="_7">Решение<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Функция надёжности <span class="arithmatex">\(R(t)=e^{-\lambda t}\)</span> определяет вероятность безотказной работы элемента за время длительностью <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[
+R(50)=e^{-0{,}01\cdot 50}=e^{-0{,}5}=0{,}606.
+\]</div>
+<p>Тот же ответ как дополнение: <span class="arithmatex">\(F(50)=1-e^{-0{,}5}=0{,}394\)</span>, отсюда <span class="arithmatex">\(1-0{,}394=0{,}606\)</span>.</p>
+</details>
+<h2 id="_8">Нормальное<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">Теория<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(N(\mu,\sigma^2)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in(-\infty;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(\Phi\bigl((x-\mu)/\sigma\bigr)\)</span>, где <span class="arithmatex">\(\Phi(x)=\dfrac{1}{\sqrt{2\pi}}\displaystyle\int_{-\infty}^{x} e^{-t^{2}/2}\,dt\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac12\bigl((x-\mu)/\sigma\bigr)^2}\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(\mu\)</span></td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(\sigma^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность нормального" src="../../assets/p08/fig-normal.png" /></p>
+<p>Существует ЦПТ: центральные предельные теоремы (ЦПТ) — класс теорем в теории вероятностей, утверждающих, что сумма достаточно большого количества слабо зависимых случайных величин, имеющих примерно одинаковые масштабы (ни одно из слагаемых не доминирует, не вносит в сумму определяющего вклада), имеет распределение, близкое к нормальному.</p>
+<p>Из-за этого распределение многих вещей в природе близко к нормальному:
+- погрешности измерений
+- рост людей
+- точка, куда попадёт стрела по оси <span class="arithmatex">\(X\)</span></p>
+<h3 id="83">Задача 8.3. Ошибка измерения вала<a class="headerlink" href="#83" title="Permanent link">&para;</a></h3>
+<p>Производится измерение диаметра вала без систематических (одного знака) ошибок. Случайные ошибки измерения <span class="arithmatex">\(X\)</span> подчинены нормальному закону со средним квадратическим отклонением <span class="arithmatex">\(\sigma=10\)</span> мм. Найти вероятность того, что измерение будет произведено с ошибкой, не превышающей по абсолютной величине 15 мм.</p>
+<h4 id="_10">Решение<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Математическое ожидание случайных ошибок равно нулю, поэтому применим формулу <span class="arithmatex">\(P(|X|&lt;\delta)=2\Phi(\delta/\sigma)\)</span>. Положив <span class="arithmatex">\(\delta=15\)</span>, <span class="arithmatex">\(\sigma=10\)</span>, находим <span class="arithmatex">\(P(|X|&lt;15)=2\Phi(1{,}5)\)</span>. По таблице приложения 2 находим: <span class="arithmatex">\(\Phi(1{,}5)=0{,}4332\)</span>. Искомая вероятность</p>
+<div class="arithmatex">\[
+P(|X|&lt;15)=2\cdot 0{,}4332=0{,}8664.
+\]</div>
+<p>Здесь <span class="arithmatex">\(\Phi\)</span> — функция Лапласа Гмурмана. Через стандартную ФР из таблички: <span class="arithmatex">\(2\Phi(1{,}5)-1\)</span>.</p>
+</details>
+<h2 id="-">Хи-квадрат<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<h3 id="_11">Теория<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(\chi^2(k)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in[0;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(\dfrac{\gamma(k/2,\,x/2)}{\Gamma(k/2)}\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{(1/2)^{k/2}}{\Gamma(k/2)}\,x^{k/2-1}e^{-x/2}\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(k\)</span></td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(2k\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность хи-квадрат" src="../../assets/p08/fig-chisq.png" /></p>
+<p>Его уже получили в практике 7, возведением стандартного нормального в квадрат: если <span class="arithmatex">\(Z_1,\ldots,Z_k\)</span> независимы и <span class="arithmatex">\(N(0,1)\)</span>, то <span class="arithmatex">\(Z_1^2+\cdots+Z_k^2\sim\chi^2(k)\)</span>. Живёт в матстате: выборочная дисперсия нормальной выборки, критерий согласия Пирсона.</p>
+<h3 id="84-">Задача 8.4. Сумма хи-квадрат<a class="headerlink" href="#84-" title="Permanent link">&para;</a></h3>
+<p>Доказать, что сумма хи-квадрат есть хи-квадрат.</p>
+<h4 id="_12">Решение<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Независимые <span class="arithmatex">\(X\sim\chi^2(k)\)</span>, <span class="arithmatex">\(Y\sim\chi^2(m)\)</span>. По формуле суммы с практики 7</p>
+<div class="arithmatex">\[
+f_{X+Y}(z)=\int_{-\infty}^{+\infty} f_X(z-x)\,f_Y(x)\,dx.
+\]</div>
+<p>Носители <span class="arithmatex">\([0,+\infty)\)</span>, поэтому интеграл по <span class="arithmatex">\(x\in[0,z]\)</span> при <span class="arithmatex">\(z&gt;0\)</span>:</p>
+<div class="arithmatex">\[
+f_{X+Y}(z)
+=
+\frac{(1/2)^{k/2}}{\Gamma(k/2)}\,
+\frac{(1/2)^{m/2}}{\Gamma(m/2)}
+\int_0^z (z-x)^{k/2-1}e^{-(z-x)/2}\,x^{m/2-1}e^{-x/2}\,dx
+\]</div>
+<div class="arithmatex">\[
+=
+\frac{(1/2)^{(k+m)/2}}{\Gamma(k/2)\,\Gamma(m/2)}\,e^{-z/2}
+\int_0^z (z-x)^{k/2-1}\,x^{m/2-1}\,dx.
+\]</div>
+<p>Замена <span class="arithmatex">\(x=zt\)</span>, <span class="arithmatex">\(dx=z\,dt\)</span>:</p>
+<div class="arithmatex">\[
+\int_0^z (z-x)^{k/2-1}\,x^{m/2-1}\,dx
+=
+z^{(k+m)/2-1}\int_0^1 t^{m/2-1}(1-t)^{k/2-1}\,dt.
+\]</div>
+<p>Интеграл Эйлера: <span class="arithmatex">\(\displaystyle\int_0^1 t^{a-1}(1-t)^{b-1}\,dt=\Gamma(a)\Gamma(b)/\Gamma(a+b)\)</span> при <span class="arithmatex">\(a=m/2\)</span>, <span class="arithmatex">\(b=k/2\)</span>. Тогда</p>
+<div class="arithmatex">\[
+f_{X+Y}(z)
+=
+\frac{(1/2)^{(k+m)/2}}{\Gamma((k+m)/2)}\,z^{(k+m)/2-1}e^{-z/2},
+\]</div>
+<p>а это плотность <span class="arithmatex">\(\chi^2(k+m)\)</span>.</p>
+<p>Если не хочется вспоминать интеграл Эйлера: достаточно свёртки с <span class="arithmatex">\(\chi^2(2)\)</span>. У <span class="arithmatex">\(\chi^2(2)\)</span> плотность <span class="arithmatex">\(\frac12 e^{-x/2}\)</span>, интеграл становится <span class="arithmatex">\(\int_0^z x^{k/2-1}\,dx\)</span>, и <span class="arithmatex">\(\Gamma(k/2+1)=(k/2)\Gamma(k/2)\)</span> даёт <span class="arithmatex">\(\chi^2(k+2)\)</span>. Дальше индукция по чётному слагаемому.</p>
+</details>
+<h2 id="_13">Гамма<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="_14">Теория<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>Форма <span class="arithmatex">\(k&gt;0\)</span>, интенсивность <span class="arithmatex">\(\lambda&gt;0\)</span> (как у экспоненциального). Другая параметризация — масштаб <span class="arithmatex">\(\theta=1/\lambda\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(\Gamma(k,\lambda)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in(0;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(\dfrac{\gamma(k,\,\lambda x)}{\Gamma(k)}\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{\lambda^k}{\Gamma(k)}\,x^{k-1}e^{-\lambda x}\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(\dfrac{k}{\lambda}\)</span></td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(\dfrac{k}{\lambda^2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность гамма" src="../../assets/p08/fig-gamma.png" /></p>
+<p>Время до <span class="arithmatex">\(n\)</span>-го события простейшего потока; суммы времён обслуживания, осадки, страховые выплаты. Для этого нужны все три аксиомы простейшего потока: интервалы н.о.р. экспоненциальные с постоянным <span class="arithmatex">\(\lambda\)</span>, события поодиночке.</p>
+<p>Связь с уже известными:</p>
+<ul>
+<li><span class="arithmatex">\(\operatorname{Exp}(\lambda)=\Gamma(1,\lambda)\)</span></li>
+<li>Эрланг: <span class="arithmatex">\(\Gamma(n,\lambda)\)</span> при целом <span class="arithmatex">\(n\)</span> — сумма <span class="arithmatex">\(n\)</span> независимых <span class="arithmatex">\(\operatorname{Exp}(\lambda)\)</span></li>
+<li><span class="arithmatex">\(\chi^2(k)=\Gamma(k/2,\,\lambda=1/2)\)</span></li>
+</ul>
+<h3 id="85">Задача 8.5. Сумма экспоненциальных<a class="headerlink" href="#85" title="Permanent link">&para;</a></h3>
+<p>Посчитать сумму <span class="arithmatex">\(N\)</span> экспоненциальных распределений.</p>
+<h4 id="_15">Решение<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Независимые <span class="arithmatex">\(X_i\sim\operatorname{Exp}(\alpha)\)</span>, плотность <span class="arithmatex">\(\alpha e^{-\alpha x}\)</span>. Свёртка двух:</p>
+<div class="arithmatex">\[
+\int_0^y \alpha e^{-\alpha(y-x)}\,\alpha e^{-\alpha x}\,dx
+=
+\alpha^2 e^{-\alpha y}\int_0^y dx
+=
+\alpha^2 y\, e^{-\alpha y}.
+\]</div>
+<p>С третьим:</p>
+<div class="arithmatex">\[
+\int_0^y \alpha^2 x e^{-\alpha x}\cdot\alpha e^{-\alpha(y-x)}\,dx
+=
+\alpha^3 e^{-\alpha y}\int_0^y x\,dx
+=
+\frac{\alpha^3 y^2 e^{-\alpha y}}{2}.
+\]</div>
+<p>По индукции сумма <span class="arithmatex">\(N\)</span> штук:</p>
+<div class="arithmatex">\[
+f_{S_N}(y)=\frac{\alpha^N y^{N-1}e^{-\alpha y}}{(N-1)!}=\Gamma(N,\,\alpha)
+\]</div>
+<p>(Эрланг). В общем виде <span class="arithmatex">\(\dfrac{\alpha^n x^{n-1}e^{-\alpha x}}{\Gamma(n)}\)</span>; <span class="arithmatex">\(\chi^2(n)=\Gamma(n/2,\,1/2)\)</span>.</p>
+</details>
+<h2 id="_16">Коши<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="_17">Теория<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(C(x_0,y)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in(-\infty;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(\dfrac{1}{\pi}\operatorname{arctg}\dfrac{x-x_0}{y}+\dfrac12\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{1}{\pi y\bigl(1+\bigl((x-x_0)/y\bigr)^2\bigr)}\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td>не существует</td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td>не существует</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность \(C(0,y)\)" src="../../assets/p08/fig-cauchy-pdf.png" /></p>
+<p>Отношение двух независимых стандартных нормальных; ордината случайного луча (задача ниже). Хвосты настолько тяжёлые, что нет матожидания: выборочное среднее не сходится к константе (снова Коши), ЦПТ не работает. Стандартное <span class="arithmatex">\(C(0,1)\)</span> — это Стьюдент с <span class="arithmatex">\(\nu=1\)</span>.</p>
+<h3 id="86">Задача 8.6. Луч Коши<a class="headerlink" href="#86" title="Permanent link">&para;</a></h3>
+<p>В прямоугольной системе координат <span class="arithmatex">\(xOy\)</span> из точки <span class="arithmatex">\(A(4; 0)\)</span> наудачу (под произвольным углом <span class="arithmatex">\(t\)</span>) проведён луч, пересекающий ось <span class="arithmatex">\(Oy\)</span>. Найти плотность <span class="arithmatex">\(g(y)\)</span> распределения вероятностей ординаты <span class="arithmatex">\(y\)</span> точки пересечения проведённого луча с осью <span class="arithmatex">\(Oy\)</span>.</p>
+<p><img alt="Луч из \(A(4;0)\)" src="../../assets/p08/fig-cauchy-ray.png" /></p>
+<h4 id="_18">Решение<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Угол <span class="arithmatex">\(t\)</span> можно рассматривать как случайную величину, распределённую равномерно в интервале <span class="arithmatex">\((-\pi/2,\,\pi/2)\)</span>, причём в этом интервале плотность распределения</p>
+<div class="arithmatex">\[
+f(t)=\frac{1}{\pi/2-(-\pi/2)}=\frac{1}{\pi};
+\]</div>
+<p>вне рассматриваемого интервала <span class="arithmatex">\(f(t)=0\)</span>.</p>
+<p>Из рис. 7 следует, что ордината <span class="arithmatex">\(y\)</span> связана с углом <span class="arithmatex">\(t\)</span> следующей зависимостью: <span class="arithmatex">\(y=4\operatorname{tg} t\)</span>. Эта функция в интервале <span class="arithmatex">\((-\pi/2,\,\pi/2)\)</span> монотонно возрастает, поэтому для отыскания искомой плотности распределения <span class="arithmatex">\(g(y)\)</span> применима формула</p>
+<div class="arithmatex">\[
+g(y)=f\bigl[\psi(y)\bigr]\cdot\bigl|\psi'(y)\bigr|, \qquad (*)
+\]</div>
+<p>где <span class="arithmatex">\(\psi(y)\)</span> — функция, обратная функции <span class="arithmatex">\(y=4\operatorname{tg} t\)</span>.</p>
+<p>Найдём <span class="arithmatex">\(\psi(y)\)</span>:</p>
+<div class="arithmatex">\[
+\psi(y)=t=\operatorname{arctg}(y/4).
+\]</div>
+<p>Найдём <span class="arithmatex">\(\psi'(y)\)</span>:</p>
+<div class="arithmatex">\[
+\psi'(y)=4/(16+y^2).
+\]</div>
+<p>Следовательно,</p>
+<div class="arithmatex">\[
+\bigl|\psi'(y)\bigr|=4/(16+y^2). \qquad (**)
+\]</div>
+<p>Найдём <span class="arithmatex">\(f\bigl[\psi(y)\bigr]\)</span>. Так как <span class="arithmatex">\(f(t)=1/\pi\)</span>, то</p>
+<div class="arithmatex">\[
+f\bigl[\psi(y)\bigr]=1/\pi. \qquad (***)
+\]</div>
+<p>Подставив <span class="arithmatex">\((**)\)</span> и <span class="arithmatex">\((***)\)</span> в <span class="arithmatex">\((*)\)</span>, окончательно получим</p>
+<div class="arithmatex">\[
+g(y)=\frac{4}{\pi(16+y^2)},
+\]</div>
+<p>причём <span class="arithmatex">\(-\infty&lt;y&lt;\infty\)</span> (последнее следует из того, что <span class="arithmatex">\(y=4\operatorname{tg} t\)</span> и <span class="arithmatex">\(-\pi/2&lt;t&lt;\pi/2\)</span>). Это <span class="arithmatex">\(C(0,4)\)</span>.</p>
+</details>
+<h2 id="_19">Стьюдент<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<h3 id="_20">Теория<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(t_\nu\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in(-\infty;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(\dfrac12+\dfrac{x\,\Gamma\bigl((\nu+1)/2\bigr)}{\sqrt{\nu\pi}\,\Gamma(\nu/2)}\,{}_2F_1\bigl(\tfrac12,\tfrac{\nu+1}{2};\tfrac32;-x^2/\nu\bigr)\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{\Gamma\bigl((\nu+1)/2\bigr)}{\sqrt{\nu\pi}\,\Gamma(\nu/2)}\bigl(1+x^2/\nu\bigr)^{-(\nu+1)/2}\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(0\)</span> при <span class="arithmatex">\(\nu&gt;1\)</span>; иначе не существует</td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(\dfrac{\nu}{\nu-2}\)</span> при <span class="arithmatex">\(\nu&gt;2\)</span>; иначе не существует</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность Стьюдента" src="../../assets/p08/fig-student.png" /></p>
+<p>Если <span class="arithmatex">\(Z\sim N(0,1)\)</span> и <span class="arithmatex">\(V\sim\chi^2(\nu)\)</span> независимы, то</p>
+<div class="arithmatex">\[
+t=\frac{Z}{\sqrt{V/\nu}}\sim t_\nu.
+\]</div>
+<p>На схеме пары: нормальное, делённое на корень из хи-квадрат. При <span class="arithmatex">\(\nu=1\)</span> это Коши; при <span class="arithmatex">\(\nu\to\infty\)</span> плотность идёт в <span class="arithmatex">\(N(0,1)\)</span>.</p>
+<p>В матстате: нормальная выборка, <span class="arithmatex">\(\sigma\)</span> неизвестна — статистика <span class="arithmatex">\((\bar X-\mu)/(s/\sqrt n)\)</span> имеет распределение Стьюдента. Отсюда <span class="arithmatex">\(t\)</span>-критерии и доверительные интервалы для среднего.</p>
+<h2 id="_21">Фишер<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h3 id="_22">Теория<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(F(d_1,d_2)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in(0;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(I_{\frac{d_1 x}{d_1 x+d_2}}\bigl(\tfrac{d_1}{2},\tfrac{d_2}{2}\bigr)\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{1}{B(d_1/2,\,d_2/2)}\Bigl(\dfrac{d_1}{d_2}\Bigr)^{d_1/2} x^{d_1/2-1}\bigl(1+\tfrac{d_1}{d_2}x\bigr)^{-(d_1+d_2)/2}\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(\dfrac{d_2}{d_2-2}\)</span> при <span class="arithmatex">\(d_2&gt;2\)</span></td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(\dfrac{2d_2^2(d_1+d_2-2)}{d_1(d_2-2)^2(d_2-4)}\)</span> при <span class="arithmatex">\(d_2&gt;4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность Фишера" src="../../assets/p08/fig-fisher.png" /></p>
+<p>Если независимые <span class="arithmatex">\(U\sim\chi^2(d_1)\)</span>, <span class="arithmatex">\(V\sim\chi^2(d_2)\)</span>, то</p>
+<div class="arithmatex">\[
+F=\frac{U/d_1}{V/d_2}\sim F(d_1,d_2).
+\]</div>
+<p>На схеме: отношение двух хи-квадрат. В матстате — сравнение двух выборочных дисперсий, дисперсионный анализ.</p>
+<h2 id="_23">Логнормальное<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<h3 id="_24">Теория<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(\operatorname{LogN}(\mu,\sigma^2)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Носитель</td>
+<td><span class="arithmatex">\(x\in(0;+\infty)\)</span></td>
+</tr>
+<tr>
+<td>Функция распределения</td>
+<td><span class="arithmatex">\(\Phi\bigl((\ln x-\mu)/\sigma\bigr)\)</span></td>
+</tr>
+<tr>
+<td>Плотность</td>
+<td><span class="arithmatex">\(\dfrac{1}{x\sigma\sqrt{2\pi}}\exp\bigl[-(\ln x-\mu)^2/(2\sigma^2)\bigr]\)</span></td>
+</tr>
+<tr>
+<td>Матожидание</td>
+<td><span class="arithmatex">\(e^{\mu+\sigma^2/2}\)</span></td>
+</tr>
+<tr>
+<td>Дисперсия</td>
+<td><span class="arithmatex">\(\bigl(e^{\sigma^2}-1\bigr)e^{2\mu+\sigma^2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Плотность логнормального" src="../../assets/p08/fig-lognormal.png" /></p>
+<p>Логнормальное распределение появляется как распределение преобразования <span class="arithmatex">\(X=e^Y\)</span>, где <span class="arithmatex">\(Y\sim n(\mu,\sigma^2)\)</span>.</p>
+<ul>
+<li>Нормальное распределение моделирует аддитивное наполнение ошибки</li>
+<li>Логнормальное распределение моделирует мультипликативное наполнение ошибки</li>
+</ul>
+<p>Например, рассмотрим модель экспоненциального роста популяции <span class="arithmatex">\(N\)</span></p>
+<div class="arithmatex">\[
+\frac{dN}{dt}=(r+\omega(t))N,
+\]</div>
+<p>где <span class="arithmatex">\(r\)</span> — скорость роста и <span class="arithmatex">\(\omega(t)\)</span> — некоторый случайный шум.</p>
+<h2 id="_25">Самостоятельная<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p><strong>3 минуты.</strong> Бомбардировщик пролетел вдоль моста <span class="arithmatex">\(30 \times 8\)</span> м и сбросил бомбы. <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> (расстояния от вертикальной и горизонтальной осей симметрии моста до места падения) независимы, СКО равны 6 и 4, матожидания равны 0. Найти вероятность попадания в мост (можно формулу).</p>
+<h4 id="_26">Решение<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Попадание: <span class="arithmatex">\(|X|&lt;15\)</span>, <span class="arithmatex">\(|Y|&lt;4\)</span>. Независимость и нормальность <span class="arithmatex">\(N(0,6^2)\)</span>, <span class="arithmatex">\(N(0,4^2)\)</span>. Через стандартную ФР из таблички:</p>
+<div class="arithmatex">\[
+P=\bigl(2\Phi(15/6)-1\bigr)\bigl(2\Phi(4/4)-1\bigr)=\bigl(2\Phi(2{,}5)-1\bigr)\bigl(2\Phi(1)-1\bigr).
+\]</div>
+</details>
+<p><strong>3 минуты.</strong> Умный ученик получает в среднем 1 озарение за 40 минут домашки. Считая озарения простейшим потоком, вероятность получить <span class="arithmatex">\(2{,}5\)</span> озарения не более чем за час (можно формулу).</p>
+<h4 id="_27">Решение<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Простейший поток, <span class="arithmatex">\(\lambda=1/40\)</span> (в минуту). Время до <span class="arithmatex">\(n\)</span>-го события — <span class="arithmatex">\(\Gamma(n,\lambda)\)</span>. Нужно <span class="arithmatex">\(P(S_{2{,}5}\le 60)\)</span>:</p>
+<div class="arithmatex">\[
+P=\frac{\gamma\bigl(5/2,\,60/40\bigr)}{\Gamma(5/2)}=\frac{\gamma(5/2,\,3/2)}{\Gamma(5/2)}.
+\]</div>
+<p>Для целого <span class="arithmatex">\(n\)</span> это то же самое, что <span class="arithmatex">\(P(N(t)\ge n)\)</span>; здесь <span class="arithmatex">\(n\)</span> не целое — поэтому гамма, а не Пуассон.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p><code>HW8_y2023.pdf</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

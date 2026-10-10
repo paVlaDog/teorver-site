@@ -1,0 +1,2276 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p01/">
+      
+      
+        <link rel="prev" href="../../ocenivanie/">
+      
+      
+        <link rel="next" href="../p02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Практика 1. События и Байес - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 1. События и Байес
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Чеховское ружьё
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Элементарные исходы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Элементарные исходы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Суммы и перемножения событий
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Суммы и перемножения событий">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Два орудия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 1. Два орудия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Комбинаторика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Комбинаторика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 2. МАТЕМАТИКА
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 2. МАТЕМАТИКА">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 3. Сенаторы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 3. Сенаторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условная вероятность
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условная вероятность">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Следствия независимости
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 4. Следствия независимости">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5. Какие равенства верны
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5. Какие равенства верны">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Независимость
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Независимость">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 6. Тетраэдр Бернштейна
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7. Квадрат · дополнительно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8. Независимость от себя · дополнительно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#практический-пример-стив" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Стив
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Стив">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формула полной вероятности и формула Байеса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Формула полной вероятности и формула Байеса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 9. Списывание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 10. Цепь · дополнительно
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 10. Цепь · дополнительно">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#практический-пример-солнце" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Солнце
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Солнце">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Казино
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Казино">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Чеховское ружьё
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Элементарные исходы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Элементарные исходы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Суммы и перемножения событий
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Суммы и перемножения событий">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Два орудия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 1. Два орудия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Комбинаторика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Комбинаторика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 2. МАТЕМАТИКА
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 2. МАТЕМАТИКА">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 3. Сенаторы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 3. Сенаторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условная вероятность
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условная вероятность">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Следствия независимости
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 4. Следствия независимости">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5. Какие равенства верны
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5. Какие равенства верны">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Независимость
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Независимость">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 6. Тетраэдр Бернштейна
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7. Квадрат · дополнительно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8. Независимость от себя · дополнительно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#практический-пример-стив" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Стив
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Стив">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формула полной вероятности и формула Байеса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Формула полной вероятности и формула Байеса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 9. Списывание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 10. Цепь · дополнительно
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 10. Цепь · дополнительно">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#практический-пример-солнце" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Солнце
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Солнце">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Казино
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Казино">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1">Практика 1. Повторение дискретной ТВ: события и условные вероятности<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> События, классическая вероятность, независимость и формула Байеса; зарядить ружьё на базовую частоту.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Ружьё: профессии Стива</li>
+<li>Элементарные исходы</li>
+<li>Суммы и произведения</li>
+<li>Комбинаторика</li>
+<li>Условная вероятность</li>
+<li>Независимость</li>
+<li>Полная вероятность и Байес</li>
+</ol>
+<h2 id="_1">Чеховское ружьё<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>На доске в начале пары — четыре профессии. Зачитать описание, спросить, какая профессия наиболее вероятна. Ответ не раскрывать: выстрел в <a href="#практический-пример-стив">практическом примере про Стива</a>.</p>
+<ul>
+<li>Библиотекарь</li>
+<li>Фармацевт</li>
+<li>Продавец</li>
+<li>Пожарный</li>
+</ul>
+<p>Некто описывает своего соседа: «Стив очень застенчив и нелюдим, всегда готов помочь, но мало интересуется окружающими и действительностью. Он тихий и аккуратный, любит порядок и систематичность и очень внимателен к деталям». Кем вероятнее работает Стив?</p>
+<h2 id="_2">Элементарные исходы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">Теория<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Дискретное</label><label for="__tabbed_1_2">Общее <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><em>Дискретным вероятностным пространством</em> (англ. <em>discrete probability space</em>) называется пара из некоторого (не более чем счётного) множества <span class="arithmatex">\(\Omega\)</span> и функции <span class="arithmatex">\(p: \Omega \rightarrow \mathbb{R}_+\)</span> (<span class="arithmatex">\(\Omega\)</span> — <em>множество элементарных исходов</em>, <span class="arithmatex">\(\omega \in \Omega\)</span> — <em>элементарный исход</em>), такая, что <span class="arithmatex">\(\sum_{\omega \in \Omega} p(\omega) = 1\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p>Пусть <span class="arithmatex">\(\Omega\)</span> — непустое множество элементарных исходов.
+Класс <span class="arithmatex">\(\mathcal{F}\)</span> подмножеств образует <span class="arithmatex">\(\sigma\)</span>-алгебру:</p>
+<ol>
+<li><span class="arithmatex">\(\Omega \in \mathcal{F}\)</span>;</li>
+<li>если <span class="arithmatex">\(A \in \mathcal{F}\)</span>, то <span class="arithmatex">\(\overline{A} \in \mathcal{F}\)</span>;</li>
+<li>если <span class="arithmatex">\(A_1, A_2, \dots \in \mathcal{F}\)</span>, то <span class="arithmatex">\(\bigcup_{i=1}^{\infty} A_i \in \mathcal{F}\)</span>.</li>
+</ol>
+<p>Элементы <span class="arithmatex">\(\mathcal{F}\)</span> — <em>события</em>. <span class="arithmatex">\(\Omega\)</span> — достоверное, <span class="arithmatex">\(\varnothing\)</span> — невозможное. <span class="arithmatex">\(A\)</span> и <span class="arithmatex">\(B\)</span> несовместны, если <span class="arithmatex">\(AB = \varnothing\)</span>.</p>
+<p>Функция <span class="arithmatex">\(P : \mathcal{F} \rightarrow [0, 1]\)</span> — <em>вероятность</em>, если <span class="arithmatex">\(P(\Omega) = 1\)</span> и</p>
+<div class="arithmatex">\[
+P\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} P(A_i)
+\]</div>
+<p>для попарно несовместных <span class="arithmatex">\(A_i\)</span>. Тройка <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> — <em>вероятностное пространство</em>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>У текущего потока нет теории мер перед теорвером.
+Поэтому, следует</p>
+<p>Четыре отличия общего определения от дискретного:
+- Снято ограничение «не более чем счётно» на <span class="arithmatex">\(\Omega\)</span> (Для работы на непрерывных мн-вах).
+- Вероятность задаётся не на элементарных исходах, а на событиях (Для работы на непрерывных мн-вах)..
+- Введены сложные правила, какие множества считаются событиями (Т.К. есть неизмеримые мн-ва).
+- Счётную аддитивность приходится требовать явно: в дискретном случае она следовала из того, что сумма по всем исходам равна 1.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Классическое определение: <span class="arithmatex">\(\Omega = \{\omega_1, \dots, \omega_n\}\)</span>, <span class="arithmatex">\(\mathcal{F}\)</span> — все подмножества,</p>
+<div class="arithmatex">\[
+P(A) = \frac{\text{число элементов в } A}{n}.
+\]</div>
+<p>Исходы равновозможны.</p>
+</div>
+<h2 id="_4">Суммы и перемножения событий<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">Теория<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><strong>Сложение несовместных.</strong> Вероятность появления одного из двух несовместных событий, безразлично какого:</p>
+<div class="arithmatex">\[
+P(A + B) = P(A) + P(B).
+\]</div>
+</div>
+<p>Следствие для попарно несовместных:</p>
+<div class="arithmatex">\[
+P(A_1 + \dots + A_n) = P(A_1) + \dots + P(A_n).
+\]</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><strong>Сложение совместных.</strong> Вероятность хотя бы одного из двух совместных:</p>
+<div class="arithmatex">\[
+P(A + B) = P(A) + P(B) - P(AB).
+\]</div>
+</div>
+<p>Для трёх:</p>
+<div class="arithmatex">\[
+P(A + B + C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC).
+\]</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><strong>Умножение.</strong> Вероятность совместного появления двух событий:</p>
+<div class="arithmatex">\[
+P(AB) = P(A) \cdot P(B \mid A).
+\]</div>
+<p>Для независимых <span class="arithmatex">\(P(AB) = P(A)P(B)\)</span>.</p>
+</div>
+<p>Для нескольких:</p>
+<div class="arithmatex">\[
+P(A_1 A_2 \dots A_n) = P(A_1)\, P(A_2 \mid A_1)\, P(A_3 \mid A_1 A_2) \cdots P(A_n \mid A_1 \dots A_{n-1}).
+\]</div>
+<p>Если независимы в совокупности — просто произведение безусловных.</p>
+<h3 id="1_1">Задача 1. Два орудия<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p>Вероятность одного попадания в цель при одном залпе из двух орудий равна 0,38. Найти вероятность поражения цели при одном выстреле первым из орудий, если для второго эта вероятность равна 0,8.</p>
+<h4 id="_6">Решение<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Пусть <span class="arithmatex">\(A\)</span> — попадание первого орудия, <span class="arithmatex">\(B\)</span> — второго, <span class="arithmatex">\(P(B) = 0{,}8\)</span>. Орудия независимы, «одно попадание при залпе» — ровно одно из двух:</p>
+<div class="arithmatex">\[
+P(A\overline{B}) + P(\overline{A}B) = P(A)(1 - 0{,}8) + (1 - P(A)) \cdot 0{,}8 = 0{,}38.
+\]</div>
+<p>Отсюда <span class="arithmatex">\(0{,}2\,P(A) + 0{,}8 - 0{,}8\,P(A) = 0{,}38\)</span>, то есть <span class="arithmatex">\(0{,}6\,P(A) = 0{,}42\)</span>, значит <span class="arithmatex">\(P(A) = 0{,}7\)</span>.</p>
+</details>
+<h2 id="_7">Комбинаторика<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">Теория<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>Задачи на комбинаторику обычно решаются через классическую вероятность: нашли число благоприятных исходов, нашли число всех, поделили.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<table>
+<thead>
+<tr>
+<th>Формула</th>
+<th>Что считает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(n!\)</span></td>
+<td>перестановки <span class="arithmatex">\(n\)</span> различных</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A_n^k = n!/(n-k)!\)</span></td>
+<td>размещения (порядок важен)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(C_n^k = n!/(k!(n-k)!)\)</span></td>
+<td>сочетания (порядок не важен)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(n!/(n_1! \dots n_k!)\)</span></td>
+<td>перестановки с повторениями</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="2">Задача 2. МАТЕМАТИКА<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>Ребёнок играет с 10 буквами разрезной азбуки: А, А, А, Е, И, К, М, М, Т, Т. Какова вероятность, что при случайном расположении букв в ряд получится слово МАТЕМАТИКА?</p>
+<h4 id="_9">Решение<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Буквы в наборе те же, что в слове МАТЕМАТИКА: три А, по две М и Т, по одной Е, И, К.</p>
+<p>Всего различных рядов:</p>
+<div class="arithmatex">\[
+\frac{10!}{3!\,2!\,2!} = 151200.
+\]</div>
+<p>Благоприятный исход один. Значит <span class="arithmatex">\(P = 1/151200\)</span>.</p>
+</details>
+<h3 id="3">Задача 3. Сенаторы<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>В США каждый из 48 штатов представлен двумя сенаторами. События: в комитете из 48 сенаторов, выбранных случайно, (1) представлен данный штат, (2) представлены все штаты.</p>
+<h4 id="_10">Решение<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>(1) Удобнее дополнительное событие: данный штат не представлен. Сенаторов 96, из них 94 не из этого штата:</p>
+<div class="arithmatex">\[
+q = \frac{C_{94}^{48}}{C_{96}^{48}} = \frac{48 \cdot 47}{96 \cdot 95} = 0{,}24737\dots
+\]</div>
+<p>Искомая вероятность: <span class="arithmatex">\(1-q\)</span>.</p>
+<p>(2) Комитет с одним сенатором от каждого штата: <span class="arithmatex">\(2^{48}\)</span> способов. Тогда <span class="arithmatex">\(p = 2^{48} / C_{96}^{48}\)</span>. По формуле Стирлинга <span class="arithmatex">\(n! \sim \sqrt{2\pi n}\,(n/e)^n\)</span> получается <span class="arithmatex">\(p \approx (3\pi)^{1/2} 2^{-46} \approx 4 \cdot 10^{-14}\)</span>.</p>
+<p>Ту же задачу можно считать через перестановки с повторениями.</p>
+</details>
+<h2 id="_11">Условная вероятность<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12">Теория<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><em>Условная вероятность</em> <span class="arithmatex">\(P(A \mid B)\)</span> события <span class="arithmatex">\(A\)</span> при условии, что произошло событие <span class="arithmatex">\(B\)</span> ненулевой вероятности:</p>
+<div class="arithmatex">\[
+P(A \mid B) = \frac{P(AB)}{P(B)}, \quad P(B) &gt; 0.
+\]</div>
+</div>
+<h3 id="4">Задача 4. Следствия независимости<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>Пусть <span class="arithmatex">\(P(A_1 \mid A_2) = P(A_1)\)</span>. Показать:</p>
+<ul>
+<li>а) <span class="arithmatex">\(P(A_1 \mid \overline{A}_2) = P(A_1)\)</span>;</li>
+<li>б) <span class="arithmatex">\(P(\overline{A}_1 \mid A_2) = P(\overline{A}_1)\)</span>.</li>
+</ul>
+<h4 id="_13">Решение<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Условие означает независимость: <span class="arithmatex">\(P(A_1 A_2) = P(A_1)P(A_2)\)</span> (и <span class="arithmatex">\(P(A_2) &gt; 0\)</span>).</p>
+<p><strong>а)</strong> <span class="arithmatex">\(P(A_1 \overline{A}_2) = P(A_1) - P(A_1 A_2) = P(A_1)(1 - P(A_2))\)</span>, поэтому при <span class="arithmatex">\(P(A_2) &lt; 1\)</span></p>
+<div class="arithmatex">\[
+P(A_1 \mid \overline{A}_2) = \frac{P(A_1)(1 - P(A_2))}{1 - P(A_2)} = P(A_1).
+\]</div>
+<p><strong>б)</strong> <span class="arithmatex">\(P(\overline{A}_1 \mid A_2) = 1 - P(A_1 \mid A_2) = 1 - P(A_1) = P(\overline{A}_1)\)</span>.</p>
+</details>
+<h3 id="5">Задача 5. Какие равенства верны<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>Верны ли равенства:</p>
+<ul>
+<li>а) <span class="arithmatex">\(P(B \mid A) + P(\overline{B} \mid A) = 1\)</span>;</li>
+<li>б) <span class="arithmatex">\(P(B \mid A) + P(B \mid \overline{A}) = 1\)</span>?</li>
+</ul>
+<h4 id="_14">Решение<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><strong>а)</strong> Верно при <span class="arithmatex">\(P(A) &gt; 0\)</span>: при фиксированном <span class="arithmatex">\(A\)</span> события <span class="arithmatex">\(B\)</span> и <span class="arithmatex">\(\overline{B}\)</span> несовместны и покрывают всё.</p>
+<p><strong>б)</strong> Неверно. Если <span class="arithmatex">\(A\)</span> и <span class="arithmatex">\(B\)</span> независимы, левая часть равна <span class="arithmatex">\(2P(B)\)</span> и равна 1 только при <span class="arithmatex">\(P(B) = 1/2\)</span>. Контрпример: независимые <span class="arithmatex">\(A\)</span> и <span class="arithmatex">\(B\)</span> с <span class="arithmatex">\(P(B) = 0{,}3\)</span>, тогда <span class="arithmatex">\(0{,}3 + 0{,}3 = 0{,}6 \neq 1\)</span>.</p>
+</details>
+<h2 id="_15">Независимость<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="_16">Теория<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>События <span class="arithmatex">\(A\)</span> и <span class="arithmatex">\(B\)</span> независимы, если <span class="arithmatex">\(P(AB) = P(A)P(B)\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><span class="arithmatex">\(A_1, \dots, A_n\)</span> независимы в совокупности, если для любого <span class="arithmatex">\(\{i_1, \dots, i_k\} \subset \{1, \dots, n\}\)</span></p>
+<div class="arithmatex">\[
+P(A_{i_1} \dots A_{i_k}) = P(A_{i_1}) \cdots P(A_{i_k}).
+\]</div>
+</div>
+<h3 id="6">Задача 6. Тетраэдр Бернштейна<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<p>На плоскость бросается тетраэдр: три грани покрашены в красный, синий и зелёный, на четвёртую нанесены все три цвета. К — выпала грань с красным, С — с синим, З — с зелёным. Проверить независимость в совокупности и попарную независимость К, С и З.</p>
+<h3 id="7">Задача 7. Квадрат · дополнительно<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<p>Точка <span class="arithmatex">\(\xi = (\xi_1, \xi_2)\)</span> выбрана наудачу в квадрате <span class="arithmatex">\([0, 1]^2\)</span>. Пусть <span class="arithmatex">\(A = \{\xi_1 \le 1/2\}\)</span>, <span class="arithmatex">\(B = \{\xi_2 \le 1/2\}\)</span> и <span class="arithmatex">\(C = \{(\xi_1 - 1/2)(\xi_2 - 1/2) &lt; 0\}\)</span>. Зависимы ли эти события</p>
+<ul>
+<li>а) в совокупности;</li>
+<li>б) попарно?</li>
+</ul>
+<h3 id="8">Задача 8. Независимость от себя · дополнительно<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<p>Пусть событие <span class="arithmatex">\(A\)</span> не зависит от самого себя. Показать, что тогда <span class="arithmatex">\(P(A) = 0\)</span> или <span class="arithmatex">\(P(A) = 1\)</span>.</p>
+<h3 id="практический-пример-стив">Практический пример: Стив<a class="headerlink" href="#практический-пример-стив" title="Permanent link">&para;</a></h3>
+<p>Вернуться к опросу с начала пары. Сначала собрать голоса, потом открыть решение.</p>
+<h4 id="_17">Решение<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Правильный ответ — продавец.</p>
+<p>Описание больше подходит библиотекарю или фармацевту, и этот человек с большей вероятностью <em>пошёл бы</em> в одну из этих профессий. Но одни профессии просто чаще встречаются.</p>
+<p>Статистика по США на 2023 год:</p>
+<table>
+<thead>
+<tr>
+<th>Профессия</th>
+<th style="text-align: right;">Численность</th>
+<th style="text-align: right;">К библиотекарям</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Библиотекарь</td>
+<td style="text-align: right;">125 тыс</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Фармацевт</td>
+<td style="text-align: right;">333 тыс</td>
+<td style="text-align: right;"><span class="arithmatex">\(\approx 2{,}7\)</span></td>
+</tr>
+<tr>
+<td>Продавец</td>
+<td style="text-align: right;">4000 тыс</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td>Пожарный</td>
+<td style="text-align: right;">302 тыс</td>
+<td style="text-align: right;"><span class="arithmatex">\(\approx 2{,}4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Пусть даже Стив вчетверо охотнее пошёл бы в библиотекари — продавцов больше в 32 раза, и по условной вероятности он всё равно чаще продавец, чем библиотекарь.</p>
+<div class="admonition quote">
+<p class="admonition-title">Канеман, «Думай медленно… решай быстро»</p>
+<p>Все немедленно отмечают сходство Стива с типичным библиотекарем, но почти всегда игнорируют не менее важные статистические соображения. Вспомнилось ли вам, что на каждого мужчину-библиотекаря в США приходится более 20 фермеров? Фермеров настолько больше, что «тихие и аккуратные» почти наверняка окажутся за рулём трактора, а не за библиотекарским столом. И всё же участники экспериментов игнорировали статистические факты и полагались исключительно на сходство. Мы предположили, что испытуемые использовали сходство как упрощающую эвристику, чтобы легче прийти к сложному оценочному суждению. Доверие к эвристике вело к прогнозируемым искажениям в предсказаниях.</p>
+</div>
+</details>
+<h2 id="_18">Формула полной вероятности и формула Байеса<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_19">Теория<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Гипотезы <span class="arithmatex">\(B_1, \dots, B_n\)</span> положительной вероятности, попарно несовместны, <span class="arithmatex">\(A \subset (B_1 + \dots + B_n)\)</span>. Тогда</p>
+<div class="arithmatex">\[
+P(A) = \sum_{i=1}^{n} P(A \mid B_i) P(B_i).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если произошло <span class="arithmatex">\(A\)</span>, апостериорные вероятности гипотез:</p>
+<div class="arithmatex">\[
+P(B_j \mid A) = \frac{P(A \mid B_j) P(B_j)}{\sum_{i=1}^{n} P(A \mid B_i) P(B_i)}.
+\]</div>
+</div>
+<h3 id="9">Задача 9. Списывание<a class="headerlink" href="#9" title="Permanent link">&para;</a></h3>
+<p>Если КТшник нашёл решения задач по теорверу, то спишет с вероятностью <span class="arithmatex">\(P(A \mid B_1) = 0{,}7\)</span>, если не найдёт — с вероятностью <span class="arithmatex">\(P(A \mid B_2) = 0{,}5\)</span>. Вероятность найти решения <span class="arithmatex">\(P(B_1) = 0{,}5\)</span>.</p>
+<p>Какова вероятность, что он списывал из решения, а не у соседа, если известно, что списал?</p>
+<h3 id="10">Задача 10. Цепь · дополнительно<a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
+<p>Рассматривается электрическая цепь из реле:</p>
+<p><img alt="Схема мостика: \(A,B\) сверху, \(C,D\) снизу, \(E\) — перемычка" src="../../assets/p01/22.png" /></p>
+<p>Каждое из реле <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(D\)</span> и <span class="arithmatex">\(E\)</span> независимо открывается и закрывается с вероятностями <span class="arithmatex">\(p\)</span> и <span class="arithmatex">\(1-p\)</span>. Какова вероятность, что сигнал со входа дойдёт до выхода? Какова условная вероятность, что реле <span class="arithmatex">\(E\)</span> было открыто, если сигнал получен?</p>
+<h4 id="_20">Решение<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Разложить по мостику <span class="arithmatex">\(E\)</span>. Реле открыто (пропускает ток) с вероятностью <span class="arithmatex">\(p\)</span>.</p>
+<p>Если <span class="arithmatex">\(E\)</span> закрыто (вероятность <span class="arithmatex">\(1-p\)</span>), остаются две независимые цепочки <span class="arithmatex">\(AB\)</span> и <span class="arithmatex">\(CD\)</span>:</p>
+<div class="arithmatex">\[
+P(S \mid \overline{E}) = 1 - (1 - p^2)^2 = 2p^2 - p^4.
+\]</div>
+<p>Если <span class="arithmatex">\(E\)</span> открыто (вероятность <span class="arithmatex">\(p\)</span>), средние точки короткозамкнуты: нужен хотя бы один из <span class="arithmatex">\(\{A, C\}\)</span> и хотя бы один из <span class="arithmatex">\(\{B, D\}\)</span>:</p>
+<div class="arithmatex">\[
+P(S \mid E) = \bigl(1 - (1-p)^2\bigr)^2 = (2p - p^2)^2.
+\]</div>
+<p>Итого</p>
+<div class="arithmatex">\[
+P(S) = p(2p - p^2)^2 + (1-p)(2p^2 - p^4) = 2p^2 + 2p^3 - 5p^4 + 2p^5.
+\]</div>
+<div class="arithmatex">\[
+P(E \mid S) = \frac{P(S \mid E)\, p}{P(S)} = \frac{p(2-p)^2}{2 + 2p - 5p^2 + 2p^3}.
+\]</div>
+</details>
+<h3 id="практический-пример-солнце">Практический пример: Солнце<a class="headerlink" href="#практический-пример-солнце" title="Permanent link">&para;</a></h3>
+<p>Пусть у нас есть устройство с вероятностью 99,99% раз в день показывает, правда ли, что взорвалось Солнце. Сегодня показывает, что взорвалось.  <br />
+Вопрос в зал: поверите ли устройству?  <br />
+Ожидаемый ответ - «нет»
+Тогда, просим доказать Байесом, почему ответ "нет" разумен, при условии что априор взрыва Солнца в конкретный день: <span class="arithmatex">\(10^{-10}\)</span>.</p>
+<h4 id="_21">Решение<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(H\)</span> — Солнце взорвалось, <span class="arithmatex">\(D\)</span> — прибор показал взрыв. <span class="arithmatex">\(P(D \mid H) = 0{,}9999\)</span>, <span class="arithmatex">\(P(D \mid \overline{H}) = 0{,}0001\)</span>, <span class="arithmatex">\(P(H) = 10^{-10}\)</span>.</p>
+<div class="arithmatex">\[
+P(D) = 0{,}9999 \cdot 10^{-10} + 0{,}0001 \cdot (1 - 10^{-10}) \approx 10^{-4}.
+\]</div>
+<div class="arithmatex">\[
+P(H \mid D) = \frac{0{,}9999 \cdot 10^{-10}}{P(D)} \approx 10^{-6}.
+\]</div>
+<p>Даже после срабатывания вероятность взрыва порядка миллионной: ложные срабатывания на фоне почти достоверного <span class="arithmatex">\(\overline{H}\)</span> перевешивают.</p>
+<p>Карл Саган: экстраординарные утверждения требуют экстраординарных доказательств.   <br />
+Если априор слишком мал, нужны очень точные измерения, иначе ошибка перевешивает.</p>
+</details>
+<h3 id="_22">Практический пример: Казино<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>Пусть вы зашли в деревенское казино: старое деревянное здание, вывеска маркерами по потёртой жёлтой бумаге «Рулетка». Рулетки нет — под вывеской усатый дед в ушанке подкидывает монетку. Ставите на сторону. Предыдущие 6 бросков — решка. На что ставить: решка, орёл или 50/50?</p>
+<h4 id="_23">Решение<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Кто не знает теорвер: «орёл, не может так часто падать решка».
+Кто знает теорвер: «50/50, броски независимы».
+Кто знает матстат: «решка».</p>
+<p>Вероятность бывает от чистой случайности и от неопределённости. Чистая случайность — в основном в задачах. Перемешивание колоды в задачнике случайно; в жизни это детерминированный процесс. Инопланетянин с идеальным зрением знал бы, где какая карта. «Случайность» — это дыра в ваших знаниях.</p>
+<p>Раз процесс детерминирован, у него могут быть закономерности. Прошлые испытания про них сообщают. Шесть решек — намёк, что монета, техника деда или глаз смещают шанс. Логичнее ставить на решку, а не на орла.</p>
+</details>
+<h2 id="_24">Самостоятельная<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<p>Пишется в начале следующей пары.</p>
+<p><strong>5 минут.</strong> Вероятность убить вампира ударом осинового кола в тело <span class="arithmatex">\(P(A) = 0{,}4\)</span>. Вероятность убить человека таким ударом <span class="arithmatex">\(P(B) = 0{,}7\)</span>. Вы убили кого-то ударом осинового кола в тело. Вероятность, что это вампир и вас не посадят. Соотношение людей к вампирам <span class="arithmatex">\(99:1\)</span>.</p>
+<h4 id="_25">Решение<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(V\)</span> — вампир, <span class="arithmatex">\(H\)</span> — человек, <span class="arithmatex">\(K\)</span> — убили колом. По соотношению <span class="arithmatex">\(99:1\)</span> априоры <span class="arithmatex">\(P(V)=1/100\)</span>, <span class="arithmatex">\(P(H)=99/100\)</span>. По условию <span class="arithmatex">\(P(K\mid V)=0{,}4\)</span>, <span class="arithmatex">\(P(K\mid H)=0{,}7\)</span>. Не посадят, если это вампир:</p>
+<div class="arithmatex">\[
+P(V\mid K) = \frac{0{,}4\cdot 1/100}{0{,}4\cdot 1/100 + 0{,}7\cdot 99/100} = \frac{0{,}4}{0{,}4 + 69{,}3} = \frac{4}{697} \approx 0{,}0057.
+\]</div>
+<p>Людей много, колом человека убить легче — даже после «успеха» вампир остаётся редкой гипотезой.</p>
+</details>
+<p><strong>8 минут.</strong> 13 разобранных вампиров, каждый из 2 частей. Наугад берёте 6 частей. Шанс собрать хотя бы одного вампира?</p>
+<h4 id="_26">Решение<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Всего <span class="arithmatex">\(26\)</span> частей, способов взять <span class="arithmatex">\(6\)</span>: <span class="arithmatex">\(C_{26}^{6}\)</span>. Дополнение: ни одной пары, то есть <span class="arithmatex">\(6\)</span> частей от <span class="arithmatex">\(6\)</span> разных вампиров. Выбрать вампиров <span class="arithmatex">\(C_{13}^{6}\)</span>, от каждого одну из двух частей: <span class="arithmatex">\(2^{6}\)</span>.</p>
+<div class="arithmatex">\[
+P = 1 - \frac{C_{13}^{6}\, 2^{6}}{C_{26}^{6}} = 1 - \frac{1716\cdot 64}{230230} = \frac{421}{805}.
+\]</div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p>Выдаётся после пары. <code>HW1_y2023.pdf</code> — файл пока не переносился на сайт.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

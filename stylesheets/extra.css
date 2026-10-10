@@ -1,0 +1,9 @@
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.md-typeset .draft {
+  opacity: 0.9;
+}
