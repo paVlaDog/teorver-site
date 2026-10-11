@@ -1,0 +1,2322 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p10/">
+      
+      
+        <link rel="prev" href="../p09/">
+      
+      
+        <link rel="next" href="../p11/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Практика 10. Моменты - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 10. Моменты
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Начальные и центральные моменты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Начальные и центральные моменты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Равномерное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Равномерное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Экспоненциальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Экспоненциальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Медиана и квантили
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Медиана и квантили">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Квантили экспоненциального
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Квантили экспоненциального">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты преобразований
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты преобразований">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#394" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 394. Дисперсия квадрата
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 394. Дисперсия квадрата">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты многомерных распределений
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты многомерных распределений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#430" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 430. Моменты в первом квадранте
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 430. Моменты в первом квадранте">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Корреляция и ковариация
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Корреляция и ковариация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Легализация оружия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Легализация оружия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-434" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 434. Синус на квадрате
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 434. Синус на квадрате">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#436" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 436. Равномерное в круге
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 436. Равномерное в круге">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условное матожидание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условное матожидание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Таблица
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Таблица">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 434. Условное матожидание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 434. Условное матожидание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Составное распределение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Составное распределение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Венчурный фонд
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Начальные и центральные моменты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Начальные и центральные моменты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Равномерное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Равномерное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Экспоненциальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Экспоненциальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Медиана и квантили
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Медиана и квантили">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Квантили экспоненциального
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Квантили экспоненциального">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты преобразований
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты преобразований">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#394" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 394. Дисперсия квадрата
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 394. Дисперсия квадрата">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты многомерных распределений
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты многомерных распределений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#430" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 430. Моменты в первом квадранте
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 430. Моменты в первом квадранте">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Корреляция и ковариация
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Корреляция и ковариация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Легализация оружия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Практический пример: Легализация оружия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#задача-434" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 434. Синус на квадрате
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 434. Синус на квадрате">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#436" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 436. Равномерное в круге
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 436. Равномерное в круге">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условное матожидание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Условное матожидание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача. Таблица
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача. Таблица">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 434. Условное матожидание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 434. Условное матожидание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Составное распределение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Составное распределение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практический пример: Венчурный фонд
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="10">Практика 10. Моменты<a class="headerlink" href="#10" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> Начальные и центральные моменты, квантили, моменты функции от СВ, ковариация и условное матожидание.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Начальные и центральные моменты</li>
+<li>Медиана и квантили</li>
+<li>Моменты преобразований</li>
+<li>Моменты многомерных распределений</li>
+<li>Корреляция и ковариация</li>
+<li>Условное матожидание</li>
+<li>Составное распределение</li>
+</ol>
+<h2 id="_1">Начальные и центральные моменты<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Теория<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Непрерывные</label><label for="__tabbed_1_2">Дискретные</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Начальный теоретический момент порядка <span class="arithmatex">\(k\)</span> непрерывной случайной величины <span class="arithmatex">\(X\)</span> определяется равенством</p>
+<div class="arithmatex">\[
+\nu_k = \int_{-\infty}^{\infty} x^k f(x)\, dx.
+\]</div>
+<p>Если все возможные значения <span class="arithmatex">\(X\)</span> принадлежат интервалу <span class="arithmatex">\((a, b)\)</span>, предел интеграла — от <span class="arithmatex">\(a\)</span> до <span class="arithmatex">\(b\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\nu_k = \sum_i x_i^k p_i.
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Непрерывные</label><label for="__tabbed_2_2">Дискретные</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Центральный теоретический момент порядка <span class="arithmatex">\(k\)</span> непрерывной случайной величины <span class="arithmatex">\(X\)</span> определяется равенством</p>
+<div class="arithmatex">\[
+\mu_k = \int_{-\infty}^{\infty} [x - M(X)]^k f(x)\, dx.
+\]</div>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\mu_k = \sum_i \bigl(x_i - M(X)\bigr)^k p_i.
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<p>Очевидно, что если <span class="arithmatex">\(k = 1\)</span>, то <span class="arithmatex">\(\nu_1 = M(X)\)</span>, <span class="arithmatex">\(\mu_1 = 0\)</span>; если <span class="arithmatex">\(k = 2\)</span>, то <span class="arithmatex">\(\mu_2 = D(X)\)</span>. Для дискретных — те же равенства, суммы вместо интегралов.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Центральные моменты выражаются через начальные моменты по формулам:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mu_2 &amp;= \nu_2 - \nu_1^2, \\
+\mu_3 &amp;= \nu_3 - 3\nu_1\nu_2 + 2\nu_1^3, \\
+\mu_4 &amp;= \nu_4 - 4\nu_1\nu_3 + 6\nu_1^2\nu_2 - 3\nu_1^4.
+\end{aligned}
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Коэффициент асимметрии</p>
+<div class="arithmatex">\[
+\gamma_1 = \frac{\mu_3}{\sigma^3} = \frac{\mu_3}{\mu_2^{3/2}}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Коэффициент эксцесса</p>
+<div class="arithmatex">\[
+\gamma_2 = \frac{\mu_4}{\sigma^4} - 3 = \frac{\mu_4}{\mu_2^2} - 3.
+\]</div>
+</div>
+<p>В плане асимметрией назван сам третий момент, эксцессом — четвёртый центральный минус 3, без деления на степень <span class="arithmatex">\(\sigma\)</span>. На доску идут нормированные коэффициенты: у симметричного закона <span class="arithmatex">\(\gamma_1 = 0\)</span>, у нормального <span class="arithmatex">\(\gamma_2 = 0\)</span>.</p>
+<h3 id="_3">Задача. Равномерное<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Найти матожидание и дисперсию равномерного распределения.</p>
+<h4 id="_4">Решение<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(U(a, b)\)</span>: плотность <span class="arithmatex">\(1/(b-a)\)</span> на <span class="arithmatex">\([a, b]\)</span>.</p>
+<div class="arithmatex">\[
+M(X) = \int_a^b \frac{x}{b-a}\, dx = \frac{a+b}{2}.
+\]</div>
+<div class="arithmatex">\[
+\nu_2 = \int_a^b \frac{x^2}{b-a}\, dx = \frac{a^2 + ab + b^2}{3},
+\]</div>
+<div class="arithmatex">\[
+D(X) = \nu_2 - \bigl(M(X)\bigr)^2 = \frac{(b-a)^2}{12}.
+\]</div>
+</details>
+<h3 id="_5">Задача. Экспоненциальное<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Найти первый и второй начальные и центральные моменты экспоненциального.</p>
+<h4 id="_6">Решение<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\operatorname{Exp}(\lambda)\)</span>: плотность <span class="arithmatex">\(\lambda e^{-\lambda x}\)</span> при <span class="arithmatex">\(x \ge 0\)</span>. Интегрирование по частям (или <span class="arithmatex">\(\Gamma(n) = (n-1)!\)</span>):</p>
+<div class="arithmatex">\[
+\nu_1 = M(X) = \frac{1}{\lambda}, \qquad \mu_1 = 0,
+\]</div>
+<div class="arithmatex">\[
+\nu_2 = E[X^2] = \frac{2}{\lambda^2}, \qquad \mu_2 = D(X) = \nu_2 - \nu_1^2 = \frac{1}{\lambda^2}.
+\]</div>
+</details>
+<h2 id="_7">Медиана и квантили<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">Теория<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Квантиль порядка <span class="arithmatex">\(x \mapsto y\)</span>: <span class="arithmatex">\(F(y) = x\)</span>.</p>
+</div>
+<p>Медиана — квантиль порядка <span class="arithmatex">\(1/2\)</span>.</p>
+<h3 id="_9">Задача. Квантили экспоненциального<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>Найдите квантили <span class="arithmatex">\(0{,}25\)</span>, <span class="arithmatex">\(0{,}5\)</span> и <span class="arithmatex">\(0{,}75\)</span> экспоненциального распределения с <span class="arithmatex">\(\lambda = 1\)</span>.</p>
+<h4 id="_10">Решение<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(F(y) = 1 - e^{-y}\)</span> при <span class="arithmatex">\(y \ge 0\)</span>. Из <span class="arithmatex">\(F(y) = q\)</span> получается <span class="arithmatex">\(y = -\ln(1-q)\)</span>.</p>
+<div class="arithmatex">\[
+y_{0{,}25} = -\ln(0{,}75) = \ln\frac{4}{3}, \qquad y_{0{,}5} = \ln 2, \qquad y_{0{,}75} = \ln 4.
+\]</div>
+</details>
+<h2 id="_11">Моменты преобразований<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12">Теория<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(Y = g(X)\)</span>. Плотность самой <span class="arithmatex">\(Y\)</span> для моментов не нужна: усредняем функцию от <span class="arithmatex">\(x\)</span> по плотности <span class="arithmatex">\(X\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E(Y) &amp;= \int g(x)\, f_X(x)\, dx \\
+M_2(Y) &amp;= \int g^2(x)\, f_X(x)\, dx \\
+MC_2(Y) &amp;= \int \bigl(g(x) - M(Y)\bigr)^2 f_X(x)\, dx
+\end{aligned}
+\]</div>
+</div>
+<p><span class="arithmatex">\(E(Y)\)</span> — матожидание <span class="arithmatex">\(g(X)\)</span>. <span class="arithmatex">\(M_2(Y)\)</span> — второй начальный момент, то есть <span class="arithmatex">\(E\bigl[g(X)^2\bigr]\)</span>. <span class="arithmatex">\(MC_2(Y)\)</span> — второй центральный, то есть дисперсия <span class="arithmatex">\(g(X)\)</span>. Та же тройка, что <span class="arithmatex">\(\nu_1\)</span>, <span class="arithmatex">\(\nu_2\)</span> и <span class="arithmatex">\(\mu_2\)</span>, только вместо <span class="arithmatex">\(x\)</span> стоит <span class="arithmatex">\(g(x)\)</span>.</p>
+<h3 id="394">Задача 394. Дисперсия квадрата<a class="headerlink" href="#394" title="Permanent link">&para;</a></h3>
+<p>Случайная величина <span class="arithmatex">\(X\)</span> задана плотностью распределения <span class="arithmatex">\(f(x) = (1/2)\sin x\)</span> в интервале <span class="arithmatex">\((0, \pi)\)</span>; вне этого интервала <span class="arithmatex">\(f(x) = 0\)</span>. Найти дисперсию функции <span class="arithmatex">\(Y = \varphi(X) = X^2\)</span>, используя плотность распределения <span class="arithmatex">\(g(y)\)</span>.</p>
+<p>Решение через плотность <span class="arithmatex">\(g(y)\)</span> в задачнике не то, что нам нужно — сверяем ответ.</p>
+<h4 id="_13">Решение<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Считаем по плотности <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(g(x) = x^2\)</span>.</p>
+<div class="arithmatex">\[
+M(Y) = \int_0^{\pi} x^2 \cdot \frac12 \sin x\, dx = \frac{\pi^2 - 4}{2}.
+\]</div>
+<div class="arithmatex">\[
+M_2(Y) = \int_0^{\pi} x^4 \cdot \frac12 \sin x\, dx = \frac{\pi^4}{2} - 6\pi^2 + 24.
+\]</div>
+<div class="arithmatex">\[
+D(Y) = M_2(Y) - \bigl(M(Y)\bigr)^2 = \frac{\pi^4 - 16\pi^2 + 80}{4}.
+\]</div>
+<p>В задачнике тот же ответ через <span class="arithmatex">\(g(y) = \sin\sqrt{y}/(4\sqrt{y})\)</span>.</p>
+</details>
+<h2 id="_14">Моменты многомерных распределений<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">Теория<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Зная плотность распределения составляющих <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> непрерывной двумерной случайной величины <span class="arithmatex">\((X, Y)\)</span>, можно найти их математические ожидания и дисперсии:</p>
+<div class="arithmatex">\[
+M(X) = \int_{-\infty}^{\infty} x f_1(x)\, dx, \qquad M(Y) = \int_{-\infty}^{\infty} y f_2(y)\, dy;
+\]</div>
+<div class="arithmatex">\[
+D(X) = \int_{-\infty}^{\infty} [x - M(X)]^2 f_1(x)\, dx = \int_{-\infty}^{\infty} x^2 f_1(x)\, dx - [M(X)]^2;
+\]</div>
+<div class="arithmatex">\[
+D(Y) = \int_{-\infty}^{\infty} [y - M(Y)]^2 f_2(y)\, dy = \int_{-\infty}^{\infty} y^2 f_2(y)\, dy - [M(Y)]^2.
+\]</div>
+</div>
+<p>Иногда удобнее использовать формулы, содержащие двумерную плотность вероятности (двойные интегралы берутся по области возможных значений системы):</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+M(X) = \iint x f(x, y)\, dx\, dy, \qquad M(Y) = \iint y f(x, y)\, dx\, dy;
+\]</div>
+<div class="arithmatex">\[
+D(X) = \iint [x - M(X)]^2 f(x, y)\, dx\, dy = \iint x^2 f(x, y)\, dx\, dy - [M(X)]^2;
+\]</div>
+<div class="arithmatex">\[
+D(Y) = \iint [y - M(Y)]^2 f(x, y)\, dx\, dy = \iint y^2 f(x, y)\, dx\, dy - [M(Y)]^2.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Начальным моментом <span class="arithmatex">\(\nu_{k,s}\)</span> порядка <span class="arithmatex">\(k + s\)</span> системы <span class="arithmatex">\((X, Y)\)</span> называют математическое ожидание произведения <span class="arithmatex">\(X^k Y^s\)</span>:</p>
+<div class="arithmatex">\[
+\nu_{k,s} = M[X^k Y^s].
+\]</div>
+<p>В частности,</p>
+<div class="arithmatex">\[
+\nu_{1,0} = M(X), \qquad \nu_{0,1} = M(Y).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Центральным моментом <span class="arithmatex">\(\mu_{k,s}\)</span> порядка <span class="arithmatex">\(k + s\)</span> системы <span class="arithmatex">\((X, Y)\)</span> называют математическое ожидание произведения отклонений соответственно <span class="arithmatex">\(k\)</span>-й и <span class="arithmatex">\(s\)</span>-й степеней:</p>
+<div class="arithmatex">\[
+\mu_{k,s} = M\bigl\{[X - M(X)]^k \cdot [Y - M(Y)]^s\bigr\}.
+\]</div>
+<p>В частности,</p>
+<div class="arithmatex">\[
+\mu_{1,0} = M[X - M(X)] = 0, \qquad \mu_{0,1} = M[Y - M(Y)] = 0;
+\]</div>
+<div class="arithmatex">\[
+\mu_{2,0} = M[X - M(X)]^2 = D(X), \qquad \mu_{0,2} = M[Y - M(Y)]^2 = D(Y).
+\]</div>
+</div>
+<h3 id="430">Задача 430. Моменты в первом квадранте<a class="headerlink" href="#430" title="Permanent link">&para;</a></h3>
+<p>Задана плотность совместного распределения непрерывной двумерной случайной величины <span class="arithmatex">\((X, Y)\)</span>:</p>
+<div class="arithmatex">\[
+f(x, y) =
+\begin{cases}
+4xy e^{-x^2 - y^2} &amp; (x &gt; 0,\ y &gt; 0), \\
+0 &amp; (x &lt; 0 \text{ или } y &lt; 0).
+\end{cases}
+\]</div>
+<p>Найти: а) математические ожидания; б) дисперсии составляющих <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span>.</p>
+<h4 id="_16">Решение<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>а) Найдем сначала плотность распределения составляющей <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+f_1(x) = \int_0^{\infty} f(x, y)\, dy = 4x e^{-x^2} \int_0^{\infty} y e^{-y^2}\, dy = 2x e^{-x^2} \quad (x &gt; 0).
+\]</div>
+<p>Аналогично получим</p>
+<div class="arithmatex">\[
+f_2(y) = 2y e^{-y^2} \quad (y &gt; 0).
+\]</div>
+<p>Найдем математическое ожидание составляющей <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+M(X) = \int_0^{\infty} x f_1(x)\, dx = \int_0^{\infty} x \cdot (2x e^{-x^2}\, dx).
+\]</div>
+<p>Интегрируя по частям и учитывая, что интеграл Пуассона <span class="arithmatex">\(\displaystyle\int_0^{\infty} e^{-x^2}\, dx = \sqrt{\pi}/2\)</span>, получим <span class="arithmatex">\(M(X) = \sqrt{\pi}/2\)</span>. Очевидно, что <span class="arithmatex">\(M(Y) = \sqrt{\pi}/2\)</span>.</p>
+<p>б) Найдем дисперсию <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+D(X) = \int_0^{\infty} x^2 f_1(x)\, dx - [M(X)]^2 = \int_0^{\infty} x^2 \cdot (2x e^{-x^2}\, dx) - \bigl(\sqrt{\pi}/2\bigr)^2 = 1 - \pi/4.
+\]</div>
+<p>Очевидно, что <span class="arithmatex">\(D(Y) = 1 - \pi/4\)</span>.</p>
+</details>
+<h2 id="_17">Корреляция и ковариация<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">Теория<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Ковариация случайных величин <span class="arithmatex">\(\xi\)</span> и <span class="arithmatex">\(\eta\)</span>:</p>
+<div class="arithmatex">\[
+\operatorname{Cov}(\xi, \eta) = E(\xi - E\xi)(\eta - E\eta).
+\]</div>
+<p>Считать удобнее так:</p>
+<div class="arithmatex">\[
+\operatorname{Cov}(\xi, \eta) = E(\xi\eta) - E\xi\, E\eta = \mu_{1,1}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Коэффициент корреляции</p>
+<div class="arithmatex">\[
+\rho(\xi, \eta) = \frac{\operatorname{Cov}(\xi, \eta)}{\sqrt{D\xi\, D\eta}}.
+\]</div>
+</div>
+<p>Если случайные величины принимают большие значения в одних и тех же точках и малые — в одних и тех же, <span class="arithmatex">\(\operatorname{Cov}\)</span> будет почти всегда положительной. Если разные — отрицательной. Если зависимости нет, скомпенсируется.</p>
+<p>Корреляция измеряет лишь <strong>линейную</strong> зависимость.</p>
+<p>Корреляция не означает причинность.</p>
+<h3 id="_19">Практический пример: Легализация оружия<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>Научное исследование выявило, что легализация оружия приводит к резкому росту преступности. Метод: взяли огромное количество регионов в разных странах и посчитали корреляцию между легализацией и уровнем убийств. Выяснили, что между легализацией и уровнем приступности высокая корреляция и сделали вывод, что легализация оружия повышает уровень преступности. Верный ли это вывод? Какие могут быть ошибки?</p>
+<h4 id="_20">Решение<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Вывод неверный: посчитали совместное движение и назвали его причиной.</p>
+<p>Ошибки:</p>
+<ul>
+<li>обратная стрелка: высокая преступность могла сама подтолкнуть регион к легализации;</li>
+<li>общая причина: бедность, плотность населения, то, как в стране считают убийства, поднимают оба показателя сразу;</li>
+<li>регионы разных стран взяты как одинаковые точки одной выборки.</li>
+</ul>
+</details>
+<h3 id="задача-434">Задача 434. Синус на квадрате<a class="headerlink" href="#задача-434" title="Permanent link">&para;</a></h3>
+<p>Задана плотность совместного распределения непрерывной двумерной случайной величины <span class="arithmatex">\((X, Y)\)</span>: <span class="arithmatex">\(f(x, y) = (1/4)\sin x \sin y\)</span> в квадрате <span class="arithmatex">\(0 \leqslant x \leqslant \pi\)</span>, <span class="arithmatex">\(0 \leqslant y \leqslant \pi\)</span>; вне квадрата <span class="arithmatex">\(f(x, y) = 0\)</span>. Найти:</p>
+<p>а) математические ожидания и дисперсии составляющих;</p>
+<p>б) корреляционный момент.</p>
+<h4 id="_21">Решение<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Плотность распадается: <span class="arithmatex">\(f(x, y) = \bigl(\tfrac12 \sin x\bigr)\bigl(\tfrac12 \sin y\bigr)\)</span>. Составляющие независимы, у каждой плотность <span class="arithmatex">\(\tfrac12 \sin t\)</span> на <span class="arithmatex">\((0, \pi)\)</span>.</p>
+<div class="arithmatex">\[
+M(X) = \int_0^{\pi} x \cdot \tfrac12 \sin x\, dx = \frac{\pi}{2}, \qquad M(Y) = \frac{\pi}{2}.
+\]</div>
+<div class="arithmatex">\[
+E[X^2] = \int_0^{\pi} x^2 \cdot \tfrac12 \sin x\, dx = \frac{\pi^2 - 4}{2},
+\]</div>
+<div class="arithmatex">\[
+D(X) = \frac{\pi^2 - 4}{2} - \left(\frac{\pi}{2}\right)^2 = \frac{\pi^2 - 8}{4}, \qquad D(Y) = \frac{\pi^2 - 8}{4}.
+\]</div>
+<p>Корреляционный момент <span class="arithmatex">\(\mu_{1,1} = M(XY) - M(X)M(Y) = 0\)</span>: при независимости <span class="arithmatex">\(M(XY) = M(X)M(Y)\)</span>.</p>
+</details>
+<h3 id="436">Задача 436. Равномерное в круге<a class="headerlink" href="#436" title="Permanent link">&para;</a></h3>
+<p>Непрерывная двумерная случайная величина <span class="arithmatex">\((X, Y)\)</span> распределена равномерно в круге радиуса <span class="arithmatex">\(r\)</span> с центром в начале координат. Доказать, что <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> зависимы, но некоррелированны.</p>
+<p>Указание. Сравнить безусловные и условные плотности распределения составляющих; убедиться, что корреляционный момент равен нулю.</p>
+<h4 id="_22">Решение<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>В круге <span class="arithmatex">\(x^2 + y^2 \leqslant r^2\)</span> плотность <span class="arithmatex">\(f(x, y) = 1/(\pi r^2)\)</span>.</p>
+<div class="arithmatex">\[
+f_X(x) = \frac{2\sqrt{r^2 - x^2}}{\pi r^2}, \qquad |x| \leqslant r.
+\]</div>
+<p>Условная плотность</p>
+<div class="arithmatex">\[
+f(y \mid x) = \frac{1}{2\sqrt{r^2 - x^2}}, \qquad |y| \leqslant \sqrt{r^2 - x^2},
+\]</div>
+<p>зависит от <span class="arithmatex">\(x\)</span> и не совпадает с <span class="arithmatex">\(f_Y\)</span>. Составляющие зависимы: если <span class="arithmatex">\(|X|\)</span> близко к <span class="arithmatex">\(r\)</span>, для <span class="arithmatex">\(Y\)</span> остаётся короткий интервал.</p>
+<p>По симметрии <span class="arithmatex">\(M(X) = M(Y) = 0\)</span>. Произведение <span class="arithmatex">\(xy\)</span> нечётно по <span class="arithmatex">\(x\)</span>, круг симметричен, поэтому <span class="arithmatex">\(M(XY) = 0\)</span> и</p>
+<div class="arithmatex">\[
+\mu_{1,1} = M(XY) - M(X)M(Y) = 0.
+\]</div>
+<p>Зависимы, но некоррелированны.</p>
+</details>
+<h2 id="_23">Условное матожидание<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<h3 id="_24">Теория<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p>Важной характеристикой условного распределения вероятностей является условное математическое ожидание.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Определение. Условным математическим ожиданием дискретной случайной величины <span class="arithmatex">\(\eta\)</span> при <span class="arithmatex">\(\xi = x\)</span> (<span class="arithmatex">\(x\)</span> — определенное возможное значение <span class="arithmatex">\(\xi\)</span>) называют сумму произведений возможных значений <span class="arithmatex">\(\eta\)</span> на их условные вероятности:</p>
+<div class="arithmatex">\[
+M(\eta \mid \xi = x) = \sum_{j=1}^{m} y_j\, p(y_j \mid x).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Для непрерывных величин</p>
+<div class="arithmatex">\[
+M(\eta \mid \xi = x) = \int_{-\infty}^{\infty} y\, \psi(y \mid x)\, dy,
+\]</div>
+<p>где <span class="arithmatex">\(\psi(y \mid x)\)</span> — условная плотность случайной величины <span class="arithmatex">\(\eta\)</span> при <span class="arithmatex">\(\xi = x\)</span>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Условное математическое ожидание <span class="arithmatex">\(M(\eta \mid x)\)</span> есть функция от <span class="arithmatex">\(x\)</span>:</p>
+<div class="arithmatex">\[
+M(\eta \mid x) = f(x),
+\]</div>
+<p>которую называют функцией регрессии <span class="arithmatex">\(\eta\)</span> на <span class="arithmatex">\(\xi\)</span>.</p>
+</div>
+<p>Аналогично определяются условное математическое ожидание случайной величины <span class="arithmatex">\(\xi\)</span> и функция регрессии <span class="arithmatex">\(\xi\)</span> на <span class="arithmatex">\(\eta\)</span>.</p>
+<p>Условное матожидание — прогноз одной величины по уже известной другой. При каждом <span class="arithmatex">\(x\)</span> число <span class="arithmatex">\(M(\eta \mid x)\)</span> есть среднее <span class="arithmatex">\(\eta\)</span>, если <span class="arithmatex">\(\xi\)</span> зафиксировали равным <span class="arithmatex">\(x\)</span>; функция регрессии показывает, как это среднее меняется вместе с <span class="arithmatex">\(x\)</span>. Если закон <span class="arithmatex">\(X\)</span> сам зависит от <span class="arithmatex">\(Y\)</span>, матожидание <span class="arithmatex">\(X\)</span> считают в два шага: сначала <span class="arithmatex">\(E[X \mid Y]\)</span>, потом среднее по <span class="arithmatex">\(Y\)</span>. Так устроен венчурный фонд ниже.</p>
+<h3 id="_25">Задача. Таблица<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>Дискретная двумерная случайная величина задана таблицей значений.</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(\xi \backslash \eta\)</span></th>
+<th><span class="arithmatex">\(x_1 = 1\)</span></th>
+<th><span class="arithmatex">\(x_2 = 3\)</span></th>
+<th><span class="arithmatex">\(x_3 = 4\)</span></th>
+<th><span class="arithmatex">\(x_4 = 8\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(y_1 = 3\)</span></td>
+<td>0,15</td>
+<td>0,06</td>
+<td>0,25</td>
+<td>0,04</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(y_2 = 6\)</span></td>
+<td>0,30</td>
+<td>0,10</td>
+<td>0,03</td>
+<td>0,07</td>
+</tr>
+</tbody>
+</table>
+<p>Найти условное математическое ожидание составляющей <span class="arithmatex">\(\eta\)</span> при <span class="arithmatex">\(\xi = x_1 = 1\)</span>.</p>
+<h4 id="_26">Решение<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Найдем <span class="arithmatex">\(p(x_1)\)</span>, для чего сложим вероятности, помещенные в первом столбце таблицы:</p>
+<div class="arithmatex">\[
+p(x_1) = 0{,}15 + 0{,}30 = 0{,}45.
+\]</div>
+<p>Найдем условное распределение вероятностей величины <span class="arithmatex">\(\eta\)</span> при <span class="arithmatex">\(\xi = x_1 = 1\)</span>:</p>
+<div class="arithmatex">\[
+p(y_1 \mid x_1) = p(x_1, y_1) / p(x_1) = 0{,}15 / 0{,}45 = 1/3;
+\]</div>
+<div class="arithmatex">\[
+p(y_2 \mid x_1) = p(x_1, y_2) / p(x_1) = 0{,}30 / 0{,}45 = 2/3.
+\]</div>
+<p>Найдем искомое условное математическое ожидание:</p>
+<div class="arithmatex">\[
+M(\eta \mid \xi = x_1) = \sum_{j=1}^{2} y_j\, p(y_j \mid x_1) = 3 \cdot (1/3) + 6 \cdot (2/3) = 5.
+\]</div>
+</details>
+<h3 id="434">Задача 434. Условное матожидание<a class="headerlink" href="#434" title="Permanent link">&para;</a></h3>
+<p>У той же плотности, что в <a href="#задача-434">задаче 434</a>, найти <span class="arithmatex">\(E(X \mid Y)\)</span>.</p>
+<h4 id="_27">Решение<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(f_Y(y) = \tfrac12 \sin y\)</span> на <span class="arithmatex">\((0, \pi)\)</span>, поэтому</p>
+<div class="arithmatex">\[
+f(x \mid y) = \frac{(1/4)\sin x \sin y}{(1/2)\sin y} = \tfrac12 \sin x.
+\]</div>
+<p>От <span class="arithmatex">\(y\)</span> условная плотность не зависит:</p>
+<div class="arithmatex">\[
+E(X \mid Y = y) = \int_0^{\pi} x \cdot \tfrac12 \sin x\, dx = \frac{\pi}{2}.
+\]</div>
+</details>
+<h2 id="_28">Составное распределение<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<h3 id="_29">Теория<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Составное распределение / compound (mixture) distribution.</p>
+<p>Случайная величина <span class="arithmatex">\(X\)</span> задается составным распределением, если ее распределение зависит от величины, которая так же имеет распределение.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Формула полного математического ожидания / law of total expectation.</p>
+<p>Пусть <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span> являются случайными величинами. Тогда <span class="arithmatex">\(EX = E[E(X \mid Y)]\)</span> при условии, что соответствующие математические ожидания существуют.</p>
+</div>
+<p>Доказательство.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+EX &amp;= \int_{-\infty}^{\infty} x f_X(x)\, dx = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x f_{X,Y}(x, y)\, dy\, dx \\
+&amp;= \int_{-\infty}^{\infty} \left( \int_{-\infty}^{\infty} x f_{X \mid Y}(x \mid y)\, dx \right) f_Y(y)\, dy \\
+&amp;= \int_{-\infty}^{\infty} E(X \mid y)\, f_Y(y)\, dy = E\bigl[E(X \mid Y)\bigr].
+\end{aligned}
+\]</div>
+<p>Здесь <span class="arithmatex">\(f_{X,Y}(x, y) = f_{X \mid Y}(x \mid y)\, f_Y(y)\)</span>, а внутренняя скобка равна <span class="arithmatex">\(E(X \mid y)\)</span>.</p>
+<h3 id="_30">Практический пример: Венчурный фонд<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{aligned}
+Y &amp;\sim \mathrm{Poisson}(\lambda), \\
+X \mid Y &amp;\sim \mathrm{binomial}(Y, p), \\
+E[X \mid Y] &amp;= pY, \\
+E\bigl[E[X \mid Y]\bigr] &amp;= E[pY] = p\, EY = p\lambda = EX.
+\end{aligned}
+\]</div>
+<h2 id="_31">Самостоятельная<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h2>
+<p><strong>7 минут.</strong> Только ковариацию.</p>
+<p><strong>Задание 8.</strong> Задана плотность совместного распределения непрерывной двумерной случайной величины <span class="arithmatex">\((X, Y)\)</span>: <span class="arithmatex">\(f(x, y) = x + y\)</span> в квадрате <span class="arithmatex">\(0 \leqslant x \leqslant 1\)</span>, <span class="arithmatex">\(0 \leqslant y \leqslant 1\)</span>; вне квадрата <span class="arithmatex">\(f(x, y) = 0\)</span>. Найти:</p>
+<p>а) математические ожидания и дисперсии составляющих;</p>
+<p>б) ковариацию и корреляцию.</p>
+<p><strong>5 минут.</strong></p>
+<p><strong>Задание 9.</strong> Доказать, что если <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> связаны линейной зависимостью <span class="arithmatex">\(Y = aX + b\)</span>, то абсолютная величина коэффициента корреляции равна единице.</p>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p><code>HW10_y2023.pdf</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2221 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p05/">
+      
+      
+        <link rel="prev" href="../p04/">
+      
+      
+        <link rel="next" href="../p06/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Практика 5. Производящие функции - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 5. Производящие функции
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что такое производящая функция
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Что такое производящая функция">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.1. Закрытый вид
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.1. Закрытый вид">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение и чтение ряда
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Определение и чтение ряда">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.2. Кубик
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.2. Кубик">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.3. Три монеты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.3. Три монеты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Преобразования
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Преобразования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.4. Сдвиг и растяжение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.4. Сдвиг и растяжение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.5. Сумма Бернулли
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.5. Сумма Бернулли">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.6. Случайное число кубиков · дополнительно
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.6. Случайное число кубиков · дополнительно">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.7. Пуассон через ПФ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.7. Пуассон через ПФ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-nb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.8. Паскаль / NB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.8. Паскаль / NB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ПФ известных распределений
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ПФ известных распределений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.9. Вывод Пуассона
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.9. Вывод Пуассона">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пределы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пределы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.10. Бином к Пуассону
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.10. Бином к Пуассону">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что такое производящая функция
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Что такое производящая функция">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.1. Закрытый вид
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.1. Закрытый вид">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение и чтение ряда
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Определение и чтение ряда">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.2. Кубик
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.2. Кубик">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.3. Три монеты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.3. Три монеты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Преобразования
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Преобразования">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.4. Сдвиг и растяжение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.4. Сдвиг и растяжение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.5. Сумма Бернулли
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.5. Сумма Бернулли">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.6. Случайное число кубиков · дополнительно
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.6. Случайное число кубиков · дополнительно">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.7. Пуассон через ПФ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.7. Пуассон через ПФ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-nb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.8. Паскаль / NB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.8. Паскаль / NB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ПФ известных распределений
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ПФ известных распределений">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.9. Вывод Пуассона
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.9. Вывод Пуассона">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пределы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пределы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5.10. Бином к Пуассону
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5.10. Бином к Пуассону">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="5">Практика 5. Производящие функции<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> Упаковать закон целочисленной СВ в одну функцию: читать вероятности, складывать независимые, брать моменты, узнавать пределы.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Что такое производящая функция и зачем она</li>
+<li>Определение и чтение ряда</li>
+<li>Преобразования   </li>
+<li>Моменты</li>
+<li>Каталог известных распределений</li>
+<li>Пределы</li>
+</ol>
+<h2 id="_1">Что такое производящая функция<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Теория<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>У текущего потока производящие функции на дискретке будут в следующем семестре.
+Поэтому здесь — минимум, ровно столько, чтобы ими пользоваться в теорвере.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Производящая функция последовательности <span class="arithmatex">\((a_k)\)</span>:</p>
+<div class="arithmatex">\[
+A(s) = \sum_{k=0}^{\infty} a_k s^k.
+\]</div>
+</div>
+<p>Фактически, мы переписали бесконечную последовательность, просто, в каком-то странном виде - домножая на степени переменной s.
+Перевод из последовательности в ПФ до тех пор, пока мы не подставляем конкретное значение в s, инъективен.
+Т.Е. каждой ПФ соответствует одна последовательность, а каждой последовательности - не более одной ПФ.
+А это, в свою очередь, позволяет переводить последовательности в ПФ, проводить с ними какие-либо операции по определённы правилам, возвращать обратно в последовательности и получать верный результат.</p>
+<h3 id="51">Задача 5.1. Закрытый вид<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Какой последовательности соответствует ряд <span class="arithmatex">\(1/(1 - s)\)</span>?</li>
+<li>Какой последовательности соответствует ряд <span class="arithmatex">\(1/(1 - s^n)\)</span>?</li>
+<li>Какой последовательности соответствует ряд <span class="arithmatex">\(1/(1 - 2s)\)</span>?</li>
+<li>Какой последовательности соответствует ряд <span class="arithmatex">\(e^s\)</span>?</li>
+<li>Какой последовательности соответствует ряд <span class="arithmatex">\(1/(1 - s)^n\)</span>?</li>
+</ul>
+<h4 id="_3">Решение<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Геометрический ряд и экспонента, <span class="arithmatex">\(|s|\)</span> достаточно мал, чтобы ряд сходился. Коэффициент при <span class="arithmatex">\(s^k\)</span> и есть <span class="arithmatex">\(a_k\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(1/(1-s)=\sum s^k\)</span> — все единицы: <span class="arithmatex">\(a_k=1\)</span>.</li>
+<li><span class="arithmatex">\(1/(1-s^n)=\sum s^{nk}\)</span> — единицы на местах <span class="arithmatex">\(0,n,2n,\dots\)</span>, остальные нули.</li>
+<li><span class="arithmatex">\(1/(1-2s)=\sum 2^k s^k\)</span> — <span class="arithmatex">\(a_k=2^k\)</span>.</li>
+<li><span class="arithmatex">\(e^s=\sum s^k/k!\)</span> — <span class="arithmatex">\(a_k=1/k!\)</span>.</li>
+<li><span class="arithmatex">\(1/(1-s)^n=\sum C_{k+n-1}^{k} s^k\)</span> — <span class="arithmatex">\(a_k=C_{k+n-1}^{k}\)</span> (ряд Ньютона / Паскаль без <span class="arithmatex">\(p^r q^k\)</span>).</li>
+</ul>
+</details>
+<p>Запись ПФ не через сумму, а через краткую формулу называется замкнутым видом.</p>
+<p>Производящая функция используется для:</p>
+<ul>
+<li>Компактной записи информации о последовательности.</li>
+<li>Нахождения зависимости <span class="arithmatex">\(a_n(n)\)</span> для последовательности <span class="arithmatex">\(a_n\)</span>, заданной рекуррентным соотношением. Например, для чисел Фибоначчи.</li>
+<li>Нахождения рекуррентного соотношения для последовательности — вид производящей функции может помочь найти формулу.</li>
+<li>Исследования асимптотического поведения последовательности.</li>
+<li>Доказательства тождеств с последовательностями.</li>
+<li>Решения задачи подсчета объектов в комбинаторике.</li>
+<li>Вычисления бесконечных сумм.</li>
+</ul>
+<h2 id="_4">Определение и чтение ряда<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">Теория<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>Теперь перейдём к ПФ в ТВ.
+Дальше <span class="arithmatex">\(X\)</span> — целочисленная СВ, <span class="arithmatex">\(X \in \{0,1,2,\dots\}\)</span>, <span class="arithmatex">\(p_k = P(X=k)\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_X(s) = \mathrm{E}[s^X] = \sum_{k=0}^{\infty} p_k s^k, \qquad |s| \leqslant 1.
+\]</div>
+</div>
+<p>Ряд сходится хотя бы при <span class="arithmatex">\(|s|\leqslant 1\)</span>: вероятности неотрицательны и в сумме дают 1. Точка <span class="arithmatex">\(s=1\)</span> — нормировка. Точка <span class="arithmatex">\(s=0\)</span> — вероятность нуля. Производные в нуле достают остальные <span class="arithmatex">\(p_k\)</span>. Если две ПФ совпали в окрестности нуля, законы совпали: коэффициенты ряда однозначны.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_X(1) = 1.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_X(0) = p_0.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+p_k = \frac{\varphi_X^{(k)}(0)}{k!}.
+\]</div>
+</div>
+<p>На практике коэффициент чаще берут не дифференцированием, а раскрытием скобок или геометрическим рядом. Формула с <span class="arithmatex">\(k!\)</span> нужна, когда <span class="arithmatex">\(\varphi\)</span> дана «закрытой», как экспонента.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если <span class="arithmatex">\(\varphi_X = \varphi_Y\)</span> в окрестности нуля, то законы <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> совпадают.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+|\varphi_X(s)| \leqslant 1 \quad \text{при } |s| \leqslant 1.
+\]</div>
+</div>
+<h3 id="52">Задача 5.2. Кубик<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<p>Получите формулу производящей функции броска шестигранного кубика.</p>
+<h4 id="_6">Решение<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(P(X=k)=1/6\)</span> для <span class="arithmatex">\(k=1,\dots,6\)</span>.</p>
+<div class="arithmatex">\[
+\varphi(s) = \frac{s+s^2+s^3+s^4+s^5+s^6}{6} = \frac{s(1-s^6)}{6(1-s)}.
+\]</div>
+<p>Второе равенство — сумма геометрической прогрессии; при <span class="arithmatex">\(s=1\)</span> правую часть доопределяют пределом: <span class="arithmatex">\(\varphi(1)=1\)</span>.</p>
+</details>
+<h3 id="53">Задача 5.3. Три монеты<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<p>Честная монета, три независимых броска, <span class="arithmatex">\(X\)</span> — число орлов. Выпишите <span class="arithmatex">\(\varphi_X\)</span> по определению, не ссылаясь на бином.</p>
+<h4 id="_7">Решение<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(P(X=0)=1/8\)</span>, <span class="arithmatex">\(P(X=1)=3/8\)</span>, <span class="arithmatex">\(P(X=2)=3/8\)</span>, <span class="arithmatex">\(P(X=3)=1/8\)</span>.</p>
+<div class="arithmatex">\[
+\varphi(s) = \frac{1}{8} + \frac{3}{8}s + \frac{3}{8}s^2 + \frac{1}{8}s^3 = \left(\frac{1+s}{2}\right)^3.
+\]</div>
+<p>Скобки — забегание: три независимых Бернулли. Это всплывёт в преобразованиях.</p>
+</details>
+<h2 id="_8">Преобразования<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">Теория<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_{aX+b}(s) = s^b \cdot \varphi_X(s^a), \qquad a \in \mathbb{N},\; b \in \mathbb{Z}_{\geqslant 0}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+X \perp Y \implies \varphi_{X+Y}(s) = \varphi_X(s)\,\varphi_Y(s).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Свёртка:</p>
+<div class="arithmatex">\[
+P(X+Y = n) = \sum_{k} P(X = k)\,P(Y = n-k).
+\]</div>
+</div>
+<p>Если число слагаемых само случайно (<span class="arithmatex">\(N\)</span> заказов, каждый размера <span class="arithmatex">\(X_i\)</span>), ПФ суммы — композиция: в ПФ счётчика <span class="arithmatex">\(N\)</span> вместо аргумента подставляют ПФ одного слагаемого. <span class="arithmatex">\(g_N\)</span> — это обычная производящая <span class="arithmatex">\(N\)</span>, <span class="arithmatex">\(g_N(t)=\mathrm{E}[t^N]\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Случайная сумма: <span class="arithmatex">\(N \perp X_i\)</span>, <span class="arithmatex">\(S = X_1 + \ldots + X_N\)</span>, тогда</p>
+<div class="arithmatex">\[
+\varphi_S(s) = g_N\bigl(\varphi_X(s)\bigr).
+\]</div>
+</div>
+<p>ПФ нужна не как «ещё одна запись закона», а как алгебра операций над СВ.
+Иногда сложные и почти невычислимые преобразования в обычных СВ являются элементарными, если перевести всё в ПФ.</p>
+<h3 id="54">Задача 5.4. Сдвиг и растяжение<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<p>Возьмём <span class="arithmatex">\(\varphi_X(s) = c(1+s^2)^2\)</span> — ПФ некоторой СВ. Найдите <span class="arithmatex">\(c\)</span> и <span class="arithmatex">\(\varphi_{2X+4}(s)\)</span>.</p>
+<h4 id="_10">Решение<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\varphi_X(1)=c\cdot 4=1\)</span>, значит <span class="arithmatex">\(c=1/4\)</span>. По определению <span class="arithmatex">\(\varphi_{2X+4}(s)=\mathrm{E}\,s^{2X+4}=s^4\mathrm{E}(s^2)^X=s^4\varphi_X(s^2)\)</span>. Подставить: <span class="arithmatex">\(s^4\cdot(1/4)(1+s^4)^2\)</span>. Линейную комбинацию всегда так и пишут, без ряда. Если раскрыть, то же самое: масса с <span class="arithmatex">\(0,2,4\)</span> переезжает на <span class="arithmatex">\(4,8,12\)</span>.</p>
+</details>
+<h3 id="55">Задача 5.5. Сумма Бернулли<a class="headerlink" href="#55" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(X_1,\dots,X_n\)</span> независимы, <span class="arithmatex">\(P(X_i=1)=p\)</span>, <span class="arithmatex">\(P(X_i=0)=q\)</span>. Найдите ПФ суммы <span class="arithmatex">\(S_n\)</span> и узнайте закон.</p>
+<h4 id="_11">Решение<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\varphi_{X_i}(s)=q+ps\)</span>, поэтому <span class="arithmatex">\(\varphi_{S_n}=(q+ps)^n\)</span> — бином <span class="arithmatex">\(B_{n,p}\)</span>. Так ПФ заменяет индукцию по формуле Бернулли.</p>
+</details>
+<h3 id="56">Задача 5.6. Случайное число кубиков · дополнительно<a class="headerlink" href="#56" title="Permanent link">&para;</a></h3>
+<p>Вы играете в следующую игру:
+Каждый свой ход вы бросаете монетку.
+Если монетка выпала орлом - вы бросаете 6-гранный кубик и прибавляете значение к своим победным очках.
+Если монетка выпала решкой - вы передаёте ход.
+Найдите закон распределения победных очков за один ход в ПФ.</p>
+<h4 id="_12">Решение<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>За один ход либо <span class="arithmatex">\(0\)</span> очков (решка), либо бросок кубика (орёл). Это случайная сумма: <span class="arithmatex">\(N\sim Bern(1/2)\)</span>, при <span class="arithmatex">\(N=1\)</span> слагаемое — кубик <span class="arithmatex">\(X\)</span>. <span class="arithmatex">\(g_N(t)=(1+t)/2\)</span>, <span class="arithmatex">\(\varphi_X\)</span> из задачи 5.2, поэтому</p>
+<div class="arithmatex">\[
+\varphi_S(s) = \frac{1}{2} + \frac{1}{2}\cdot\frac{s+\cdots+s^6}{6} = \frac{1}{2} + \frac{s(1-s^6)}{12(1-s)}.
+\]</div>
+<p>Закон: <span class="arithmatex">\(P(S=0)=1/2\)</span>, <span class="arithmatex">\(P(S=k)=1/12\)</span> для <span class="arithmatex">\(k=1,\dots,6\)</span>.</p>
+</details>
+<h2 id="_13">Моменты<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="_14">Теория<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+Q(s) = \sum_{k \geqslant 0} P(X &gt; k)\, s^k = \frac{1 - \varphi(s)}{1 - s}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\mathrm{E}[X] = \varphi'(1) = Q(1).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\mathrm{E}\bigl[X(X-1)\bigr] = \varphi''(1).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+D(X) = \varphi''(1) + \varphi'(1) - \bigl(\varphi'(1)\bigr)^2.
+\]</div>
+</div>
+<p>Если <span class="arithmatex">\(\varphi'(s)\)</span> взрывается при <span class="arithmatex">\(s\to 1\)</span>, среднее бесконечно. Такое бывает, на паре можно не копать.</p>
+<h3 id="57">Задача 5.7. Пуассон через ПФ<a class="headerlink" href="#57" title="Permanent link">&para;</a></h3>
+<p>Посчитайте матожидание и дисперсию <span class="arithmatex">\(Pois(\lambda)\)</span> при помощи производящих функций.</p>
+<h4 id="_15">Решение<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\varphi(s)=e^{\lambda(s-1)}\)</span>, <span class="arithmatex">\(\varphi'(s)=\lambda e^{\lambda(s-1)}\)</span>, <span class="arithmatex">\(\varphi'(1)=\lambda\)</span>. <span class="arithmatex">\(\varphi''(s)=\lambda^2 e^{\lambda(s-1)}\)</span>, <span class="arithmatex">\(\varphi''(1)=\lambda^2\)</span>. Тогда <span class="arithmatex">\(D=\lambda^2+\lambda-\lambda^2=\lambda\)</span>. Среднее равно дисперсии — сразу из двух производных.</p>
+</details>
+<h3 id="58-nb">Задача 5.8. Паскаль / NB<a class="headerlink" href="#58-nb" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(X\)</span> — число неудач до <span class="arithmatex">\(r\)</span> успехов, <span class="arithmatex">\(NB_{r,p}\)</span>:</p>
+<div class="arithmatex">\[
+P(X=k) = C_{k+r-1}^{k}\, p^r q^k, \qquad k = 0,1,2,\dots
+\]</div>
+<p>Найдите <span class="arithmatex">\(\mathrm{E}[X]\)</span> и <span class="arithmatex">\(D(X)\)</span> любым способом.</p>
+<p>P.S. Отличный пример, когда "в лоб" считается плохо и логичнее обойти через ПФ.</p>
+<h4 id="_16">Решение<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>В лоб по формуле</summary>
+<div class="arithmatex">\[
+\mathrm{E}[X] = \sum_{k=0}^{\infty} k\, C_{k+r-1}^{k}\, p^r q^k.
+\]</div>
+<p>Член <span class="arithmatex">\(k=0\)</span> ноль. Тождество</p>
+<div class="arithmatex">\[
+k\, C_{k+r-1}^{k} = k\cdot\frac{(k+r-1)!}{k!\,(r-1)!} = \frac{(k+r-1)!}{(k-1)!\,(r-1)!} = r\, C_{k+r-1}^{k-1}.
+\]</div>
+<p>Тогда</p>
+<div class="arithmatex">\[
+\mathrm{E}[X] = r p^r \sum_{k=1}^{\infty} C_{k+r-1}^{k-1} q^k = r\frac{q}{p}\sum_{k=1}^{\infty} C_{k+r-1}^{k-1}\, p^{r+1} q^{k-1}.
+\]</div>
+<p>Сдвиг <span class="arithmatex">\(j=k-1\)</span>: <span class="arithmatex">\(C_{k+r-1}^{k-1}=C_{j+(r+1)-1}^{j}\)</span>, а <span class="arithmatex">\(C_{j+r}^{j}p^{r+1}q^j\)</span> — это в точности <span class="arithmatex">\(NB_{r+1,p}(j)\)</span>. Сумма по <span class="arithmatex">\(j\)</span> равна 1, потому что это снова закон распределения с практики 4. Итого <span class="arithmatex">\(\mathrm{E}[X]=rq/p\)</span>.</p>
+<p>Для дисперсии сначала второй факториальный момент:</p>
+<div class="arithmatex">\[
+\mathrm{E}\bigl[X(X-1)\bigr] = \sum_{k=2}^{\infty} k(k-1)\, C_{k+r-1}^{k}\, p^r q^k.
+\]</div>
+<p>Ещё одно тождество:</p>
+<div class="arithmatex">\[
+k(k-1)\, C_{k+r-1}^{k} = \frac{(k+r-1)!}{(k-2)!\,(r-1)!} = r(r+1)\, C_{k+r-1}^{k-2}.
+\]</div>
+<div class="arithmatex">\[
+\mathrm{E}\bigl[X(X-1)\bigr] = r(r+1)p^r\sum_{k=2}^{\infty} C_{k+r-1}^{k-2} q^k = r(r+1)\frac{q^2}{p^2}\sum_{j=0}^{\infty} C_{j+(r+2)-1}^{j}\, p^{r+2} q^j = \frac{r(r+1)q^2}{p^2},
+\]</div>
+<p>снова потому что внутри <span class="arithmatex">\(NB_{r+2,p}\)</span>. Наконец</p>
+<div class="arithmatex">\[
+D(X)=\mathrm{E}\bigl[X(X-1)\bigr]+\mathrm{E}[X]-\bigl(\mathrm{E}[X]\bigr)^2 = \frac{r(r+1)q^2}{p^2}+\frac{rq}{p}-\frac{r^2 q^2}{p^2}=\frac{rq}{p^2}.
+\]</div>
+<p>Два биномиальных тождества, два сдвига индекса, два раза вспомнить, что <span class="arithmatex">\(NB_{r+1}\)</span> и <span class="arithmatex">\(NB_{r+2}\)</span> — тоже законы.</p>
+</details>
+<details class="question">
+<summary>Через ПФ</summary>
+<p>Ряд <span class="arithmatex">\(\sum C_{k+r-1}^{k} x^k = 1/(1-x)^r\)</span>, поэтому</p>
+<div class="arithmatex">\[
+\varphi(s) = \sum_{k=0}^{\infty} C_{k+r-1}^{k} p^r (qs)^k = \left(\frac{p}{1-qs}\right)^r.
+\]</div>
+<div class="arithmatex">\[
+\varphi'(s) = r q p^r (1-qs)^{-r-1}, \qquad \varphi'(1)=\frac{rq}{p}.
+\]</div>
+<div class="arithmatex">\[
+\varphi''(s) = r(r+1) q^2 p^r (1-qs)^{-r-2}, \qquad \varphi''(1)=\frac{r(r+1)q^2}{p^2}.
+\]</div>
+<div class="arithmatex">\[
+D(X)=\frac{r(r+1)q^2}{p^2}+\frac{rq}{p}-\left(\frac{rq}{p}\right)^2=\frac{rq}{p^2}.
+\]</div>
+<p>Ряд с биномами дифференцировать не пришлось: закрытая дробь.</p>
+</details>
+<h2 id="_17">ПФ известных распределений<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">Теория<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Бернулли <span class="arithmatex">\(p\)</span>:</p>
+<div class="arithmatex">\[
+\varphi(s) = q + ps.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Бином <span class="arithmatex">\(B_{n,p}\)</span>:</p>
+<div class="arithmatex">\[
+\varphi(s) = (q + ps)^n.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Геометрия, число неудач до успеха:</p>
+<div class="arithmatex">\[
+\varphi(s) = \frac{p}{1 - qs}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Геометрия, номер первого успеха:</p>
+<div class="arithmatex">\[
+\varphi(s) = \frac{ps}{1 - qs}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Паскаль / <span class="arithmatex">\(NB_{r,p}\)</span>:</p>
+<div class="arithmatex">\[
+\varphi(s) = \left(\frac{p}{1 - qs}\right)^r.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Пуассон <span class="arithmatex">\(\lambda\)</span>:</p>
+<div class="arithmatex">\[
+\varphi(s) = e^{\lambda(s-1)}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Равномерное на <span class="arithmatex">\(\{1,\ldots,n\}\)</span>:</p>
+<div class="arithmatex">\[
+\varphi(s) = \frac{s + \cdots + s^n}{n} = \frac{s(1 - s^n)}{n(1 - s)}.
+\]</div>
+</div>
+<p>Следствия, которые стоит проговорить вслух:</p>
+<ul>
+<li><span class="arithmatex">\(B_{n,p}\)</span> — сумма <span class="arithmatex">\(n\)</span> бернуллиев, поэтому <span class="arithmatex">\((q+ps)^n\)</span>;</li>
+<li><span class="arithmatex">\(NB_{r,p}\)</span> — сумма <span class="arithmatex">\(r\)</span> независимых геометрий (числа неудач), поэтому скобка в степени <span class="arithmatex">\(r\)</span>;</li>
+<li>сумма независимых Пуассонов — Пуассон, потому что экспоненты складывают показатели;</li>
+<li>гипергеометрическое в элементарных функциях так не упаковывается (выбор без возвращения, слагаемые зависимы) — ПФ для него на паре не пишем.</li>
+</ul>
+<h3 id="59">Задача 5.9. Вывод Пуассона<a class="headerlink" href="#59" title="Permanent link">&para;</a></h3>
+<p>Выведите <span class="arithmatex">\(\varphi\)</span> для <span class="arithmatex">\(P(X=k)=e^{-\lambda}\lambda^k/k!\)</span>. Докажите <span class="arithmatex">\(Pois(a)+Pois(b)=Pois(a+b)\)</span> при независимости.</p>
+<h4 id="_19">Решение<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\varphi(s)=\sum e^{-\lambda}(\lambda s)^k/k! = e^{-\lambda}e^{\lambda s}=e^{\lambda(s-1)}\)</span>. Произведение <span class="arithmatex">\(e^{a(s-1)}e^{b(s-1)}=e^{(a+b)(s-1)}\)</span>.</p>
+</details>
+<h2 id="_20">Пределы<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h3 id="_21">Теория<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>На практике 4 уже пользовались «при большом <span class="arithmatex">\(n\)</span> и маленьком <span class="arithmatex">\(p\)</span> бином похож на Пуассон». Производящие объясняют, почему: функции сходятся, а сходимость ПФ в <span class="arithmatex">\([0,1)\)</span> равносильна сходимости всех <span class="arithmatex">\(p_k\)</span>.</p>
+<p>Индекс <span class="arithmatex">\(n\)</span> — номер закона в последовательности, не значение СВ. Для каждого <span class="arithmatex">\(n\)</span> есть своя СВ <span class="arithmatex">\(X_n\)</span> с вероятностями <span class="arithmatex">\(p_{k,n}=P(X_n=k)\)</span> и своей ПФ <span class="arithmatex">\(\varphi_n(s)=\sum_k p_{k,n}s^k\)</span>. Предел по <span class="arithmatex">\(n\)</span>: у бинома это <span class="arithmatex">\(B_{n,\lambda/n}\)</span> при растущем числе испытаний. У предельного закона вероятности <span class="arithmatex">\(p_k=P(X=k)\)</span>, ПФ <span class="arithmatex">\(\varphi\)</span>. Теорема говорит, что <span class="arithmatex">\(p_{k,n}\to p_k\)</span> сразу для всех <span class="arithmatex">\(k\)</span> тогда и только тогда, когда <span class="arithmatex">\(\varphi_n\)</span> сходится к <span class="arithmatex">\(\varphi\)</span> в каждой точке <span class="arithmatex">\(s\in[0,1)\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_n(s) \to \varphi(s) \quad \text{при } s \in [0,1) \iff p_{k,n} \to p_k \text{ для всех } k.
+\]</div>
+</div>
+<p>Практические применения: пуассоновское приближение бинома; Паскаль с редкими успехами тоже идёт в Пуассон (домашка); редкие события с <em>разными</em> вероятностями — пожары в домах, звонки на АТС, простейший поток.</p>
+<h3 id="510">Задача 5.10. Бином к Пуассону<a class="headerlink" href="#510" title="Permanent link">&para;</a></h3>
+<p>Пусть <span class="arithmatex">\(X_n \sim B_{n, \lambda/n}\)</span>, <span class="arithmatex">\(\lambda\)</span> фиксировано. Покажите <span class="arithmatex">\(\varphi_{X_n}(s)\to e^{\lambda(s-1)}\)</span> и заключите, что <span class="arithmatex">\(X_n\)</span> сходится по распределению к <span class="arithmatex">\(Pois(\lambda)\)</span>.</p>
+<h4 id="_22">Решение<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\varphi_n(s)=\bigl(1-\lambda/n + (\lambda/n)s\bigr)^n = \bigl(1 - \lambda(1-s)/n\bigr)^n \to e^{\lambda(s-1)}\)</span>. По теореме непрерывности <span class="arithmatex">\(p_{k,n}\to e^{-\lambda}\lambda^k/k!\)</span>.</p>
+</details>
+<h2 id="_23">Самостоятельная<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<p><strong>5 минут.</strong> Найти производящую функцию и матожидание (через производящую функцию) распределения Пуассона.</p>
+<h4 id="_24">Решение<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\varphi(s)=e^{\lambda(s-1)}\)</span>, <span class="arithmatex">\(E=\varphi'(1)=\lambda\)</span>.</p>
+</details>
+<p><strong>6 минут.</strong> Найти производящую функцию и матожидание (через производящую функцию) геометрического распределения.</p>
+<h4 id="_25">Решение<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Уточнить конвенцию. Число неудач: <span class="arithmatex">\(\varphi=p/(1-qs)\)</span>, <span class="arithmatex">\(E=q/p\)</span>. Номер успеха: <span class="arithmatex">\(\varphi=ps/(1-qs)\)</span>, <span class="arithmatex">\(E=1/p\)</span>. На практике 4 геометрическое задавалось обоими способами — на самостоятельной принять тот, который объявили в каталоге.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p><code>HW5_y2023.pdf</code></p>
+<p>В задании 5 формулировка «<span class="arithmatex">\(Geom(a)+Geom(b)=Geom(a+b)\)</span>» неверна: при равных параметрах это Паскаль, при разных — не геометрия. Имеет смысл заменить на вывод ПФ Паскаля или на «покажите, что это не так».</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
