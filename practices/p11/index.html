@@ -1,0 +1,2407 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Преподавательский конспект практик по теории вероятностей (y2025)">
+      
+      
+        <meta name="author" content="Практики теорвера">
+      
+      
+        <link rel="canonical" href="https://pavladog.github.io/teorver-site/practices/p11/">
+      
+      
+        <link rel="prev" href="../p10/">
+      
+      
+        <link rel="next" href="../p-bonus-balance/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Практика 11. Характеристические функции - Теорвер — план практик</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Теорвер — план практик" class="md-header__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Теорвер — план практик
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Практика 11. Характеристические функции
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Тёмная тема"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Тёмная тема" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Светлая тема"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Светлая тема" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Теорвер — план практик" class="md-nav__button md-logo" aria-label="Теорвер — план практик" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Теорвер — план практик
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О сайте
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ocenivanie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система оценивания
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Практики
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 1. События и Байес
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 2. Случайные величины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 3. Геометрическая вероятность
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 4. Зоопарк дискретных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 5. Производящие функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 6. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 7. Непрерывные СВ и преобразования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 8. Зоопарк непрерывных распределений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 9. Многомерные, ЗБЧ и ЦПТ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 10. Моменты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 11. Характеристические функции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Определение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Показательное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 1. Показательное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подстановка в производящую
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подстановка в производящую">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 2. Паскаль
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 2. Паскаль">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Полный квадрат
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Полный квадрат">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 3. Стандартное нормальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 3. Стандартное нормальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Линейная замена
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Линейная замена">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сумма независимых
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сумма независимых">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Разность нормальных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 4. Разность нормальных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Суммы экспонент
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Суммы экспонент">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5. Произведение косинусов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5. Произведение косинусов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ряды
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ряды">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 6. Дробь
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 6. Дробь">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7. Асимметрия показательного
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7. Асимметрия показательного">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Предел
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Предел">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8. Пуассон к нормальному
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8. Пуассон к нормальному">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 9. Сумма показательных · дополнительно
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 9. Сумма показательных · дополнительно">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p12.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практика 12. (контрольная)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p-bonus-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бонусная лекция. Дисбаланс в играх
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Определение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 1. Показательное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 1. Показательное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подстановка в производящую
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Подстановка в производящую">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 2. Паскаль
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 2. Паскаль">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Полный квадрат
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Полный квадрат">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 3. Стандартное нормальное
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 3. Стандартное нормальное">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Линейная замена
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Линейная замена">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сумма независимых
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сумма независимых">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4. Разность нормальных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 4. Разность нормальных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Суммы экспонент
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Суммы экспонент">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5. Произведение косинусов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 5. Произведение косинусов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ряды
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ряды">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 6. Дробь
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 6. Дробь">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Моменты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Моменты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 7. Асимметрия показательного
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 7. Асимметрия показательного">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Предел
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Предел">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Теория
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 8. Пуассон к нормальному
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 8. Пуассон к нормальному">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 9. Сумма показательных · дополнительно
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Задача 9. Сумма показательных · дополнительно">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Самостоятельная
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Самостоятельная">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="11">Практика 11. Характеристические функции<a class="headerlink" href="#11" title="Permanent link">&para;</a></h1>
+<p><strong>Цель.</strong> По закону считать характеристическую функцию, по функции восстанавливать закон и моменты, по пределу функций узнавать предельный закон.</p>
+<p><strong>Ход пары</strong></p>
+<ol>
+<li>Определение</li>
+<li>Подстановка в производящую</li>
+<li>Полный квадрат</li>
+<li>Линейная замена</li>
+<li>Сумма независимых</li>
+<li>Суммы экспонент</li>
+<li>Ряды</li>
+<li>Моменты</li>
+<li>Предел</li>
+</ol>
+<h2 id="_1">Определение<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Теория<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_X(t) = \mathrm{E}[e^{itX}], \qquad t \in \mathbb{R}.
+\]</div>
+<p>Непрерывный закон с плотностью <span class="arithmatex">\(p\)</span>:</p>
+<div class="arithmatex">\[
+\varphi_X(t) = \int_{-\infty}^{\infty} e^{itx}\, p(x)\, dx.
+\]</div>
+<p>Дискретный закон:</p>
+<div class="arithmatex">\[
+\varphi_X(t) = \sum_k e^{itx_k}\, P(X = x_k).
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_X(0) = 1, \qquad |\varphi_X(t)| \le 1.
+\]</div>
+</div>
+<p>Производящая с пары 5 умеет только целые массы: ряд <span class="arithmatex">\(\sum p_k s^k\)</span>. У показательного и нормального таких масс нет. <span class="arithmatex">\(e^{itX}\)</span> ограничена единицей, поэтому среднее существует у любого закона, и интеграл с плотностью сходится абсолютно.</p>
+<p>В задачниках ту же функцию часто называют <span class="arithmatex">\(f_\xi(t)\)</span>. Здесь <span class="arithmatex">\(\varphi\)</span>, как у производящей на паре 5: там аргумент <span class="arithmatex">\(s\)</span>, здесь <span class="arithmatex">\(t\)</span>, а внутри стоит <span class="arithmatex">\(e^{itX}\)</span>.</p>
+<h3 id="1">Задача 1. Показательное<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>Плотность <span class="arithmatex">\(p(x) = \alpha e^{-\alpha x}\)</span> при <span class="arithmatex">\(x &gt; 0\)</span> и <span class="arithmatex">\(p(x) = 0\)</span> при <span class="arithmatex">\(x &lt; 0\)</span>, параметр <span class="arithmatex">\(\alpha &gt; 0\)</span>. Найти <span class="arithmatex">\(\varphi(t)\)</span>.</p>
+<h4 id="_3">Решение<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+\varphi(t) = \int_0^{\infty} e^{itx}\, \alpha e^{-\alpha x}\, dx = \alpha \int_0^{\infty} e^{-x(\alpha - it)}\, dx.
+\]</div>
+<p>Первообразная <span class="arithmatex">\(-\dfrac{1}{\alpha - it}\, e^{-x(\alpha - it)}\)</span>. На бесконечности модуль экспоненты равен <span class="arithmatex">\(e^{-\alpha x}\)</span> и уходит в нуль, в нуле остаётся единица:</p>
+<div class="arithmatex">\[
+\varphi(t) = \alpha \cdot \frac{1}{\alpha - it} = \frac{\alpha}{\alpha - it}.
+\]</div>
+<p>Проверка: <span class="arithmatex">\(\varphi(0) = 1\)</span> и <span class="arithmatex">\(\bigl|\varphi(t)\bigr| = \alpha / \sqrt{\alpha^2 + t^2} \le 1\)</span>.</p>
+</details>
+<h2 id="_4">Подстановка в производящую<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">Теория<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если <span class="arithmatex">\(X\)</span> принимает значения <span class="arithmatex">\(0, 1, 2, \ldots\)</span> и <span class="arithmatex">\(g(s) = \mathrm{E}[s^X]\)</span> — её производящая, то</p>
+<div class="arithmatex">\[
+\varphi_X(t) = g(e^{it}).
+\]</div>
+</div>
+<p>Ряд вероятностей на паре 5 уже суммировали. Подстановка <span class="arithmatex">\(s = e^{it}\)</span> дешевле, чем собирать тот же ряд заново.</p>
+<h3 id="2">Задача 2. Паскаль<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>Число неудач до <span class="arithmatex">\(r\)</span>-го успеха:</p>
+<div class="arithmatex">\[
+P(X = k) = C_{k+r-1}^{k}\, p^r q^k, \qquad k = 0, 1, 2, \ldots
+\]</div>
+<p>Найти <span class="arithmatex">\(\varphi_X(t)\)</span>. Сумму <span class="arithmatex">\(\sum C_{k+r-1}^{k} z^k\)</span> брали на паре 5.</p>
+<h4 id="_6">Решение<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+\varphi_X(t) = \sum_{k=0}^{\infty} C_{k+r-1}^{k}\, p^r (q e^{it})^k.
+\]</div>
+<p>На паре 5 было <span class="arithmatex">\(\sum_{k=0}^{\infty} C_{k+r-1}^{k} z^k = (1 - z)^{-r}\)</span> при <span class="arithmatex">\(|z| &lt; 1\)</span>. Здесь <span class="arithmatex">\(z = q e^{it}\)</span> и <span class="arithmatex">\(|z| = q &lt; 1\)</span> при <span class="arithmatex">\(p &gt; 0\)</span>, поэтому</p>
+<div class="arithmatex">\[
+\varphi_X(t) = p^r \bigl(1 - q e^{it}\bigr)^{-r} = \left( \frac{p}{1 - q e^{it}} \right)^r.
+\]</div>
+<p>При <span class="arithmatex">\(r = 1\)</span> остаётся <span class="arithmatex">\(\varphi(t) = p / (1 - q e^{it})\)</span> — число неудач до первого успеха.</p>
+</details>
+<h2 id="_7">Полный квадрат<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">Теория<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \exp\bigl( -(x - it)^2 / 2 \bigr)\, dx = \sqrt{2\pi}.
+\]</div>
+</div>
+<p>Интеграл <span class="arithmatex">\(e^{itx} e^{-x^2/2}\)</span> таблицей не берётся. Приём такой: из показателя вынести <span class="arithmatex">\(-1/2\)</span>, добавить и вычесть <span class="arithmatex">\((it)^2\)</span>, свернуть <span class="arithmatex">\((x-it)^2\)</span>. Квадрат <span class="arithmatex">\((it)^2\)</span> равен <span class="arithmatex">\(-t^2\)</span>, это вещественное число, оно уходит в множитель <span class="arithmatex">\(e^{-t^2/2}\)</span> перед интегралом. Почему сдвиг контура на <span class="arithmatex">\(it\)</span> не меняет значение интеграла, не доказываем: подынтегральная целая и убывает на бесконечности в полосе. Это единственный недоказываемый факт темы.</p>
+<h3 id="3">Задача 3. Стандартное нормальное<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>Найти характеристическую функцию <span class="arithmatex">\(N(0, 1)\)</span>.</p>
+<h4 id="_9">Решение<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+\varphi(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \exp\bigl( itx - x^2/2 \bigr)\, dx.
+\]</div>
+<p><span class="arithmatex">\(t\)</span> — вещественный параметр, по <span class="arithmatex">\(x\)</span> интегрируем. Показатель:</p>
+<div class="arithmatex">\[
+itx - \frac{x^2}{2} = -\frac{1}{2}\bigl(x^2 - 2it\, x\bigr).
+\]</div>
+<p>В скобке не хватает квадрата половины коэффициента при <span class="arithmatex">\(x\)</span>. Половина от <span class="arithmatex">\(2it\)</span> есть <span class="arithmatex">\(it\)</span>, и <span class="arithmatex">\((it)^2 = i^2 t^2 = -t^2\)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+x^2 - 2it\, x
+&amp;= x^2 - 2it\, x + (it)^2 - (it)^2 \\
+&amp;= (x - it)^2 - (it)^2 \\
+&amp;= (x - it)^2 - (-t^2) \\
+&amp;= (x - it)^2 + t^2.
+\end{aligned}
+\]</div>
+<p>Возвращаем множитель <span class="arithmatex">\(-1/2\)</span>:</p>
+<div class="arithmatex">\[
+itx - \frac{x^2}{2}
+= -\frac{1}{2}\bigl((x - it)^2 + t^2\bigr)
+= -\frac{(x - it)^2}{2} - \frac{t^2}{2}.
+\]</div>
+<p>Проверка в обратную сторону: <span class="arithmatex">\((x-it)^2 = x^2 - 2itx + (it)^2 = x^2 - 2itx - t^2\)</span>, поэтому</p>
+<div class="arithmatex">\[
+-\frac{(x-it)^2}{2} - \frac{t^2}{2}
+= -\frac{x^2}{2} + itx + \frac{t^2}{2} - \frac{t^2}{2}
+= itx - \frac{x^2}{2}.
+\]</div>
+<p>Экспонента распадается на множитель без <span class="arithmatex">\(x\)</span> и сдвинутый гауссов интеграл:</p>
+<div class="arithmatex">\[
+\varphi(t)
+= e^{-t^2/2} \cdot \frac{1}{\sqrt{2\pi}}
+\int_{-\infty}^{\infty} \exp\bigl( -(x - it)^2 / 2 \bigr)\, dx
+= e^{-t^2/2}.
+\]</div>
+</details>
+<h2 id="_10">Линейная замена<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="_11">Теория<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\varphi_{aX+b}(t) = e^{ibt}\, \varphi_X(at), \qquad a, b \in \mathbb{R}.
+\]</div>
+</div>
+<p>Новый интеграл для сдвига и растяжения не нужен. Перед предельными теоремами так же центрируют и нормируют: у <span class="arithmatex">\((X - \mu)/\sigma\)</span> в функцию подставляется аргумент <span class="arithmatex">\(t/\sigma\)</span> и дописывается множитель <span class="arithmatex">\(e^{-it\mu/\sigma}\)</span>.</p>
+<p>В следующей задаче формула нужна дважды. Сначала из <span class="arithmatex">\(N(0,1)\)</span> собираются <span class="arithmatex">\(N(2, 4)\)</span> и <span class="arithmatex">\(N(-1, 1)\)</span>, потом у второго сомножителя берётся <span class="arithmatex">\(-2Y\)</span>.</p>
+<h2 id="_12">Сумма независимых<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_13">Теория<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> независимы, то</p>
+<div class="arithmatex">\[
+\varphi_{X+Y}(t) = \varphi_X(t)\, \varphi_Y(t).
+\]</div>
+</div>
+<p>На паре 7 сумму двух плотностей считали свёрткой. Произведение характеристических функций заменяет тот интеграл, а вид произведения часто сразу называется законом.</p>
+<h3 id="4">Задача 4. Разность нормальных<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(X \sim N(2, 4)\)</span> и <span class="arithmatex">\(Y \sim N(-1, 1)\)</span> независимы. Найти характеристическую функцию <span class="arithmatex">\(Z = X - 2Y\)</span> и узнать закон <span class="arithmatex">\(Z\)</span>.</p>
+<h4 id="_14">Решение<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Из задачи 3 <span class="arithmatex">\(\varphi_\xi(t) = e^{-t^2/2}\)</span> для <span class="arithmatex">\(\xi \sim N(0,1)\)</span>. Линейная замена <span class="arithmatex">\(X = 2\xi + 2\)</span> даёт <span class="arithmatex">\(N(2, 4)\)</span>:</p>
+<div class="arithmatex">\[
+\varphi_X(t) = e^{2it}\, \varphi_\xi(2t) = e^{2it}\, \exp\bigl(-(2t)^2/2\bigr) = \exp(2it - 2t^2).
+\]</div>
+<p><span class="arithmatex">\(Y = \eta - 1\)</span> при <span class="arithmatex">\(\eta \sim N(0,1)\)</span> даёт <span class="arithmatex">\(N(-1, 1)\)</span>:</p>
+<div class="arithmatex">\[
+\varphi_Y(t) = e^{-it}\, \varphi_\eta(t) = \exp(-it - t^2/2).
+\]</div>
+<p>Минус двойка — линейная замена у второго сомножителя, потом произведение:</p>
+<div class="arithmatex">\[
+\varphi_Y(-2t) = \exp\bigl( -i(-2t) - (-2t)^2 / 2 \bigr) = \exp(2it - 2t^2),
+\]</div>
+<div class="arithmatex">\[
+\varphi_Z(t) = \varphi_X(t)\, \varphi_Y(-2t) = \exp(4it - 4t^2).
+\]</div>
+<p><span class="arithmatex">\(\sigma^2 / 2 = 4\)</span>, поэтому <span class="arithmatex">\(\sigma^2 = 8\)</span> и <span class="arithmatex">\(\mu = 4\)</span>. Закон <span class="arithmatex">\(Z\)</span> — <span class="arithmatex">\(N(4, 8)\)</span>.</p>
+<p>Проверка: <span class="arithmatex">\(\mathrm{E}[Z] = 2 - 2(-1) = 4\)</span>, <span class="arithmatex">\(\mathrm{D}[Z] = 4 + 4 \cdot 1 = 8\)</span>.</p>
+</details>
+<h2 id="_15">Суммы экспонент<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="_16">Теория<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<div class="arithmatex">\[
+\cos t = \frac{e^{it} + e^{-it}}{2}, \qquad
+\sin t = \frac{e^{it} - e^{-it}}{2i}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Конечная сумма <span class="arithmatex">\(\sum_k p_k e^{itk}\)</span> есть характеристическая функция дискретного закона: масса <span class="arithmatex">\(p_k\)</span> сидит в точке <span class="arithmatex">\(k\)</span>.</p>
+<p>Если <span class="arithmatex">\(\varphi_X = \varphi_Y\)</span>, законы <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> совпадают.</p>
+</div>
+<p>Функция на входе, закон на выходе. Косинус и синус раскрывают в двучлен <span class="arithmatex">\(e^{it}\)</span> и <span class="arithmatex">\(e^{-it}\)</span>, коэффициенты читают как массы. Произведение сначала сворачивают в сумму, потом каждый член раскрывают так же.</p>
+<h3 id="5">Задача 5. Произведение косинусов<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>Найти распределение с характеристической функцией <span class="arithmatex">\(\varphi(t) = \cos t \cdot \cos 2t\)</span>.</p>
+<h4 id="_17">Решение<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[\cos A \cos B = \frac{\cos(A+B) + \cos(A-B)}{2},\]</div>
+<p>поэтому</p>
+<div class="arithmatex">\[
+\cos t \cdot \cos 2t = \frac{\cos 3t + \cos t}{2}.
+\]</div>
+<div class="arithmatex">\[
+\cos 3t = \frac{e^{i3t} + e^{-i3t}}{2}, \qquad \cos t = \frac{e^{it} + e^{-it}}{2},
+\]</div>
+<div class="arithmatex">\[
+\varphi(t) = \frac{1}{4}\, e^{i3t} + \frac{1}{4}\, e^{-i3t} + \frac{1}{4}\, e^{it} + \frac{1}{4}\, e^{-it}.
+\]</div>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th><span class="arithmatex">\(-3\)</span></th>
+<th><span class="arithmatex">\(-1\)</span></th>
+<th><span class="arithmatex">\(1\)</span></th>
+<th><span class="arithmatex">\(3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P\)</span></td>
+<td><span class="arithmatex">\(1/4\)</span></td>
+<td><span class="arithmatex">\(1/4\)</span></td>
+<td><span class="arithmatex">\(1/4\)</span></td>
+<td><span class="arithmatex">\(1/4\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Сумма масс равна 1, другой закон с той же <span class="arithmatex">\(\varphi\)</span> невозможен.</p>
+</details>
+<h2 id="_18">Ряды<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_19">Теория<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<table>
+<thead>
+<tr>
+<th>Сумма</th>
+<th>Закрытый вид</th>
+<th>Где</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\displaystyle\sum_{k=0}^{\infty} z^k\)</span></td>
+<td><span class="arithmatex">\(\dfrac{1}{1-z}\)</span></td>
+<td><span class="arithmatex">\(\|z\|&lt;1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\displaystyle\sum_{k=1}^{\infty} k z^k\)</span></td>
+<td><span class="arithmatex">\(\dfrac{z}{(1-z)^2}\)</span></td>
+<td><span class="arithmatex">\(\|z\|&lt;1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\displaystyle\sum_{k=0}^{\infty} C_{k+r-1}^{k} z^k\)</span></td>
+<td><span class="arithmatex">\((1-z)^{-r}\)</span></td>
+<td><span class="arithmatex">\(\|z\|&lt;1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\displaystyle\sum_{k=0}^{\infty} \dfrac{z^k}{k!}\)</span></td>
+<td><span class="arithmatex">\(e^z\)</span></td>
+<td>любое <span class="arithmatex">\(z\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\displaystyle\sum_{k=0}^{n} z^k\)</span></td>
+<td><span class="arithmatex">\(\dfrac{1-z^{n+1}}{1-z}\)</span></td>
+<td><span class="arithmatex">\(z \ne 1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\displaystyle\sum_{k=0}^{n} C_n^k z^k\)</span></td>
+<td><span class="arithmatex">\((1+z)^n\)</span></td>
+<td>любое <span class="arithmatex">\(z\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Дробь от <span class="arithmatex">\(e^{it}\)</span> формулой Эйлера не раскрывается: её приводят к одной из этих сумм и читают коэффициент при <span class="arithmatex">\(z^k = e^{itk}\)</span> как массу в точке <span class="arithmatex">\(k\)</span>. В характеристической функции <span class="arithmatex">\(z = q e^{it}\)</span>, поэтому <span class="arithmatex">\(|z| = q\)</span>. Ряд с единицы без множителя <span class="arithmatex">\(k\)</span> получается из первой строки вычитанием нулевого члена: <span class="arithmatex">\(\sum_{k=1}^{\infty} z^k = z/(1-z)\)</span>. При <span class="arithmatex">\(z=1\)</span> конечная геометрическая сумма равна числу слагаемых, <span class="arithmatex">\(n+1\)</span>.</p>
+<h3 id="6">Задача 6. Дробь<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<p>Найти распределение с характеристической функцией</p>
+<div class="arithmatex">\[
+\varphi(t) = \frac{2}{3 - e^{it}}.
+\]</div>
+<h4 id="_20">Решение<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+\varphi(t) = \frac{2/3}{1 - e^{it}/3} = \frac{2}{3} \sum_{k=0}^{\infty} \left( \frac{e^{it}}{3} \right)^k = \sum_{k=0}^{\infty} \frac{2}{3} \left( \frac{1}{3} \right)^k e^{itk}.
+\]</div>
+<p><span class="arithmatex">\(|e^{it}/3| = 1/3 &lt; 1\)</span>, ряд законен.</p>
+<div class="arithmatex">\[
+P(X = k) = \frac{2}{3} \left( \frac{1}{3} \right)^k, \qquad k = 0, 1, 2, \ldots
+\]</div>
+<p>Это число неудач до первого успеха при вероятности успеха <span class="arithmatex">\(2/3\)</span>.</p>
+</details>
+<h2 id="_21">Моменты<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h3 id="_22">Теория<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если момент порядка <span class="arithmatex">\(k\)</span> существует, то</p>
+<div class="arithmatex">\[
+\varphi^{(k)}(0) = i^k\, \mathrm{E}[X^k].
+\]</div>
+<div class="arithmatex">\[
+\mathrm{E}[X] = -i\varphi'(0), \qquad \mathrm{E}[X^2] = -\varphi''(0), \qquad \mathrm{E}[X^3] = i\varphi'''(0).
+\]</div>
+<div class="arithmatex">\[
+\mathrm{D}[X] = -\varphi''(0) + \bigl(\varphi'(0)\bigr)^2.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>С пары 10, через начальные моменты <span class="arithmatex">\(\nu_k = \mathrm{E}[X^k]\)</span>:</p>
+<div class="arithmatex">\[
+\mu_3 = \nu_3 - 3\nu_1\nu_2 + 2\nu_1^3, \qquad \gamma_1 = \frac{\mu_3}{\sigma^3}.
+\]</div>
+</div>
+<p>Интеграл <span class="arithmatex">\(\int x^k p(x)\, dx\)</span> для показательного на паре 10 брали по частям. Производная характеристической функции в нуле даёт те же числа. <span class="arithmatex">\((\varphi'(0))^2\)</span> — это не <span class="arithmatex">\((\mathrm{E}[X])^2\)</span>: у первой производной в нуле сидит множитель <span class="arithmatex">\(i\)</span>, и квадрат даёт минус.</p>
+<h3 id="7">Задача 7. Асимметрия показательного<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<p>По <span class="arithmatex">\(\varphi(t) = \alpha / (\alpha - it)\)</span>, <span class="arithmatex">\(\alpha &gt; 0\)</span>, найти <span class="arithmatex">\(\mathrm{E}[X]\)</span>, <span class="arithmatex">\(\mathrm{D}[X]\)</span> и коэффициент асимметрии.</p>
+<h4 id="_23">Решение<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p><span class="arithmatex">\(\varphi(t) = \alpha (\alpha - it)^{-1}\)</span>.</p>
+<div class="arithmatex">\[
+\varphi'(t) = \alpha (\alpha - it)^{-2} \cdot i = i\alpha (\alpha - it)^{-2}, \qquad \varphi'(0) = \frac{i}{\alpha}.
+\]</div>
+<div class="arithmatex">\[
+\mathrm{E}[X] = -i \cdot \frac{i}{\alpha} = \frac{1}{\alpha}.
+\]</div>
+<div class="arithmatex">\[
+\varphi''(t) = i\alpha \cdot (-2) (\alpha - it)^{-3} \cdot (-i) = -2\alpha (\alpha - it)^{-3}, \qquad \varphi''(0) = -\frac{2}{\alpha^2}.
+\]</div>
+<div class="arithmatex">\[
+\mathrm{E}[X^2] = \frac{2}{\alpha^2}, \qquad \mathrm{D}[X] = \frac{2}{\alpha^2} - \frac{1}{\alpha^2} = \frac{1}{\alpha^2}.
+\]</div>
+<p>Та же дисперсия формулой с доски: <span class="arithmatex">\(-\varphi''(0) + (\varphi'(0))^2 = 2/\alpha^2 + (i/\alpha)^2 = 2/\alpha^2 - 1/\alpha^2\)</span>.</p>
+<p>Производная <span class="arithmatex">\((\alpha - it)^{-3}\)</span> равна <span class="arithmatex">\((-3)(\alpha - it)^{-4} \cdot (-i) = 3i(\alpha - it)^{-4}\)</span>, поэтому</p>
+<div class="arithmatex">\[
+\varphi'''(t) = -2\alpha \cdot 3i\, (\alpha - it)^{-4} = -6i\alpha (\alpha - it)^{-4}, \qquad \varphi'''(0) = -\frac{6i}{\alpha^3}.
+\]</div>
+<div class="arithmatex">\[
+\mathrm{E}[X^3] = i \cdot \left( -\frac{6i}{\alpha^3} \right) = \frac{6}{\alpha^3}.
+\]</div>
+<div class="arithmatex">\[
+\mu_3 = \frac{6}{\alpha^3} - 3 \cdot \frac{1}{\alpha} \cdot \frac{2}{\alpha^2} + 2 \cdot \frac{1}{\alpha^3} = \frac{2}{\alpha^3}, \qquad \sigma^3 = \frac{1}{\alpha^3}, \qquad \gamma_1 = 2.
+\]</div>
+<p>Асимметрия показательного от <span class="arithmatex">\(\alpha\)</span> не зависит.</p>
+</details>
+<h2 id="_24">Предел<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<h3 id="_25">Теория<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>Если <span class="arithmatex">\(\varphi_n(t) \to \varphi(t)\)</span> при каждом <span class="arithmatex">\(t\)</span> и предел непрерывен в нуле, то <span class="arithmatex">\(\varphi\)</span> — характеристическая функция некоторого закона, и закон <span class="arithmatex">\(X_n\)</span> сходится к нему по распределению.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p>У центрированной величины с дисперсией <span class="arithmatex">\(\sigma^2\)</span></p>
+<div class="arithmatex">\[
+\varphi(t) = 1 - \frac{\sigma^2 t^2}{2} + o(t^2), \qquad t \to 0,
+\]</div>
+<p>потому что <span class="arithmatex">\(\varphi(0) = 1\)</span>, <span class="arithmatex">\(\varphi'(0) = 0\)</span> и <span class="arithmatex">\(\varphi''(0) = -\sigma^2\)</span>. Тогда</p>
+<div class="arithmatex">\[
+\bigl( \varphi(t / \sqrt{n}) \bigr)^n \to e^{-\sigma^2 t^2 / 2}.
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">На доску</p>
+<p><span class="arithmatex">\(e^{-t^2/2}\)</span> — характеристическая функция <span class="arithmatex">\(N(0, 1)\)</span>.</p>
+<p><span class="arithmatex">\(e^{itc}\)</span> — характеристическая функция константы <span class="arithmatex">\(c\)</span>.</p>
+</div>
+<p>Разложение в нуле — это ЦПТ с пары 9, записанная на языке характеристических функций. В задаче ниже начало ряда считают из замкнутого вида, без ссылки на <span class="arithmatex">\(o(t^2)\)</span>: у Пуассона есть явная экспонента.</p>
+<h3 id="8">Задача 8. Пуассон к нормальному<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(\xi_\lambda\)</span> распределена по Пуассону с параметром <span class="arithmatex">\(\lambda\)</span>. Найти предельный закон</p>
+<div class="arithmatex">\[
+\eta_\lambda = \frac{\xi_\lambda - \lambda}{\sqrt{\lambda}}
+\]</div>
+<p>при <span class="arithmatex">\(\lambda \to \infty\)</span>.</p>
+<h4 id="_26">Решение<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>Из подстановки в производящую <span class="arithmatex">\(\varphi_{\xi}(u) = \exp\bigl( \lambda(e^{iu} - 1) \bigr)\)</span>. Линейная замена <span class="arithmatex">\(\eta = \xi/\sqrt{\lambda} - \sqrt{\lambda}\)</span>:</p>
+<div class="arithmatex">\[
+\varphi_{\eta}(t) = \exp(-it\sqrt{\lambda})\, \varphi_{\xi}(t/\sqrt{\lambda}) = \exp\Bigl( -it\sqrt{\lambda} + \lambda \bigl( e^{it/\sqrt{\lambda}} - 1 \bigr) \Bigr).
+\]</div>
+<div class="arithmatex">\[
+e^{iu} = 1 + iu - \frac{u^2}{2} - \frac{i u^3}{6} + O(u^4), \qquad u = \frac{t}{\sqrt{\lambda}}.
+\]</div>
+<div class="arithmatex">\[
+\lambda(e^{iu} - 1) = it\sqrt{\lambda} - \frac{t^2}{2} - \frac{i t^3}{6\sqrt{\lambda}} + O(\lambda^{-1}).
+\]</div>
+<p>Мнимые члены <span class="arithmatex">\(it\sqrt{\lambda}\)</span> сокращаются:</p>
+<div class="arithmatex">\[
+\varphi_{\eta}(t) = \exp\Bigl( -\frac{t^2}{2} - \frac{i t^3}{6\sqrt{\lambda}} + O(\lambda^{-1}) \Bigr) \to e^{-t^2/2}.
+\]</div>
+<p>Предел непрерывен в нуле и является характеристической функцией <span class="arithmatex">\(N(0, 1)\)</span>. По теореме непрерывности <span class="arithmatex">\(\eta_\lambda\)</span> сходится к <span class="arithmatex">\(N(0, 1)\)</span> по распределению:</p>
+<div class="arithmatex">\[
+P(\eta_\lambda &lt; x) \to \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{x} e^{-u^2/2}\, du.
+\]</div>
+<p>Здесь <span class="arithmatex">\(\Phi\)</span> — функция распределения стандартного нормального с интегралом от <span class="arithmatex">\(-\infty\)</span>, не функция Лапласа от <span class="arithmatex">\(0\)</span> до <span class="arithmatex">\(x\)</span>.</p>
+</details>
+<p>Та же схема даёт ЦПТ для любой центрированной суммы с конечной дисперсией: в разложение подставляют <span class="arithmatex">\(t/\sqrt{n}\)</span> и возводят в степень <span class="arithmatex">\(n\)</span>. Ряд Тейлора под знаком среднего мы не обосновываем, начало ряда берётся из значений <span class="arithmatex">\(\varphi'(0)\)</span> и <span class="arithmatex">\(\varphi''(0)\)</span>.</p>
+<h3 id="9">Задача 9. Сумма показательных · дополнительно<a class="headerlink" href="#9" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(n\)</span> независимых величин, у каждой плотность <span class="arithmatex">\(n\alpha\, e^{-n\alpha x}\)</span> при <span class="arithmatex">\(x &gt; 0\)</span>, <span class="arithmatex">\(\alpha &gt; 0\)</span>. К какому закону сходится их сумма при <span class="arithmatex">\(n \to \infty\)</span>?</p>
+<h4 id="_27">Решение<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>У одного слагаемого по задаче 1</p>
+<div class="arithmatex">\[
+\varphi(t) = \frac{n\alpha}{n\alpha - it}.
+\]</div>
+<p>Произведение <span class="arithmatex">\(n\)</span> одинаковых функций:</p>
+<div class="arithmatex">\[
+\varphi_{S_n}(t) = \left( \frac{n\alpha}{n\alpha - it} \right)^n = \left( 1 - \frac{it}{n\alpha} \right)^{-n} \to e^{it/\alpha}.
+\]</div>
+<p>Предел — характеристическая функция константы <span class="arithmatex">\(1/\alpha\)</span>.</p>
+<p>Среднее одного слагаемого <span class="arithmatex">\(1/(n\alpha)\)</span>, среднее суммы <span class="arithmatex">\(1/\alpha\)</span>. Дисперсия одного <span class="arithmatex">\(1/(n\alpha)^2\)</span>, дисперсия суммы <span class="arithmatex">\(1/(n\alpha^2) \to 0\)</span>. Масса схлопывается в точку: это закон больших чисел, не нормальное приближение. Центрировать и делить на <span class="arithmatex">\(\sqrt{n}\)</span> здесь не стали.</p>
+</details>
+<h2 id="_28">Самостоятельная<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<p>Пишется в начале следующей пары.</p>
+<p><strong>7 минут.</strong> <span class="arithmatex">\(X\)</span> и <span class="arithmatex">\(Y\)</span> независимы, у обеих плотность <span class="arithmatex">\(e^{-x}\)</span> при <span class="arithmatex">\(x &gt; 0\)</span>. Найти <span class="arithmatex">\(\varphi_{X-Y}(t)\)</span>.</p>
+<h4 id="_29">Решение<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<p>По задаче 1 с <span class="arithmatex">\(\alpha = 1\)</span> верно <span class="arithmatex">\(\varphi_X(t) = 1/(1 - it)\)</span>. У <span class="arithmatex">\(-Y\)</span> аргумент меняет знак:</p>
+<div class="arithmatex">\[
+\varphi_{X-Y}(t) = \varphi_X(t)\, \varphi_Y(-t) = \frac{1}{1 - it} \cdot \frac{1}{1 + it} = \frac{1}{1 + t^2}.
+\]</div>
+</details>
+<p><strong>6 минут.</strong> У величины с <span class="arithmatex">\(\varphi(t) = 1/(1 + t^2)\)</span> найти дисперсию дифференцированием в нуле.</p>
+<h4 id="_30">Решение<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<details class="question">
+<summary>Открыть</summary>
+<div class="arithmatex">\[
+\varphi'(t) = -2t (1 + t^2)^{-2}, \qquad \varphi'(0) = 0, \qquad \mathrm{E}[X] = 0.
+\]</div>
+<div class="arithmatex">\[
+\varphi''(t) = -2(1 + t^2)^{-2} + 8t^2 (1 + t^2)^{-3}, \qquad \varphi''(0) = -2.
+\]</div>
+<div class="arithmatex">\[
+\mathrm{D}[X] = -\varphi''(0) = 2.
+\]</div>
+<p>С предыдущим пунктом сходится: у разности двух независимых показательных с параметром <span class="arithmatex">\(1\)</span> дисперсия равна <span class="arithmatex">\(1 + 1 = 2\)</span>.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Домашнее задание</p>
+<p><code>HW11_y2023.pdf</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
